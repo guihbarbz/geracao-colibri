@@ -17,9 +17,15 @@
 <body>
 
     <header class="header-fixo">
-        <div class="logo">
+        <a href="#hero" class="logo">
             <img src="imagens/logo.png" alt="Ícone Autoescola Geração Colibri" class="logo-img">
-        </div>
+            <span class="logo-texto">Geração Colibri</span>
+        </a>
+
+        <button class="menu-mobile-btn" aria-label="Abrir menu">
+            <i class="ph-bold ph-list"></i>
+        </button>
+
         <nav class="menu-principal">
             <ul>
                 <li class="dropdown">
@@ -32,9 +38,8 @@
                         <li><a href="#faq">Dúvidas</a></li>
                     </ul>
                 </li>
-                
-                <li><a href="regularizacao.html">Pontos na CNH</a></li>
-                <li><a href="cursos.html">Cursos (Em Breve)</a></li>
+                <li><a href="regularizacao.html">Regularização CNH</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="sobre.html">Sobre Nós</a></li>
             </ul>
@@ -69,7 +74,9 @@
                 <div class="hero-content animar-fade">
                     <span class="badge"><i class="ph-fill ph-medal" style="margin-right: 4px;"></i> 26 anos • Referência em Guarulhos</span>
                     <h1 class="texto-branco">Tire sua CNH na Autoescola referência em Guarulhos</h1>
-                    <p class="subheadline texto-branco"><strong>CNH Brasil com flexibilidade, mas com preparo de verdade.</strong> Aqui você começa com 2 aulas avaliativas e segue com o pacote ideal — sem achismo e sem perder tempo.</p>
+                    <p class="subheadline texto-branco">
+                        <img src="imagens/CNH_do_Brasil.png" alt="CNH Brasil" class="logo-inline"> <strong>com mais flexibilidade, mas sem abrir mão do preparo de verdade.</strong> Aqui você inicia com 2 aulas avaliativas e, a partir do seu desempenho, seguimos com o pacote ideal para você — sem achismo, sem desperdício e com foco real na aprovação.
+                    </p>
                     
                     <ul class="lista-check texto-branco">
                         <li><i class="ph-bold ph-check icone-check"></i> Melhor preço + condições facilitadas</li>
@@ -77,7 +84,7 @@
                         <li><i class="ph-bold ph-check icone-check"></i> Veículo incluso no exame prático</li>
                     </ul>
                     
-                    <p class="micro-prova bg-glass"><i class="ph-fill ph-star text-amarelo"></i> Nota 4,9 no Google • +300 avaliações • 12,4 mil no Instagram</p>
+                    <p class="micro-prova bg-glass"><i class="ph-fill ph-star text-amarelo"></i> Nota 4,9 no Google • +300 avaliações • 20 mil no Instagram</p>
 
                         <div class="botoes-grupo">
                             <button class="btn btn-primario btn-wa" data-track="click_whatsapp_hero" data-message="Olá! Vim do site e quero começar minha CNH.">CHAMAR NO WHATSAPP AGORA</button>
@@ -106,7 +113,7 @@
                                 <div class="passo-marcador">1</div>
                                 <h3>Matrícula</h3>
                             </div>
-                            <p>Nossa equipe realiza toda sua orientação inicial.</p>
+                            <p>Nossa equipe realiza toda sua orientação inicial e agendamento de todas as etapas.</p>
                         </div>
                     </div>
 
@@ -166,7 +173,7 @@
                                 <div class="passo-marcador">7</div>
                                 <h3>Exame Prático</h3>
                             </div>
-                            <p>O aluno realiza o exame muito mais preparado e seguro.</p>
+                            <p>O aluno realiza o exame com muito mais preparo e segurança.</p>
                         </div>
                     </div>
                 </div>
@@ -190,6 +197,8 @@
                         <ul class="plano-lista">
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Matrícula digital + assessoria</li>
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Curso teórico gratuito via App</li>
+                            <li><i class="ph-bold ph-check icone-check-plano"></i> Manual do Condutor</li>
+                            <li><i class="ph-bold ph-check icone-check-plano"></i> Pacote com 2 aulas avaliativas</li>
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Aulas práticas personalizadas</li>
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Suporte até a emissão da PPD</li>
                         </ul>
@@ -203,6 +212,8 @@
                         <ul class="plano-lista">
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Matrícula digital + assessoria</li>
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Curso teórico gratuito via App</li>
+                            <li><i class="ph-bold ph-check icone-check-plano"></i> Manual do Condutor</li>
+                            <li><i class="ph-bold ph-check icone-check-plano"></i> Pacote com 2 aulas avaliativas</li>
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Aulas práticas com veículos novos</li>
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Suporte até a emissão da PPD</li>
                         </ul>
@@ -269,62 +280,94 @@
                         
                         <div class="review-card">
                             <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Júlia+Celeghini&background=0D8ABC&color=fff&rounded=true" alt="Avatar"></div>
+                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Lucas+Dantas&background=0D8ABC&color=fff&rounded=true" alt="Avatar"></div>
                                 <div>
-                                    <h4>Júlia Celeghini</h4>
-                                    <span class="data-review">28/06/2024</span>
+                                    <h4>Lucas Dantas</h4>
+                                    <span class="data-review">15/05/2026</span>
                                 </div>
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
                             </div>
                             <div class="stars-small">
                                 <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
                             </div>
-                            <p>"Experiência maravilhosa, pessoal muito gente boa, e atenciosos!"</p>
+                            <p>"Tive uma experiência muito boa e tranquila desde o primeiro dia do CFC até a conclusão do exame prático. Equipe e professores muito atenciosos e prontos para ajudar!"</p>
                         </div>
                         
                         <div class="review-card">
                             <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=geovanna+Ribeiro&background=A259FF&color=fff&rounded=true" alt="Avatar"></div>
+                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Bia+Denaro&background=A259FF&color=fff&rounded=true" alt="Avatar"></div>
                                 <div>
-                                    <h4>geovanna Ribeiro</h4>
-                                    <span class="data-review">28/06/2024</span>
+                                    <h4>Bia Denaro</h4>
+                                    <span class="data-review">22/04/2026</span>
                                 </div>
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
                             </div>
                             <div class="stars-small">
                                 <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
                             </div>
-                            <p>"A autoescola é ótima o atendimento é ótimo, o ensino é completo instrutores super colaborativos..."</p>
+                            <p>Tirei minha habilitação aí, nota 10 pros professores e recepção, direção! Todos estão de parabéns ❤️ atendimento excelente"</p>
                         </div>
-        
+
                         <div class="review-card">
                             <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Rogerio+Silva&background=4285F4&color=fff&rounded=true" alt="Avatar"></div>
+                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Karol+Paiva&background=4285F4&color=fff&rounded=true" alt="Avatar"></div>
                                 <div>
-                                    <h4>Rogerio Silva</h4>
-                                    <span class="data-review">28/06/2024</span>
+                                    <h4>Karol Paiva</h4>
+                                    <span class="data-review">15/03/2026</span>
                                 </div>
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
                             </div>
                             <div class="stars-small">
                                 <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
                             </div>
-                            <p>"Bom atendimento correspondeu tudo q procurava. Transparência e rapidez no processo."</p>
+                            <p>"Queria agradecer a todos os funcionários da Colibri, sem dúvida foi a melhor escolha que fiz! As meninas da recepção são incríveis e super me ajudaram, e os instrutores a mesma coisa."</p>
                         </div>
-        
+
                         <div class="review-card">
                             <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Milena+Colares&background=D81B60&color=fff&rounded=true" alt="Avatar"></div>
+                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Bruno+Lizoti&background=D81B60&color=fff&rounded=true" alt="Avatar"></div>
                                 <div>
-                                    <h4>Milena Colares</h4>
-                                    <span class="data-review">28/06/2024</span>
+                                    <h4>Bruno Lizoti</h4>
+                                    <span class="data-review">10/03/2026</span>
                                 </div>
                                 <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
                             </div>
                             <div class="stars-small">
                                 <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
                             </div>
-                            <p>"O Atendimento da autoescola é ótimo Dao Todo Suporte e Apoio os Instrutores sao Bem pacientes..."</p>
+                            <p>"Aulas muito bem preparadas, instrutores excelentes e atendimento maravilhoso.
+
+Aprovado e muito grato por tudo que aprendi Colibri!"</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Aline+Lima+Bergo&background=F26522&color=fff&rounded=true" alt="Avatar"></div>
+                                <div>
+                                    <h4>Aline Lima Bergo</h4>
+                                    <span class="data-review">30/01/2026</span>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
+                            </div>
+                            <div class="stars-small">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
+                            </div>
+                            <p>"Desde o início, o atendimento foi muito agradável, especialmente pelas meninas da recepção, que sempre foram rápidas no retorno e muito atenciosas. Não tive nenhum problema, tudo foi extremamente agradável. Nas aulas práticas, tive o instrutor Ângelo. Sua paciência e dedicação fizeram toda a diferença."</p>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Elaine+Torres&background=34A853&color=fff&rounded=true" alt="Avatar"></div>
+                                <div>
+                                    <h4>Elaine Torres</h4>
+                                    <span class="data-review">20/01/2026</span>
+                                </div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
+                            </div>
+                            <div class="stars-small">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
+                            </div>
+                            <p>"Profissionais altamente capacitados, processo rápido e sem enrolação, super recomendo a auto escola e seus profissionais, nota 1000."</p>
                         </div>
                     </div>
                 </div>
@@ -354,6 +397,10 @@
                     <div class="faq-item">
                         <button class="faq-pergunta">Vocês cuidam de toda a burocracia? <i class="ph-bold ph-plus faq-icone"></i></button>
                         <div class="faq-resposta"><p>Sim, nossa equipe realiza os agendamentos, emissão de guias e orientação completa em cada etapa do processo. Você foca apenas em aprender.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">Seus veículos são equipados para as aulas? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Sim, nossa frota de veículos são preparados com duplo comando para o melhor aprendizado e suporte em casos de necessidade</p></div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-pergunta">Posso fazer a matrícula online? <i class="ph-bold ph-plus faq-icone"></i></button>
@@ -386,15 +433,53 @@
         </section>
     </main>
 
-    <footer class="footer-minimalista">
-        <div class="container text-center relative-z">
-            <p><strong>Autoescola Geração Colibri</strong></p>
-            <p>CNPJ: 03.594.977/0001-72</p>
-            <div class="links-footer">
-                <a href="https://www.instagram.com/geracaocolibriautoescola/" target="_blank"><i class="ph-fill ph-instagram-logo"></i> Instagram</a>
-                <a href="https://www.facebook.com/geracaocolibri?locale=pt_BR" target="_blank"><i class="ph-fill ph-facebook-logo"></i> Facebook</a>
+    <footer class="footer-corporativo">
+        <div class="container relative-z">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 15px;">
+                        <img src="imagens/logo.png" alt="Logo" class="logo-img" style="height: 40px; margin-right: 10px;">
+                        <span class="logo-texto" style="font-size: 18px;">Geração Colibri</span>
+                    </div>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Formando motoristas conscientes e preparados para o trânsito com a melhor infraestrutura de Guarulhos.</p>
+                    <div class="links-sociais-footer">
+                        <a href="https://www.instagram.com/geracaocolibriautoescola/" target="_blank" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="https://www.facebook.com/geracaocolibri?locale=pt_BR" target="_blank" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="https://www.tiktok.com/@geracaocolibriautoescola?_t=8q3JCMjhUcX&_r=1" target="_blank" aria-label="TikTok"><i class="ph-fill ph-tiktok-logo"></i></a>
+                        <a href="https://youtube.com/@geracaocolibriautoescola272?si=tWgFRy-alcleRliJ" target="_blank" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Acesso Rápido</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Primeira Habilitação</a></li>
+                        <li><a href="regularizacao.html">Regularização de CNH</a></li>
+                        <li><a href="cursos.html">Cursos Especializados</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="sobre.html">Sobre a Autoescola</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Informações Legais</h3>
+                    <ul class="footer-infos" style="list-style: none; color: #666; font-size: 14px;">
+                        <li style="margin-bottom: 10px;"><strong>CNPJ:</strong> 03.594.977/0001-72</li>
+                        <li style="margin-bottom: 10px;"><strong>Credencial Detran-SP:</strong> CENTRO DE FORMAÇÃO DE CONDUTORES -A/B Nº 204</li>
+                        <li style="margin-bottom: 10px;">Rua Juazeiro do Norte, 272 – Cumbica, Guarulhos/SP</li>
+                    </ul>
+                </div>
+                
             </div>
-            <p class="disclaimer">Os valores das taxas estaduais (Detran/Exames) não compõem os pacotes da autoescola e devem ser pagos separadamente aos órgãos responsáveis.</p>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                <p>&copy; 2026 Autoescola Geração Colibri. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://github.com/guihbarbz" target="_blank" style="color: var(--cor-destaque-planos); text-decoration: none; font-weight: 600;">Guilherme Barbosa</a></p>
+            </div>
+            <p class="disclaimer-bottom">Os valores das taxas estaduais (Detran/Exames) não compõem os pacotes da autoescola e devem ser pagos separadamente.</p>
         </div>
     </footer>
 

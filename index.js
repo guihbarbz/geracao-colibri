@@ -181,4 +181,40 @@ document.addEventListener('DOMContentLoaded', () => {
     elementosAnimar.forEach(elemento => {
         observer.observe(elemento);
     });
+
+    // ==========================================
+    // 6. MENU MOBILE (HAMBÚRGUER)
+    // ==========================================
+    const btnMobile = document.querySelector('.menu-mobile-btn');
+    const menuPrincipal = document.querySelector('.menu-principal');
+    
+    if (btnMobile && menuPrincipal) {
+        const iconeMenu = btnMobile.querySelector('i');
+
+        btnMobile.addEventListener('click', () => {
+            // Abre ou fecha o menu
+            menuPrincipal.classList.toggle('ativo');
+            
+            // Troca o ícone (Barrinhas <-> X)
+            if (menuPrincipal.classList.contains('ativo')) {
+                iconeMenu.classList.remove('ph-list');
+                iconeMenu.classList.add('ph-x');
+            } else {
+                iconeMenu.classList.remove('ph-x');
+                iconeMenu.classList.add('ph-list');
+            }
+        });
+        
+        // Fecha o menu automaticamente quando o usuário clica em qualquer link
+        const linksMenu = menuPrincipal.querySelectorAll('a:not(.link-dropdown)');
+        linksMenu.forEach(link => {
+            link.addEventListener('click', () => {
+                menuPrincipal.classList.remove('ativo');
+                if(iconeMenu) {
+                    iconeMenu.classList.remove('ph-x');
+                    iconeMenu.classList.add('ph-list');
+                }
+            });
+        });
+    }
 });
