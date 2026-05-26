@@ -238,6 +238,52 @@ body.dark-mode .plano-titulo { color: var(--cor-branco); }
    FOOTER CORPORATIVO
    ========================================== */
 .footer-corporativo { background: var(--cor-branco); padding-top: 60px; border-top: 1px solid var(--cor-borda); position: relative; overflow: hidden; }
+
+/* ==========================================
+   RODAPÉ NO MODO ESCURO
+   ========================================== */
+body.dark-mode .footer-corporativo {
+    background-color: #0f0f0f; /* Fundo bem escuro para o rodapé */
+    border-top-color: rgba(255, 255, 255, 0.1); /* Suaviza a linha divisória */
+}
+
+/* Clareia os títulos das colunas (Acesso Rápido, Informações, etc) */
+body.dark-mode .footer-col h3 {
+    color: #ffffff;
+}
+
+/* Clareia os textos descritivos forçando a substituição da cor do HTML */
+body.dark-mode .footer-col p,
+body.dark-mode .footer-infos {
+    color: #cccccc !important; 
+}
+
+/* Remove o sublinhado branco dos ícones das redes sociais */
+.links-sociais-footer a {
+    text-decoration: none !important;
+}
+
+body.dark-mode .footer-infos li {
+    color: #cccccc;
+}
+
+/* Clareia as cores dos links do menu do rodapé */
+body.dark-mode .footer-links a {
+    color: #bbbbbb;
+}
+
+/* Garante que o link continue mudando de cor ao passar o mouse */
+body.dark-mode .footer-links a:hover {
+    color: var(--cor-destaque-planos);
+}
+
+/* Ajusta a barra de direitos autorais e assinatura no final da página */
+body.dark-mode .footer-bottom {
+    background-color: #0a0a0a; /* Fundo ligeiramente mais escuro que o rodapé */
+    border-top-color: rgba(255, 255, 255, 0.1);
+    color: #888888;
+}
+
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
 .footer-col h3 { font-size: 18px; margin-bottom: 20px; color: var(--cor-preto); }
 
@@ -287,6 +333,113 @@ body.dark-mode .plano-titulo { color: var(--cor-branco); }
     color: var(--cor-texto);
     cursor: pointer;
     transition: color 0.3s;
+}
+
+/* ==========================================
+   BANNER DICA (APLICATIVO)
+   ========================================== */
+.banner-dica {
+    background: linear-gradient(135deg, var(--cor-fundo-base), #ffffff);
+    border-left: 5px solid var(--cor-amarelo);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto 40px auto;
+    max-width: 900px;
+}
+
+/* Ajuste do degradê no Modo Escuro */
+body.dark-mode .banner-dica {
+    /* Troca o #ffffff por um cinza bem escuro para manter a leitura perfeita */
+    background: linear-gradient(135deg, var(--cor-fundo-base), rgba(255, 255, 255, 0.05));
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* ==========================================
+   SEÇÃO: PROVA VISUAL DE SUCESSO
+   ========================================== */
+.prova-visual-container {
+    padding-bottom: 20px;
+}
+
+.prova-visual-foto-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.prova-visual-card {
+    max-width: 600px; /* Reduzido de 850px para 600px em desktop para evitar a estranheza */
+    width: 100%;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    border: 10px solid #fff; /* Mantemos a borda estilo 'quadro' */
+}
+
+.prova-visual-imagem {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* object-fit: cover; - Removi para evitar o corte nas bordas e mostrar toda a mesa */
+}
+
+/* ==========================================
+   CORREÇÃO DE BARRA INFERIOR INDEVIDA NAS IMAGENS
+   ========================================== */
+
+/* Regra base para ambos os contêineres de imagem */
+.div-recorte-base {
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    overflow: hidden; /* Habilita o recorte */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* 1. Recorte do Carro Branco (image_22.png) */
+.img-carro {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 350px;
+    
+    /* A mágica acontece aqui: 
+       puxa o rodapé do carro para baixo, escondendo a barra */
+    margin-bottom: -15px !important; 
+    position: relative; /* Garante que a margem negativa funcione */
+    z-index: 1; /* Previne que o z-index de outros elementos interfira */
+}
+
+/* 2. Recorte do Instrutor (image_23.png) */
+.img-instrutor {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 350px;
+    
+    /* Mesma técnica: puxa para baixo para esconder a barra */
+    margin-bottom: -15px !important; 
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 768px) {
+    .prova-visual-card {
+        max-width: 90% ; /* Um pouco menor para mobile */
+        border: 5px solid #fff; /* Borda mais fina no celular */
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 /* MOBILE RESPONSIVO */

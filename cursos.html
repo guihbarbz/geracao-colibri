@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cursos especializados de trânsito na Autoescola Geração Colibri. Novidades em breve!">
+    <title>Cursos Especializados | Geração Colibri</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header-fixo">
+        <a href="index.html" class="logo">
+            <img src="imagens/logo.png" alt="Ícone Autoescola Geração Colibri" class="logo-img">
+            <span class="logo-texto">Geração Colibri</span>
+        </a>
+
+        <button class="menu-mobile-btn" aria-label="Abrir menu">
+            <i class="ph-bold ph-list"></i>
+        </button>
+
+        <nav class="menu-principal">
+            <ul>
+                <li><a href="index.html">Primeira Habilitação</a></li>
+                <li><a href="regularizacao.html">Regularização CNH</a></li>
+                <li><a href="#" style="color: var(--cor-vermelho); font-weight: 700;">Cursos</a></li>
+                <li><a href="regularizacao.html">Produtos</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <button id="btn-dark" class="btn-icone" title="Alternar Tema"><i class="ph-fill ph-moon"></i></button>
+            <button class="btn btn-primario btn-sm btn-wa" data-track="click_whatsapp_top" data-message="Olá! Gostaria de saber sobre os próximos cursos da autoescola."><i class="ph-bold ph-whatsapp-logo" style="margin-right: 6px;"></i> WhatsApp</button>
+        </div>
+    </header>
+
+    <button class="btn-flutuante-wa btn-wa" data-track="click_whatsapp_float" data-message="Olá! Vi que a página de cursos está em desenvolvimento, mas gostaria de tirar uma dúvida.">
+        <i class="ph-fill ph-whatsapp-logo"></i>
+    </button>
+
+    <main style="margin-top: var(--altura-header); min-height: 75vh; display: flex; align-items: center; justify-content: center;">
+        
+        <section class="secao-branca" style="padding: 60px 0;">
+            <div class="container text-center animar-fade relative-z" style="max-width: 600px; margin: 0 auto;">
+                
+                <div style="margin-bottom: 30px; display: inline-block; position: relative;">
+                    <div style="background: rgba(254, 221, 0, 0.1); width: 120px; height: 120px; border-radius: 50%; display: flex; justify-content: center; align-items: center; margin: 0 auto;">
+                        <i class="ph-duotone ph-traffic-cone" style="font-size: 64px; color: var(--cor-amarelo);"></i>
+                    </div>
+                    <i class="ph-fill ph-gear" style="position: absolute; bottom: 5px; right: 5px; font-size: 28px; color: var(--cor-vermelho); animation: spin 4s linear infinite;"></i>
+                </div>
+
+                <span class="subtitulo-laranja" style="letter-spacing: 3px;">PÁGINA EM DESENVOLVIMENTO</span>
+                <h1 class="titulo-secao" style="font-size: 36px; margin-bottom: 15px;">Novos cursos estão chegando!</h1>
+                
+                <p style="font-size: 16px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 30px;">
+                    Estamos preparando uma grade completa de cursos especializados (como transporte de passageiros, cargas indivisíveis, frotas e reciclagem avançada) para ajudar você a se capacitar profissionalmente. Em breve, todas as informações e inscrições estarão disponíveis aqui.
+                </p>
+
+                <div style="background: var(--cor-fundo-base); padding: 20px; border-radius: 12px; border: 1px dashed var(--cor-borda); margin-bottom: 30px;">
+                    <p style="font-size: 14px; color: var(--cor-texto); margin: 0 0 10px 0;"><strong>Precisa de um curso especializado agora?</strong></p>
+                    <p style="font-size: 14px; color: var(--cor-texto); margin: 0;">Nossa equipe já realiza atendimentos e matrículas manuais para turmas atuais. Fale conosco!</p>
+                </div>
+
+                <button class="btn btn-primario btn-wa" style="margin: 0 auto;" data-message="Olá! Gostaria de saber quais cursos especializados vocês já oferecem atualmente.">
+                    <i class="ph-bold ph-whatsapp-logo" style="margin-right: 8px;"></i> CONSULTAR DISPONIBILIDADE
+                </button>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-corporativo">
+        <div class="container relative-z">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 15px;">
+                        <img src="imagens/logo.png" alt="Logo" class="logo-img" style="height: 40px; margin-right: 10px;">
+                        <span class="logo-texto" style="font-size: 18px;">Geração Colibri</span>
+                    </div>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Formando motoristas conscientes e preparados para o trânsito com a melhor infraestrutura de Guarulhos.</p>
+                    <div class="links-sociais-footer">
+                        <a href="https://www.instagram.com/geracaocolibriautoescola/" target="_blank" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                        <a href="https://www.facebook.com/geracaocolibri?locale=pt_BR" target="_blank" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="https://www.tiktok.com/@geracaocolibriautoescola?_t=8q3JCMjhUcX&_r=1" target="_blank" aria-label="TikTok"><i class="ph-fill ph-tiktok-logo"></i></a>
+                        <a href="https://youtube.com/@geracaocolibriautoescola272?si=tWgFRy-alcleRliJ" target="_blank" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Acesso Rápido</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Primeira Habilitação</a></li>
+                        <li><a href="regularizacao.html">Regularização de CNH</a></li>
+                        <li><a href="cursos.html">Cursos Especializados</a></li>
+                        <li><a href="produtos.html">Produtos</a></li>
+                        <li><a href="sobre.html">Sobre a Autoescola</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Informações Legais</h3>
+                    <ul class="footer-infos" style="list-style: none; color: #666; font-size: 14px;">
+                        <li style="margin-bottom: 10px;"><strong>CNPJ:</strong> 03.594.977/0001-72</li>
+                        <li style="margin-bottom: 10px;"><strong>Credencial Detran-SP:</strong> CENTRO DE FORMAÇÃO DE CONDUTORES -A/B Nº 204</li>
+                        <li style="margin-bottom: 10px;">Rua Juazeiro do Norte, 272 – Cumbica, Guarulhos/SP</li>
+                    </ul>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                <p>&copy; 2026 Autoescola Geração Colibri. Todos os direitos reservados.</p>
+                <p>Desenvolvido por <a href="https://linktr.ee/guih.barbz" target="_blank" style="color: var(--cor-destaque-planos); text-decoration: none; font-weight: 600;">Guilherme Barbosa</a></p>
+            </div>
+            <p class="disclaimer-bottom">Os valores das taxas estaduais (Detran/Exames) não compõem os pacotes da autoescola e devem ser pagos separadamente.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
