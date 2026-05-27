@@ -43,6 +43,9 @@
         
         <!-- HERO SECTION (Conversão Imediata com Foto) -->
         <section class="secao-cinza" style="padding: 70px 0 50px 0; border-bottom: 1px solid var(--cor-borda);">
+
+            
+
             <div class="container animar-fade relative-z">
                 <div class="grid-2" style="align-items: center;">
                     
@@ -77,6 +80,32 @@
             </div>
         </section>
 
+        <!-- BLOCO DE PREÇO (CTA Principal) Movido para o Topo -->
+        <section class="secao-branca" style="padding: 60px 0 20px 0;">
+            <div class="container animar-fade relative-z">
+                <div style="background: linear-gradient(135deg, #111, #222); border-radius: 24px; padding: 50px; text-align: center; color: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.2); max-width: 800px; margin: 0 auto;">
+                    <h2 style="font-size: 32px; color: #fff; margin-bottom: 10px;">CURSO DE RECICLAGEM ONLINE</h2>
+                    <div style="font-size: 48px; font-weight: 800; color: var(--cor-amarelo); margin: 20px 0;">A partir de R$ 380,00</div>
+                    
+                    <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; font-size: 16px;">
+                        <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Processo simples</li>
+                        <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Atendimento rápido</li>
+                        <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Faça tudo online</li>
+                    </ul>
+                    
+                    <button class="btn btn-primario btn-wa" style="font-size: 20px; padding: 20px 50px; background: var(--cor-verde); width: 100%; max-width: 400px; justify-content: center;" data-message="Olá! Quero me matricular no curso de reciclagem.">
+                        <i class="ph-bold ph-whatsapp-logo"></i> Quero resolver agora
+                    </button>
+                    
+                    <div style="margin-top: 25px; display: flex; justify-content: center; gap: 10px; color: #aaa; font-size: 14px;">
+                        <span><i class="ph-fill ph-star" style="color: var(--cor-amarelo);"></i> Nota máxima no Google</span>
+                        <span>•</span>
+                        <span>Credenciada Detran-SP</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <!-- SUBHEADLINE DE IMPACTO COM FOTO DRAMÁTICA -->
         <section class="secao-branca" style="padding: 60px 0;">
             <div class="container text-center animar-fade">
@@ -115,15 +144,28 @@
         <section class="secao-branca" style="padding: 60px 0;">
             <div class="container">
                 <div class="grid-2">
+                    <!-- Coluna 1: Autossuspensivas -->
                     <div style="background: rgba(254, 1, 0, 0.05); border: 1px solid rgba(254, 1, 0, 0.2); padding: 40px; border-radius: 20px;">
                         <span class="badge" style="background: var(--cor-vermelho); color: #fff; margin-bottom: 20px;">CUIDADO REDOBRADO</span>
                         <h3 style="font-size: 24px; color: var(--cor-preto); margin-bottom: 15px;">Infrações Autossuspensivas</h3>
                         <p style="color: var(--cor-texto); margin-bottom: 20px;">Algumas infrações podem suspender sua CNH na hora, mesmo sem atingir o limite de pontos. Exemplos:</p>
-                        <ul class="lista-check" style="color: var(--cor-texto);">
-                            <li><i class="ph-bold ph-x" style="color: var(--cor-vermelho);"></i> Lei Seca ou recusar bafômetro</li>
-                            <li><i class="ph-bold ph-x" style="color: var(--cor-vermelho);"></i> Excesso de velocidade acima de 50%</li>
-                            <li><i class="ph-bold ph-x" style="color: var(--cor-vermelho);"></i> Disputar corrida ou manobra perigosa</li>
+                        
+                        <!-- Lista corrigida: padding e margin zerados, com flexbox para alinhar o ícone -->
+                        <ul style="list-style: none; padding: 0; margin: 0; color: var(--cor-texto);">
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+                                <i class="ph-bold ph-x" style="color: var(--cor-vermelho); font-size: 20px; flex-shrink: 0; margin-top: 2px;"></i>
+                                <span>Lei Seca ou recusar bafômetro</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+                                <i class="ph-bold ph-x" style="color: var(--cor-vermelho); font-size: 20px; flex-shrink: 0; margin-top: 2px;"></i>
+                                <span>Excesso de velocidade acima de 50%</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
+                                <i class="ph-bold ph-x" style="color: var(--cor-vermelho); font-size: 20px; flex-shrink: 0; margin-top: 2px;"></i>
+                                <span>Disputar corrida ou manobra perigosa</span>
+                            </li>
                         </ul>
+                        
                         <p style="margin-top: 20px; font-weight: 700; color: var(--cor-vermelho);">⚠️ Não espere a CNH ser bloqueada para regularizar.</p>
                     </div>
 
@@ -133,6 +175,56 @@
                         <p style="color: var(--cor-texto); margin-bottom: 20px;">Motoristas de aplicativo, taxistas e profissionais com EAR podem fazer o curso preventivo ao atingir <strong>30 pontos</strong>, zerando a pontuação e evitando o bloqueio.</p>
                         <button class="btn-link btn-wa" style="color: var(--cor-preto); font-weight: 700;" data-message="Olá, sou motorista EAR e quero informações sobre a reciclagem preventiva.">Consultar minha CNH agora <i class="ph-bold ph-arrow-right"></i></button>
                     </div>
+                </div>
+            </div>
+        </section>
+
+       <!-- APLICATIVO CNH DIGITAL (Consulta de Pontos) -->
+        <section class="secao-cinza" style="padding: 60px 0;">
+            <div class="container animar-fade relative-z">
+                <div class="grid-2" style="align-items: center; background: #fff; border-radius: 24px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda);">
+                    
+                    <!-- Coluna 1: Apenas os Textos -->
+                    <div>
+                        <span class="badge" style="background: var(--cor-amarelo); color: var(--cor-preto); margin-bottom: 20px;"><i class="ph-bold ph-magnifying-glass"></i> CONSULTE SUA CNH</span>
+                        <h2 style="font-size: 32px; color: var(--cor-preto); margin-bottom: 20px;">Como saber se minha CNH está suspensa?</h2>
+                        <p style="color: var(--cor-texto); margin-bottom: 20px; font-size: 16px;">
+                            A forma mais rápida e segura de verificar a situação da sua habilitação e a sua pontuação atual é através do aplicativo oficial do governo, a <strong>Carteira Digital de Trânsito (CDT)</strong>.
+                        </p>
+                        <p style="color: var(--cor-texto); margin-bottom: 0; font-size: 16px;">
+                            Baixe o app gratuitamente, faça login com sua conta Gov.br e acesse a aba "Infrações" para ver todos os detalhes do seu prontuário.
+                        </p>
+                    </div>
+                    
+                    <!-- Coluna 2: Imagem do App e Botões agrupados -->
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
+                        
+                        <!-- Imagem da Logo (Agora vem primeiro) -->
+                        <img src="imagens/CNH_do_Brasil.png" alt="Aplicativo Carteira Digital de Trânsito" style="max-width: 250px; height: auto; object-fit: contain;">
+                        
+                        <!-- Botões (Agora ficam abaixo da logo) -->
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; width: 100%;">
+                            <!-- Botão Google Play -->
+                            <a href="https://play.google.com/store/apps/details?id=br.gov.serpro.cnhe" target="_blank" rel="noopener noreferrer" class="btn" style="background: #111; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 8px; flex: 1; min-width: 160px; justify-content: center;">
+                                <i class="ph-fill ph-google-play-logo" style="font-size: 24px;"></i>
+                                <div style="text-align: left; line-height: 1.2;">
+                                    <span style="font-size: 10px; display: block; opacity: 0.8;">DISPONÍVEL NO</span>
+                                    <strong style="font-size: 14px;">Google Play</strong>
+                                </div>
+                            </a>
+                            
+                            <!-- Botão App Store -->
+                            <a href="https://apps.apple.com/br/app/carteira-digital-de-tr%C3%A2nsito/id1275057217" target="_blank" rel="noopener noreferrer" class="btn" style="background: #111; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 8px; flex: 1; min-width: 160px; justify-content: center;">
+                                <i class="ph-fill ph-apple-logo" style="font-size: 24px;"></i>
+                                <div style="text-align: left; line-height: 1.2;">
+                                    <span style="font-size: 10px; display: block; opacity: 0.8;">BAIXAR NA</span>
+                                    <strong style="font-size: 14px;">App Store</strong>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -169,6 +261,7 @@
         </section>
 
         <!-- SEÇÃO INDIVIDUAL: PASSO A PASSO SUSPENSÃO -->
+         <!-- SEÇÃO INDIVIDUAL: PASSO A PASSO SUSPENSÃO -->
         <section class="secao-branca" style="padding: 60px 0;">
             <div class="container">
                 <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
@@ -206,7 +299,6 @@
             </div>
         </section>
 
-        <!-- SEÇÃO INDIVIDUAL: PASSO A PASSO CASSAÇÃO -->
        <!-- SEÇÃO INDIVIDUAL: PASSO A PASSO CASSAÇÃO -->
         <section class="secao-cinza" style="padding: 60px 0;">
             <div class="container">
@@ -232,8 +324,8 @@
                     <!-- Passo 3 -->
                     <div class="card-servico" style="position: relative; padding-top: 40px;">
                         <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-vermelho); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid var(--cor-fundo-base);">3</div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Cursos e Provas</h3>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Será necessário refazer o curso teórico, a prova teórica, as aulas práticas de direção e o exame prático.</p>
+                        <h3 style="font-size: 20px; margin-bottom: 10px;">Provas (Sem Aulas)</h3>
+                        <p style="font-size: 14px; color: var(--cor-texto);">Uma grande vantagem: <strong>não é obrigatório refazer as aulas</strong> teóricas ou práticas. Você passa direto para a prova teórica e, depois, para o exame prático de direção.</p>
                     </div>
                     <!-- Passo 4 -->
                     <div class="card-servico" style="position: relative; padding-top: 40px; border-bottom: 4px solid var(--cor-verde);">
@@ -242,45 +334,12 @@
                         <p style="font-size: 14px; color: var(--cor-texto);">Com aprovação em todas as etapas de reabilitação, uma nova via da sua habilitação será emitida.</p>
                     </div>
                 </div>
-
-                <!-- ALERTA IMPORTANTE SOBRE A CATEGORIA -->
-                <div style="background: rgba(254, 1, 0, 0.05); border: 1px solid rgba(254, 1, 0, 0.2); border-left: 5px solid var(--cor-vermelho); padding: 20px; border-radius: 12px; margin-top: 30px; max-width: 850px; margin-left: auto; margin-right: auto; display: flex; gap: 15px; align-items: flex-start; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
-                    <i class="ph-bold ph-warning-circle" style="font-size: 28px; color: var(--cor-vermelho); flex-shrink: 0; margin-top: 2px;"></i>
-                    <p style="margin: 0; font-size: 15px; color: var(--cor-texto); text-align: left; line-height: 1.6;">
-                        <strong style="color: var(--cor-preto);">Atenção:</strong> Por determinação do Detran, o condutor que teve a habilitação cassada <strong>deve, obrigatoriamente, se reabilitar na mesma categoria</strong> que possuía antes da penalidade. Não é possível alterar ou rebaixar a categoria durante este processo de reabilitação.
-                    </p>
-                </div>
                 
                 <!-- CTA para Cassação -->
                 <div class="text-center" style="margin-top: 40px;">
                     <button class="btn btn-primario btn-wa" style="font-size: 16px;" data-message="Olá! Minha CNH foi cassada e preciso de ajuda para iniciar a reabilitação.">
                         <i class="ph-bold ph-whatsapp-logo"></i> Precisa de ajuda com CNH Cassada? Fale conosco
                     </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="secao-cinza" style="padding: 60px 0;">
-            <div class="container animar-fade">
-                <div style="background: linear-gradient(135deg, #111, #222); border-radius: 24px; padding: 50px; text-align: center; color: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.2); max-width: 800px; margin: 0 auto;">
-                    <h2 style="font-size: 32px; color: #fff; margin-bottom: 10px;">CURSO DE RECICLAGEM ONLINE</h2>
-                    <div style="font-size: 48px; font-weight: 800; color: var(--cor-amarelo); margin: 20px 0;">A partir de R$ 380,00</div>
-                    
-                    <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; font-size: 16px;">
-                        <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Processo simples</li>
-                        <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Atendimento rápido</li>
-                        <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Faça tudo online</li>
-                    </ul>
-                    
-                    <button class="btn btn-primario btn-wa" style="font-size: 20px; padding: 20px 50px; background: var(--cor-verde); width: 100%; max-width: 400px; justify-content: center;" data-message="Olá! Quero me matricular no curso de reciclagem.">
-                        <i class="ph-bold ph-whatsapp-logo"></i> Quero resolver agora
-                    </button>
-                    
-                    <div style="margin-top: 25px; display: flex; justify-content: center; gap: 10px; color: #aaa; font-size: 14px;">
-                        <span><i class="ph-fill ph-star" style="color: var(--cor-amarelo);"></i> Nota máxima no Google</span>
-                        <span>•</span>
-                        <span>Credenciada Detran-SP</span>
-                    </div>
                 </div>
             </div>
         </section>
