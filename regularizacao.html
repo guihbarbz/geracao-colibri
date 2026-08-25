@@ -5,37 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="CNH suspensa ou com excesso de pontos? Faça o curso de reciclagem online e regularize sua CNH com a Geração Colibri.">
     <title>Regularizar CNH Suspensa | Curso de Reciclagem</title>
+    <!-- ======================================================= -->
+    <!-- PACOTE COMPLETO DE FAVICONS E APP ICONS -->
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+    <!-- Se o seu arquivo JSON tiver outro nome (ex: site.webmanifest), ajuste abaixo -->
+    <link rel="manifest" href="imagens/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <!-- ======================================================= -->
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="style.css">
+
+    <!-- ================================================== -->
+    <!-- META PIXEL CODE (COLE AQUI!) -->
+    <!-- ================================================== -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2112868742488481');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2112868742488481&ev=PageView&noscript=1"
+    /></noscript>
+
+    <!-- ================================================== -->
+<!-- GOOGLE TAG (Google Ads) -->
+<!-- ================================================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-620881332"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-620881332');
+</script>
 </head>
 <body>
 
     <header class="header-fixo">
-        <a href="index.html" class="logo">
+        <!-- A logo agora aponta para o topo da Home -->
+        <a href="index.html#hero" class="logo">
             <img src="imagens/logo.png" alt="Ícone Autoescola Geração Colibri" class="logo-img">
             <span class="logo-texto">Geração Colibri</span>
         </a>
-        <button class="menu-mobile-btn" aria-label="Abrir menu"><i class="ph-bold ph-list"></i></button>
+
+        <button class="menu-mobile-btn" aria-label="Abrir menu">
+            <i class="ph-bold ph-list"></i>
+        </button>
+
         <nav class="menu-principal">
             <ul>
-                <li><a href="index.html">Primeira Habilitação</a></li>
-                <li><a href="#" style="color: var(--cor-vermelho); font-weight: 700;">Regularização CNH</a></li>
+                <li class="dropdown">
+                    <a href="#" class="link-dropdown">Primeira Habilitação <i class="ph-bold ph-caret-down icone-seta"></i></a>
+                    <ul class="submenu">
+                        <!-- Links atualizados com o caminho da página inicial -->
+                        <li><a href="index.html#como-funciona">Como funciona</a></li>
+                        <li><a href="index.html#categorias">Categorias</a></li>
+                        <li><a href="index.html#solucoes">Serviços</a></li>
+                        <li><a href="index.html#avaliacoes">Avaliações</a></li>
+                        <li><a href="index.html#faq">Dúvidas</a></li>
+                    </ul>
+                </li>
+                <li><a href="regularizacao.html">Regularização CNH</a></li>
+                
+                <!-- Dica: O briefing pedia para ocultar Cursos e Produtos por enquanto. Se quiser escondê-los temporariamente, basta adicionar style="display: none;" nas tags <li> abaixo -->
                 <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
+                
                 <li><a href="sobre.html">Sobre Nós</a></li>
             </ul>
         </nav>
         <div class="header-actions">
             <button id="btn-dark" class="btn-icone" title="Alternar Tema"><i class="ph-fill ph-moon"></i></button>
-            <button class="btn btn-primario btn-sm btn-wa" data-track="click_whatsapp_top"><i class="ph-bold ph-whatsapp-logo" style="margin-right: 6px;"></i> WhatsApp</button>
+            <button class="btn btn-primario btn-sm btn-wa" data-track="click_whatsapp_top" data-message="Olá! Vim do site e quero informações gerais."><i class="ph-bold ph-whatsapp-logo" style="margin-right: 6px;"></i> WhatsApp</button>
         </div>
     </header>
 
-    <button class="btn-flutuante-wa btn-wa" data-track="click_whatsapp_float">
+    <button class="btn-flutuante-wa btn-wa" data-track="whatsapp_flutuante_reciclagem">
         <i class="ph-fill ph-whatsapp-logo"></i>
     </button>
 
@@ -65,7 +123,7 @@
                             <li style="margin-bottom: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); margin-right: 8px;"></i> Atendimento rápido e suporte completo</li>
                         </ul>
 
-                        <button class="btn btn-primario btn-wa" style="font-size: 18px; padding: 15px 30px;" data-message="Olá! Quero regularizar minha CNH agora.">
+                        <button class="btn btn-primario btn-wa" data-track="whatsapp_reciclagem_hero" style="font-size: 18px; padding: 15px 30px;" data-message="Olá! Quero regularizar minha CNH agora.">
                             <i class="ph-bold ph-whatsapp-logo"></i> Fale agora com nossa equipe
                         </button>
                         <p style="margin-top: 15px; font-size: 14px; color: var(--cor-texto);">Você resolve tudo em um só lugar. Atendimento rápido e suporte completo.</p>
@@ -93,7 +151,7 @@
                         <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Faça tudo online</li>
                     </ul>
                     
-                    <button class="btn btn-primario btn-wa" style="font-size: 20px; padding: 20px 50px; background: var(--cor-verde); width: 100%; max-width: 400px; justify-content: center;" data-message="Olá! Quero me matricular no curso de reciclagem.">
+                    <button class="btn btn-primario btn-wa" data-track="whatsapp_reciclagem_ead" style="font-size: 20px; padding: 20px 50px; background: var(--cor-verde); width: 100%; max-width: 400px; justify-content: center;" data-message="Olá! Quero me matricular no curso de reciclagem.">
                         <i class="ph-bold ph-whatsapp-logo"></i> Quero resolver agora
                     </button>
                     
@@ -173,7 +231,7 @@
                         <span class="badge" style="background: var(--cor-amarelo); color: #000; margin-bottom: 20px;">TRABALHA DIRIGINDO?</span>
                         <h3 style="font-size: 24px; color: var(--cor-preto); margin-bottom: 15px;">Reciclagem Preventiva (EAR)</h3>
                         <p style="color: var(--cor-texto); margin-bottom: 20px;">Motoristas de aplicativo, taxistas e profissionais com EAR podem fazer o curso preventivo ao atingir <strong>30 pontos</strong>, zerando a pontuação e evitando o bloqueio.</p>
-                        <button class="btn-link btn-wa" style="color: var(--cor-preto); font-weight: 700;" data-message="Olá, sou motorista EAR e quero informações sobre a reciclagem preventiva.">Consultar minha CNH agora <i class="ph-bold ph-arrow-right"></i></button>
+                        <button class="btn-link btn-wa" data-track="whatsapp_reciclagem_preventiva" style="color: var(--cor-preto); font-weight: 700;" data-message="Olá, sou motorista EAR e quero informações sobre a reciclagem preventiva.">Consultar minha CNH agora <i class="ph-bold ph-arrow-right"></i></button>
                     </div>
                 </div>
             </div>
@@ -342,7 +400,7 @@
                 
                 <!-- CTA para Cassação -->
                 <div class="text-center" style="margin-top: 40px;">
-                    <button class="btn btn-primario btn-wa" style="font-size: 16px;" data-message="Olá! Minha CNH foi cassada e preciso de ajuda para iniciar a reabilitação.">
+                    <button class="btn btn-primario btn-wa" data-track="whatsapp_cassacao" style="font-size: 16px;" data-message="Olá! Minha CNH foi cassada e preciso de ajuda para iniciar a reabilitação.">
                         <i class="ph-bold ph-whatsapp-logo"></i> Precisa de ajuda com CNH Cassada? Fale conosco
                     </button>
                 </div>
@@ -378,54 +436,105 @@
 
     </main>
 
+    <!-- RODAPÉ CORPORATIVO -->
     <footer class="footer-corporativo">
         <div class="container relative-z">
-            <div class="footer-grid">
+            
+            <!-- Grade de 4 Colunas -->
+            <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
                 
+                <!-- Coluna 1 — Geração Colibri -->
                 <div class="footer-col">
                     <div class="logo" style="margin-bottom: 15px;">
                         <img src="imagens/logo.png" alt="Logo" class="logo-img" style="height: 40px; margin-right: 10px;">
                         <span class="logo-texto" style="font-size: 18px;">Geração Colibri</span>
                     </div>
-                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Formando motoristas conscientes e preparados para o trânsito com a melhor infraestrutura de Guarulhos.</p>
-                    <div class="links-sociais-footer">
+                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;">Há 26 anos ajudando pessoas a conquistarem sua liberdade no trânsito com orientação, segurança e confiança.</p>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 15px; font-weight: 600;">A melhor Autoescola de Guarulhos com o melhor preço da região.</p>
+                    <a href="sobre.html" style="color: var(--cor-destaque-planos); font-weight: 700; text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; transition: 0.2s;">
+                        Conheça nossa história <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Coluna 2 — Acesso Rápido -->
+                <div class="footer-col">
+                    <h3 style="font-size: 18px; margin-bottom: 20px;">Acesso Rápido</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <!-- ATUALIZADO: Adicionado 'index.html' antes do '#' -->
+                        <li><a href="index.html#hero">Primeira Habilitação</a></li>
+                        <li><a href="regularizacao.html">Reciclagem e Regularização</a></li>
+                        <!-- ATUALIZADO: Adicionado 'index.html' antes do '#' -->
+                        <li><a href="index.html#categorias">Adição de Categoria</a></li>
+                        <li><a href="index.html#categorias">Mudança de Categoria</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3 — Fale Conosco -->
+                <div class="footer-col">
+                    <h3 style="font-size: 18px; margin-bottom: 20px;">Fale Conosco</h3>
+                    <ul class="footer-infos" style="list-style: none; color: #666; font-size: 14px; margin-bottom: 20px;">
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="ph-fill ph-map-pin" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
+                            <span>Rua Juazeiro do Norte, 272 – Cumbica, Guarulhos/SP</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">
+                            <i class="ph-fill ph-phone-call" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
+                            <span>(11) 2479-7811</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="ph-fill ph-clock" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
+                            <span>Seg a Sex: 08:30 – 19:00<br>Sábados: 09:00 – 14:00</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primario btn-wa" style="width: 100%; font-size: 14px; padding: 14px; justify-content: center; border-radius: 8px;" data-track="whatsapp_footer" data-message="Olá! Peguei o contato no rodapé do site e gostaria de mais informações.">
+                        <i class="ph-bold ph-whatsapp-logo" style="margin-right: 8px; font-size: 18px;"></i> FALAR PELO WHATSAPP
+                    </button>
+                </div>
+
+                <!-- Coluna 4 — Acompanhe a Geração Colibri -->
+                <div class="footer-col">
+                    <h3 style="font-size: 18px; margin-bottom: 20px;">Acompanhe a Colibri</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Dicas, informações e conteúdos para ajudar você a dirigir melhor e entender tudo sobre sua habilitação.</p>
+                    <div class="links-sociais-footer" style="display: flex; gap: 15px;">
                         <a href="https://www.instagram.com/geracaocolibriautoescola/" target="_blank" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
                         <a href="https://www.facebook.com/geracaocolibri?locale=pt_BR" target="_blank" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
                         <a href="https://www.tiktok.com/@geracaocolibriautoescola?_t=8q3JCMjhUcX&_r=1" target="_blank" aria-label="TikTok"><i class="ph-fill ph-tiktok-logo"></i></a>
                         <a href="https://youtube.com/@geracaocolibriautoescola272?si=tWgFRy-alcleRliJ" target="_blank" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
                     </div>
                 </div>
-
-                <div class="footer-col">
-                    <h3>Acesso Rápido</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Primeira Habilitação</a></li>
-                        <li><a href="regularizacao.html">Regularização de CNH</a></li>
-                        <li><a href="cursos.html">Cursos Especializados</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="sobre.html">Sobre a Autoescola</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Informações Legais</h3>
-                    <ul class="footer-infos" style="list-style: none; color: #666; font-size: 14px;">
-                        <li style="margin-bottom: 10px;"><strong>CNPJ:</strong> 03.594.977/0001-72</li>
-                        <li style="margin-bottom: 10px;"><strong>Credencial Detran-SP:</strong> CENTRO DE FORMAÇÃO DE CONDUTORES -A/B Nº 204</li>
-                        <li style="margin-bottom: 10px;">Rua Juazeiro do Norte, 272 – Cumbica, Guarulhos/SP</li>
-                    </ul>
-                </div>
                 
             </div>
+            
+            <!-- Faixa Institucional Inferior -->
+            <div style="border-top: 1px solid var(--cor-borda); padding: 25px 0 15px 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+                <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                    <span class="badge" style="background: var(--cor-fundo-base); color: var(--cor-texto); border: 1px solid var(--cor-borda); margin: 0; font-size: 12px; box-shadow: none;"><i class="ph-fill ph-shield-check" style="color: var(--cor-verde); margin-right: 6px; font-size: 16px;"></i> Autoescola credenciada pelo DETRAN-SP</span>
+                    <span style="font-size: 13px; color: #888;"><strong>CNPJ:</strong> 03.594.977/0001-72</span>
+                    <span style="font-size: 13px; color: #888;"><strong>Credenciamento:</strong> CFC - A/B Nº 204</span>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="politica-privacidade.html" style="font-size: 13px; color: #888; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='var(--cor-destaque-planos)'" onmouseout="this.style.color='#888'">Política de Privacidade</a>
+                    <a href="termos-uso.html" style="font-size: 13px; color: #888; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='var(--cor-destaque-planos)'" onmouseout="this.style.color='#888'">Termos de Uso</a>
+                </div>
+            </div>
+
         </div>
 
+        <!-- Links Legais e Copyright -->
         <div class="footer-bottom">
             <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-                <p>&copy; 2026 Autoescola Geração Colibri. Todos os direitos reservados.</p>
+                <p>&copy; <span id="ano-copyright"></span> Autoescola Geração Colibri. Todos os direitos reservados.</p>
                 <p>Desenvolvido por <a href="https://linktr.ee/guih.barbz" target="_blank" style="color: var(--cor-destaque-planos); text-decoration: none; font-weight: 600;">Guilherme Barbosa</a></p>
             </div>
-            <p class="disclaimer-bottom">Os valores das taxas estaduais (Detran/Exames) não compõem os pacotes da autoescola e devem ser pagos separadamente.</p>
+            <p class="disclaimer-bottom" style="margin-top: 15px;">Os valores das taxas estaduais (Detran/Exames) não compõem os pacotes da autoescola e devem ser pagos separadamente.</p>
         </div>
+        
+        <!-- Script rápido para atualizar o ano automaticamente -->
+        <script>
+            document.getElementById('ano-copyright').textContent = new Date().getFullYear();
+        </script>
     </footer>
 
     <script src="index.js"></script>

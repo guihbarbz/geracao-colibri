@@ -49,20 +49,14 @@ body.dark-mode .glow-blob { opacity: 0.2; }
 
 /* CABEÇALHO E MENU DROPDOWN */
 .header-fixo { position: fixed; top: 0; width: 100%; height: var(--altura-header); background: var(--cor-branco); display: flex; justify-content: space-between; align-items: center; padding: 0 5%; z-index: 1000; border-bottom: 1px solid var(--cor-borda); transition: background 0.3s; }
-/* NOVA REGRA PARA A LOGO EM IMAGEM */
 .logo-img {
-    height: 150px; /* Aumentado de 32px para 50px */
-    width: auto; /* Mantém a proporção */
-    margin-right: 12px; /* Aumentei um pouquinho o espaço para o texto acompanhar o tamanho */
+    height: 150px;
+    width: auto;
+    margin-right: 12px;
     object-fit: contain;
 }
 .logo-texto { font-family: var(--fonte-titulo); font-weight: 800; font-size: 20px; color: var(--cor-texto); }
-/* Atualize a classe .logo existente */
-.logo { 
-    display: flex; 
-    align-items: center; 
-    text-decoration: none; /* Garante que não haja sublinhado se um dia for um link */
-}
+.logo { display: flex; align-items: center; text-decoration: none; }
 .menu-principal ul { list-style: none; display: flex; gap: 32px; }
 .menu-principal a { text-decoration: none; color: var(--cor-texto); font-weight: 500; font-size: 15px; transition: color 0.2s; }
 .menu-principal a:hover { color: var(--cor-vermelho); }
@@ -104,14 +98,13 @@ body.dark-mode .submenu { background-color: var(--cor-fundo-base); box-shadow: 0
 .texto-branco { color: #FFFFFF !important; }
 .secao-hero h1 { font-size: 48px; margin-bottom: 20px; letter-spacing: -1px; }
 .subheadline.texto-branco { font-size: 20px; margin-bottom: 24px; opacity: 0.9; }
-/* ==========================================
-   LOGO INLINE NO TEXTO
-   ========================================== */
+
+/* LOGO INLINE NO TEXTO */
 .logo-inline {
-    height: 42px; /* Aumentei um pouco para a leitura ficar melhor */
+    height: 42px;
     width: auto;
     vertical-align: middle; 
-    margin-right: 0px; /* Zeramos a margem para colar no texto */
+    margin-right: 0px;
     position: relative;
     top: -2px; 
 }
@@ -125,28 +118,26 @@ body.dark-mode .submenu { background-color: var(--cor-fundo-base); box-shadow: 0
 .btn-secundario-glass { font-family: var(--fonte-texto); font-weight: 600; text-decoration: none; padding: 16px 32px; border-radius: 12px; border: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: all 0.3s ease; background-color: rgba(255, 255, 255, 0.1); color: #FFFFFF !important; border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px); }
 .btn-secundario-glass:hover { background-color: rgba(255, 255, 255, 0.2); transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.1); }
 
-/* ==========================================
-   SELO DE PARCERIA (CNH BRASIL)
-   ========================================== */
+/* SELO DE PARCERIA (CNH BRASIL) */
 .selo-parceria {
     margin-top: 40px;
     display: inline-flex;
     align-items: center;
     gap: 12px;
     padding-top: 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Linha divisória de vidro */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .selo-texto {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.7); /* Texto cinza claro para não brigar com o título principal */
+    color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 600;
 }
 
 .selo-img {
-    height: 35px; /* Aumentado de 35px para 55px */
+    height: 35px;
     width: auto;
     object-fit: contain;
     transition: all 0.3s ease;
@@ -194,34 +185,74 @@ body.dark-mode .plano-titulo { color: var(--cor-branco); }
 .btn-plano.solid:hover { background: #D9531E; }
 .ribbon { position: absolute; top: 25px; right: -35px; background: var(--cor-destaque-planos); color: white; padding: 5px 40px; transform: rotate(45deg); font-size: 12px; font-weight: bold; }
 
-/* AVALIAÇÕES GOOGLE (Rolagem Livre Interativa) */
+/* AVALIAÇÕES GOOGLE */
 .google-header-container { margin-bottom: 40px; }
 .google-titulo { font-size: 24px; font-weight: 800; margin-bottom: 5px; color: var(--cor-preto); }
 .google-estrelas { font-size: 30px; letter-spacing: 5px; margin-bottom: 5px; color: #FBBC05; }
 .google-base { font-size: 14px; color: #555; margin-bottom: 10px; }
 .google-logo { font-size: 32px; font-family: sans-serif; letter-spacing: -1px; }
 
-.scroll-manual { overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; padding: 20px 0 40px 0; cursor: grab; scrollbar-width: none; -ms-overflow-style: none; }
-.scroll-manual::-webkit-scrollbar { display: none; }
-.scroll-manual:active { cursor: grabbing; }
-
-.carrossel-track { display: flex; gap: 24px; width: max-content; }
-.review-card { width: 320px; flex-shrink: 0; background: var(--cor-branco); padding: 24px; border-radius: 16px; border: 1px solid var(--cor-borda); box-shadow: 0 10px 20px rgba(0,0,0,0.03); white-space: normal; text-align: left; user-select: none; }
-.review-header { display: flex; align-items: center; gap: 10px; margin-bottom: 15px; position: relative; }
-.avatar-img img { width: 40px; height: 40px; border-radius: 50%; pointer-events: none;}
-.review-header h4 { font-size: 15px; margin: 0; color: var(--cor-preto); }
-.data-review { font-size: 12px; color: #888; }
-.google-icon-small { position: absolute; right: 0; top: 4px; width: 20px; height: 20px; }
-.google-icon-clean { 
-    position: absolute; 
-    right: 0; 
-    top: 4px; /* Leve recuo para alinhar com o topo do nome */
-    width: 20px; 
-    height: 20px; 
+/* CARROSSEL SUAVE E CONTÍNUO (INFINITE MARQUEE) */
+.carrossel-estatico-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
-.stars-small { font-size: 12px; margin-bottom: 10px; display: flex; gap: 2px; align-items: center; color: #FBBC05; }
-.stars-small span { color: #1A73E8; background: #E8F0FE; border-radius: 50%; width: 14px; height: 14px; display: inline-flex; justify-content: center; align-items: center; font-size: 10px; margin-left: 5px; }
-.review-card p { font-size: 15px; }
+
+.carrossel-trilho {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: rolagem-continua 35s linear infinite;
+}
+
+.carrossel-trilho:hover {
+    animation-play-state: paused;
+}
+
+.card-depoimento {
+    width: 350px;
+    background: var(--cor-fundo-base);
+    border: 1px solid var(--cor-borda);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: normal;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-depoimento:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-amarelo);
+}
+
+.card-depoimento .estrelas {
+    color: #FBBC05;
+    font-size: 16px;
+    margin-bottom: 15px;
+    display: flex;
+    gap: 4px;
+}
+
+.card-depoimento .texto-depoimento {
+    color: var(--cor-texto);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+@keyframes rolagem-continua {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
 /* FAQ ACCORDION */
 .faq-container { max-width: 800px; margin: 0 auto; }
@@ -235,52 +266,22 @@ body.dark-mode .plano-titulo { color: var(--cor-branco); }
 .faq-item.ativo .faq-icone { transform: rotate(45deg); }
 
 /* FOOTER & EXTRAS */
-/* ==========================================
-   FOOTER CORPORATIVO
-   ========================================== */
 .footer-corporativo { background: var(--cor-branco); padding-top: 60px; border-top: 1px solid var(--cor-borda); position: relative; overflow: hidden; }
 
-/* ==========================================
-   RODAPÉ NO MODO ESCURO
-   ========================================== */
 body.dark-mode .footer-corporativo {
-    background-color: #0f0f0f; /* Fundo bem escuro para o rodapé */
-    border-top-color: rgba(255, 255, 255, 0.1); /* Suaviza a linha divisória */
+    background-color: #0f0f0f;
+    border-top-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Clareia os títulos das colunas (Acesso Rápido, Informações, etc) */
-body.dark-mode .footer-col h3 {
-    color: #ffffff;
-}
-
-/* Clareia os textos descritivos forçando a substituição da cor do HTML */
+body.dark-mode .footer-col h3 { color: #ffffff; }
 body.dark-mode .footer-col p,
-body.dark-mode .footer-infos {
-    color: #cccccc !important; 
-}
-
-/* Remove o sublinhado branco dos ícones das redes sociais */
-.links-sociais-footer a {
-    text-decoration: none !important;
-}
-
-body.dark-mode .footer-infos li {
-    color: #cccccc;
-}
-
-/* Clareia as cores dos links do menu do rodapé */
-body.dark-mode .footer-links a {
-    color: #bbbbbb;
-}
-
-/* Garante que o link continue mudando de cor ao passar o mouse */
-body.dark-mode .footer-links a:hover {
-    color: var(--cor-destaque-planos);
-}
-
-/* Ajusta a barra de direitos autorais e assinatura no final da página */
+body.dark-mode .footer-infos { color: #cccccc !important; }
+.links-sociais-footer a { text-decoration: none !important; }
+body.dark-mode .footer-infos li { color: #cccccc; }
+body.dark-mode .footer-links a { color: #bbbbbb; }
+body.dark-mode .footer-links a:hover { color: var(--cor-destaque-planos); }
 body.dark-mode .footer-bottom {
-    background-color: #0a0a0a; /* Fundo ligeiramente mais escuro que o rodapé */
+    background-color: #0a0a0a;
     border-top-color: rgba(255, 255, 255, 0.1);
     color: #888888;
 }
@@ -300,18 +301,7 @@ body.dark-mode .footer-bottom {
 .footer-bottom { border-top: 1px solid var(--cor-borda); padding: 20px 0; font-size: 13px; color: #888; background-color: var(--cor-fundo-base); }
 .disclaimer-bottom { text-align: center; max-width: 800px; margin: 15px auto 0; font-size: 11px; opacity: 0.7; }
 
-/* Mobile do Footer */
-@media (max-width: 768px) {
-    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
-    .footer-bottom .container { flex-direction: column; text-align: center; }
-}
-.links-footer { 
-    display: flex; 
-    justify-content: center; 
-    gap: 24px; 
-    margin: 20px 0; 
-    flex-wrap: wrap; /* Nova propriedade para garantir quebra de linha no mobile */
-}
+.links-footer { display: flex; justify-content: center; gap: 24px; margin: 20px 0; flex-wrap: wrap; }
 .links-footer a { color: var(--cor-texto); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; transition: 0.2s;}
 .links-footer a:hover { color: var(--cor-destaque-planos); }
 .disclaimer { color: #888; font-size: 12px; margin-top: 32px; max-width: 600px; margin-left: auto; margin-right: auto; }
@@ -323,11 +313,9 @@ body.dark-mode .footer-bottom {
 .animar-fade { opacity: 0; transform: translateY(40px); transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); will-change: opacity, transform; }
 .animar-fade.visivel { opacity: 1; transform: translateY(0); }
 
-/* ==========================================
-   MENU MOBILE (HAMBÚRGUER)
-   ========================================== */
+/* MENU MOBILE (HAMBÚRGUER) */
 .menu-mobile-btn {
-    display: none; /* Fica escondido no PC */
+    display: none;
     background: none;
     border: none;
     font-size: 32px;
@@ -336,9 +324,7 @@ body.dark-mode .footer-bottom {
     transition: color 0.3s;
 }
 
-/* ==========================================
-   BANNER DICA (APLICATIVO)
-   ========================================== */
+/* BANNER DICA (APLICATIVO) */
 .banner-dica {
     background: linear-gradient(135deg, var(--cor-fundo-base), #ffffff);
     border-left: 5px solid var(--cor-amarelo);
@@ -353,97 +339,37 @@ body.dark-mode .footer-bottom {
     max-width: 900px;
 }
 
-/* Ajuste do degradê no Modo Escuro */
 body.dark-mode .banner-dica {
-    /* Troca o #ffffff por um cinza bem escuro para manter a leitura perfeita */
     background: linear-gradient(135deg, var(--cor-fundo-base), rgba(255, 255, 255, 0.05));
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* ==========================================
-   SEÇÃO: PROVA VISUAL DE SUCESSO
-   ========================================== */
-.prova-visual-container {
-    padding-bottom: 20px;
-}
-
-.prova-visual-foto-showcase {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
+/* SEÇÃO: PROVA VISUAL DE SUCESSO */
+.prova-visual-container { padding-bottom: 20px; }
+.prova-visual-foto-showcase { display: flex; justify-content: center; align-items: center; width: 100%; }
 .prova-visual-card {
-    max-width: 600px; /* Reduzido de 850px para 600px em desktop para evitar a estranheza */
+    max-width: 600px;
     width: 100%;
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-    border: 10px solid #fff; /* Mantemos a borda estilo 'quadro' */
+    border: 10px solid #fff;
 }
+.prova-visual-imagem { width: 100%; height: auto; display: block; }
 
-.prova-visual-imagem {
-    width: 100%;
-    height: auto;
-    display: block;
-    /* object-fit: cover; - Removi para evitar o corte nas bordas e mostrar toda a mesa */
-}
-
-/* ==========================================
-   CORREÇÃO DE BARRA INFERIOR INDEVIDA NAS IMAGENS
-   ========================================== */
-
-/* Regra base para ambos os contêineres de imagem */
-.div-recorte-base {
-    width: 100%;
-    height: 100%;
-    border-radius: 24px;
-    overflow: hidden; /* Habilita o recorte */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* 1. Recorte do Carro Branco (image_22.png) */
-.img-carro {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 350px;
-    
-    /* A mágica acontece aqui: 
-       puxa o rodapé do carro para baixo, escondendo a barra */
-    margin-bottom: -15px !important; 
-    position: relative; /* Garante que a margem negativa funcione */
-    z-index: 1; /* Previne que o z-index de outros elementos interfira */
-}
-
-/* 2. Recorte do Instrutor (image_23.png) */
-.img-instrutor {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    min-height: 350px;
-    
-    /* Mesma técnica: puxa para baixo para esconder a barra */
-    margin-bottom: -15px !important; 
-    position: relative;
-    z-index: 1;
-}
-
-/* Responsividade para mobile */
-@media (max-width: 768px) {
-    .prova-visual-card {
-        max-width: 90% ; /* Um pouco menor para mobile */
-        border: 5px solid #fff; /* Borda mais fina no celular */
-    }
-}
+/* CORREÇÃO DE BARRA INFERIOR INDEVIDA NAS IMAGENS */
+.div-recorte-base { width: 100%; height: 100%; border-radius: 24px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.img-carro { width: 100%; height: 100%; object-fit: cover; min-height: 350px; margin-bottom: -15px !important; position: relative; z-index: 1; }
+.img-instrutor { width: 100%; height: 100%; object-fit: cover; min-height: 350px; margin-bottom: -15px !important; position: relative; z-index: 1; }
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
-/* MOBILE RESPONSIVO */
+/* ==========================================
+   MOBILE RESPONSIVO (UNIFICADO)
+   ========================================== */
 @media (max-width: 992px) {
     .secao-hero { padding: 100px 0 60px 0; }
     .hero-content { margin: 0 auto; text-align: center; }
@@ -462,19 +388,30 @@ body.dark-mode .banner-dica {
     .passo-jornada::before { left: 20px; transform: translate(-50%, -50%); }
     .passo-conteudo { width: calc(100% - 50px); }
 
-    /* 1. Limpeza do Header no Celular */
-    .logo-texto { display: none; } /* Esconde o texto redundante */
-    .logo-img { height: 40px; } /* Diminui a logo levemente para caber bem */
-    .header-actions .btn-primario { display: none; } /* Esconde o WA do header, pois já tem o flutuante */
+    /* Força o texto "Geração Colibri" a aparecer do lado do ícone sem quebrar */
+    .logo-texto {
+        display: inline-block !important;
+        font-size: 15px !important;
+        font-weight: 700;
+        white-space: nowrap;
+    }
+    .logo { display: flex; align-items: center; gap: 6px; }
+    .logo-img { height: 50px !important; width: auto; }
     
-    /* 2. Mostra o botão hambúrguer */
+    .header-actions .btn-primario { display: none; }
     .menu-mobile-btn { display: block; }
 
-    /* 3. Reorganiza a ordem dos itens (Logo -> DarkMode -> Hambúrguer) */
+    /* Reorganiza o Header para o Menu Hambúrguer ficar na extrema direita */
     .header-fixo { justify-content: space-between; gap: 10px; }
-    .header-actions { margin-left: auto; margin-right: 10px; }
+    .header-fixo .logo { order: 1; }
+    .header-fixo .header-actions {
+        order: 2;
+        margin-left: auto !important;
+        margin-right: 15px;
+    }
+    .header-fixo .menu-mobile-btn { order: 3; }
 
-    /* 4. Transforma o Menu numa gaveta oculta */
+    /* Transforma o Menu numa gaveta oculta */
     .menu-principal {
         display: flex;
         position: absolute;
@@ -484,27 +421,16 @@ body.dark-mode .banner-dica {
         background-color: var(--cor-branco);
         flex-direction: column;
         padding: 0;
-        max-height: 0; /* Escondido por padrão */
+        max-height: 0;
         overflow: hidden;
         transition: max-height 0.4s ease-in-out, padding 0.4s ease-in-out;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         z-index: 999;
     }
 
-    /* Classe ativada pelo JS para descer a gaveta */
-    .menu-principal.ativo {
-        max-height: 600px; 
-        padding: 20px 0;
-    }
+    .menu-principal.ativo { max-height: 600px; padding: 20px 0; }
+    .menu-principal ul { flex-direction: column; align-items: center; gap: 15px; width: 100%; }
 
-    .menu-principal ul {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        width: 100%;
-    }
-
-    /* O dropdown também precisa se adaptar para não quebrar a tela */
     .submenu {
         position: relative;
         top: 0;
@@ -518,4 +444,68 @@ body.dark-mode .banner-dica {
 
     body.dark-mode .menu-principal { background-color: var(--cor-fundo-base); }
     body.dark-mode .submenu { background-color: rgba(255,255,255,0.05); }
+    
+    /* Responsivo dos cards de depoimento */
+    .card-depoimento { width: 280px; padding: 20px; }
+    .carrossel-trilho { gap: 15px; animation-duration: 55s; }
+    
+    .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+    .footer-bottom .container { flex-direction: column; text-align: center; }
+}
+
+/* ==========================================
+   BANNER DE COOKIES
+   ========================================== */
+.cookie-banner {
+    position: fixed;
+    bottom: -100%; /* Começa escondido para animar */
+    left: 0;
+    width: 100%;
+    background-color: var(--cor-branco);
+    border-top: 1px solid var(--cor-borda);
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.1);
+    z-index: 9999;
+    padding: 20px 0;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.cookie-banner.mostrar {
+    bottom: 0;
+}
+
+.cookie-content {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.cookie-text {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+    min-width: 300px;
+}
+
+.cookie-text p {
+    margin: 0;
+    font-size: 13px;
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+.cookie-text a {
+    color: var(--cor-destaque-planos);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+body.dark-mode .cookie-banner {
+    background-color: #1a1a1a;
+    box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
 }

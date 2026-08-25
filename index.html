@@ -6,6 +6,16 @@
     <meta name="description" content="Autoescola Geração Colibri em Guarulhos. Tire sua Primeira Habilitação, CNH Brasil, Adição e Reciclagem. Pacotes em até 6x.">
     <title>Autoescola em Guarulhos | Geração Colibri – CNH Brasil</title>
     
+    <!-- ======================================================= -->
+    <!-- PACOTE COMPLETO DE FAVICONS E APP ICONS -->
+    <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+    <link rel="manifest" href="imagens/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    <!-- ======================================================= -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -13,11 +23,42 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
     <link rel="stylesheet" href="style.css">
+
+    <!-- ================================================== -->
+    <!-- META PIXEL CODE (COLE AQUI!) -->
+    <!-- ================================================== -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2112868742488481');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2112868742488481&ev=PageView&noscript=1"
+    /></noscript>
+
+    <!-- ================================================== -->
+<!-- GOOGLE TAG (Google Ads) -->
+<!-- ================================================== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-620881332"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-620881332');
+</script>
 </head>
 <body>
 
     <header class="header-fixo">
-        <a href="#hero" class="logo">
+        <!-- A logo agora aponta para o topo da Home -->
+        <a href="index.html#hero" class="logo">
             <img src="imagens/logo.png" alt="Ícone Autoescola Geração Colibri" class="logo-img">
             <span class="logo-texto">Geração Colibri</span>
         </a>
@@ -31,16 +72,20 @@
                 <li class="dropdown">
                     <a href="#" class="link-dropdown">Primeira Habilitação <i class="ph-bold ph-caret-down icone-seta"></i></a>
                     <ul class="submenu">
-                        <li><a href="#como-funciona">Como funciona</a></li>
-                        <li><a href="#categorias">Categorias</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#avaliacoes">Avaliações</a></li>
-                        <li><a href="#faq">Dúvidas</a></li>
+                        <!-- Links atualizados com o caminho da página inicial -->
+                        <li><a href="index.html#como-funciona">Como funciona</a></li>
+                        <li><a href="index.html#categorias">Categorias</a></li>
+                        <li><a href="index.html#solucoes">Serviços</a></li>
+                        <li><a href="index.html#avaliacoes">Avaliações</a></li>
+                        <li><a href="index.html#faq">Dúvidas</a></li>
                     </ul>
                 </li>
                 <li><a href="regularizacao.html">Regularização CNH</a></li>
+                
+                <!-- Dica: O briefing pedia para ocultar Cursos e Produtos por enquanto. Se quiser escondê-los temporariamente, basta adicionar style="display: none;" nas tags <li> abaixo -->
                 <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
+                
                 <li><a href="sobre.html">Sobre Nós</a></li>
             </ul>
         </nav>
@@ -61,45 +106,210 @@
         </div>
     </div>
 
-    <button class="btn-flutuante-wa btn-wa" data-track="click_whatsapp_float" data-message="Olá! Estava navegando no site e preciso de ajuda.">
+    <button class="btn-flutuante-wa btn-wa" data-track="whatsapp_cabecalho" data-message="Olá! Estava navegando no site e preciso de ajuda.">
         <i class="ph-fill ph-whatsapp-logo"></i>
     </button>
 
     <main>
-        <section id="hero" class="secao-hero secao-ancora" style="background-image: url('imagens/Dois\ Carros\ de\ Frente.jpg');">
-            <div class="glow-blob blob-hero"></div>
+        <!-- BLOCO 1: PRIMEIRA DOBRA (HÍBRIDA - ESTILO ANTIGO + NOVA OFERTA) -->
+        <section id="hero" class="secao-hero secao-ancora" style="background-image: url('imagens/Aula.JPG');">
+            <!-- Mantemos o gradiente escuro que você gostava -->
             <div class="hero-overlay-gradiente"></div>
             
             <div class="container hero-container relative-z">
-                <div class="hero-content animar-fade">
-                    <span class="badge"><i class="ph-fill ph-medal" style="margin-right: 4px;"></i> 26 anos • Referência em Guarulhos</span>
-                    <h1 class="texto-branco">Tire sua CNH na Autoescola referência em Guarulhos</h1>
-                    <p class="subheadline texto-branco">
-                        <img src="imagens/CNH_do_Brasil.png" alt="CNH Brasil" class="logo-inline"> <strong>com mais flexibilidade, mas sem abrir mão do preparo de verdade.</strong> Aqui você inicia com 2 aulas avaliativas e, a partir do seu desempenho, seguimos com o pacote ideal para você — sem suposição, sem desperdício e com foco real na aprovação.
-                    </p>
+                <!-- O grid-2 vai dividir a tela. A coluna vazia na direita vai deixar a foto de fundo brilhar -->
+                <div class="grid-2" style="align-items: center;">
                     
-                    <ul class="lista-check texto-branco">
-                        <li><i class="ph-bold ph-check icone-check"></i> Melhor preço + condições facilitadas</li>
-                        <li><i class="ph-bold ph-check icone-check"></i> Suporte do início ao fim do processo</li>
-                        <li><i class="ph-bold ph-check icone-check"></i> Veículo incluso no exame prático</li>
-                    </ul>
-                    
-                    <p class="micro-prova bg-glass"><i class="ph-fill ph-star text-amarelo"></i> Nota 4,9 no Google • +300 avaliações • 20 mil no Instagram</p>
+                    <!-- Lado Esquerdo: Textos + Card de Oferta -->
+                    <div class="hero-content animar-fade" style="max-width: 100%;">
+                        
+                        <!-- Título e Texto em branco para contrastar com o fundo escuro -->
+                        <h1 class="texto-branco" style="font-size: 44px; margin-bottom: 20px; line-height: 1.1; letter-spacing: -1px;">A melhor Autoescola de Guarulhos com o melhor preço da região.</h1>
+                        <p class="subheadline texto-branco" style="font-size: 17px; margin-bottom: 30px; opacity: 0.9;">
+                            Tire sua CNH com tranquilidade, suporte completo e acompanhamento do início ao fim. Aqui você não precisa descobrir sozinho como funciona o processo.
+                        </p>
+                        
+                        <!-- Card de Oferta (Design Premium) -->
+                        <div style="background: var(--cor-branco); padding: 40px; border-radius: 24px; box-shadow: 0 25px 50px rgba(0,0,0,0.3); position: relative; max-width: 500px; border: 1px solid var(--cor-borda);">
+                            
+                            <!-- Badge Flutuante Premium -->
+                            <span style="position: absolute; top: -16px; left: 40px; background: linear-gradient(90deg, var(--cor-amarelo), #FFC107); color: #000; font-weight: 800; font-size: 13px; padding: 8px 20px; border-radius: 30px; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: 0 8px 15px rgba(254, 221, 0, 0.3);">Plano Básico</span>
+                            
+                            <h3 style="font-size: 22px; margin: 10px 0 20px 0; color: var(--cor-preto); font-weight: 800;">O plano ideal para começar sua jornada</h3>
+                            
+                            <!-- Área de Preço Destacada (Inner Card) -->
+                            <div style="background: var(--cor-fundo-base); padding: 25px; border-radius: 16px; margin-bottom: 25px; border: 1px solid var(--cor-borda); position: relative; overflow: hidden;">
+                                <!-- Detalhe visual lateral -->
+                                <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--cor-verde);"></div>
+                                
+                                <p style="font-size: 13px; color: var(--cor-texto); text-transform: uppercase; font-weight: 700; margin-bottom: 5px; letter-spacing: 1px;">Categoria B (Carro)</p>
+                                <div style="display: flex; align-items: baseline; gap: 8px; margin-bottom: 5px;">
+                                    <span style="font-size: 48px; font-weight: 800; color: var(--cor-verde); letter-spacing: -2px; line-height: 1;">R$ 499</span>
+                                    <span style="font-size: 16px; color: var(--cor-texto); font-weight: 600;">à vista</span>
+                                </div>
+                                <p style="font-size: 15px; color: var(--cor-texto); margin-bottom: 0; font-weight: 500;">ou 6x de R$ 89 sem juros</p>
+                            </div>
+                            
+                            <p style="font-weight: 700; font-size: 15px; margin-bottom: 15px; color: var(--cor-preto);">O que está incluso no pacote:</p>
+                            
+                            <ul class="lista-check" style="margin-bottom: 30px; color: var(--cor-texto); font-size: 15px;">
+                                <li style="margin-bottom: 12px; align-items: flex-start;"><i class="ph-fill ph-check-circle" style="color: var(--cor-whatsapp); font-size: 22px; margin-top: -2px;"></i> <span><strong>2 aulas práticas</strong> + Matrícula e Material</span></li>
+                                <li style="margin-bottom: 12px; align-items: flex-start;"><i class="ph-fill ph-check-circle" style="color: var(--cor-whatsapp); font-size: 22px; margin-top: -2px;"></i> <span>Suporte completo e agendamentos</span></li>
+                                <li style="margin-bottom: 0; align-items: flex-start;"><i class="ph-fill ph-check-circle" style="color: var(--cor-whatsapp); font-size: 22px; margin-top: -2px;"></i> <span>LADV e Veículo para o exame prático</span></li>
+                            </ul>
+                            
+                            <button class="btn btn-primario btn-wa" style="width: 100%; font-size: 16px; font-weight: 700; justify-content: center; padding: 20px; border-radius: 14px; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3); text-transform: uppercase; letter-spacing: 1px;" data-track="whatsapp_primeira_habilitacao" data-message="Olá! Quero começar minha CNH no Plano Básico de R$ 499.">
+                                <i class="ph-bold ph-whatsapp-logo" style="margin-right: 10px; font-size: 24px;"></i> QUERO COMEÇAR AGORA
+                            </button>
+                        </div>
 
-                        <div class="botoes-grupo">
-                            <button class="btn btn-primario btn-wa" data-track="click_whatsapp_hero" data-message="Olá! Vim do site e quero começar minha CNH.">CHAMAR NO WHATSAPP AGORA</button>
-                            <a href="#como-funciona" class="btn-secundario-glass">VER COMO FUNCIONA</a>
-                        </div>
-            
-                        <div class="selo-parceria">
-                            <span class="selo-texto">Credenciada Oficial:</span>
-                            <img src="imagens/CNH_do_Brasil.png" alt="Programa CNH do Brasil" class="selo-img">
-                        </div>
+                        <!-- Link Adicional em Branco/Amarelo -->
+                        <p style="margin-top: 20px; font-size: 14px; color: rgba(255,255,255,0.9);">
+                            Quer tirar habilitação de Moto ou Carro + Moto?<br>
+                            <a href="#categorias" style="color: var(--cor-amarelo); font-weight: 700; text-decoration: none; margin-top: 5px; display: inline-block;">CONHEÇA TODAS AS OPÇÕES <i class="ph-bold ph-arrow-right"></i></a>
+                        </p>
                     </div>
+                    
+                    <!-- Lado Direito: Apenas uma div vazia para reservar o espaço e deixar a imagem de fundo aparecer -->
+                    <div class="hero-blank-space"></div>
+                    
                 </div>
             </div>
         </section>
 
+       <!-- FAIXA DE CONTINUIDADE (Bloco 1) - Estilo Editorial Limpo -->
+        <section class="secao-branca" style="padding: 80px 0; border-bottom: 1px solid var(--cor-borda); overflow: hidden;">
+            <div class="container animar-fade relative-z">
+                
+                <div class="grid-2" style="align-items: center; gap: 60px;">
+                    
+                    <!-- Lado Esquerdo: Texto (Sem caixas, respirando no layout) -->
+                    <div style="padding-right: 20px;">
+                        <span class="subtitulo-laranja" style="margin-bottom: 15px; display: inline-block;">SUPORTE COMPLETO</span>
+                        
+                        <h2 class="titulo-secao" style="font-size: 38px; color: var(--cor-preto); margin-bottom: 25px; line-height: 1.15; letter-spacing: -1px;">
+                            Não sabe por onde começar?<br>A gente sabe.
+                        </h2>
+                        
+                        <p style="font-size: 17px; color: var(--cor-texto); margin-bottom: 25px; line-height: 1.6;">
+                            Exames, taxas, agendamentos, documentos, LADV, aulas, prova prática... você não precisa aprender tudo isso sozinho para tirar sua CNH.
+                        </p>
+                        
+                        <!-- Destaque lateral sutil -->
+                        <div style="border-left: 3px solid var(--cor-amarelo); padding-left: 20px; margin-top: 30px;">
+                            <p style="font-size: 17px; color: var(--cor-preto); font-weight: 800; margin-bottom: 8px;">Na Geração Colibri, você tem suporte do início ao fim.</p>
+                            <p style="font-size: 15px; color: var(--cor-texto); margin-bottom: 0; line-height: 1.5;">Nossa equipe orienta você em cada etapa para tornar o processo mais simples, organizado e tranquilo.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Lado Direito: Imagem com bordas suaves e sombra premium -->
+                    <div style="position: relative;">
+                        <!-- Elemento decorativo atrás da imagem -->
+                        <div style="position: absolute; top: 20px; right: -20px; bottom: -20px; left: 20px; background: rgba(254, 221, 0, 0.15); border-radius: 24px; z-index: 0;"></div>
+                        
+                        <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1); position: relative; z-index: 1;">
+                            <!-- Lembrete: Trocar pela foto de ATENDIMENTO no balcão -->
+                            <img src="imagens/IMG_9152.jpg" alt="Atendimento e suporte na Autoescola Geração Colibri" style="width: 100%; height: auto; display: block; object-fit: cover;">
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </section>
+
+        <!-- BLOCO 2 — AUTORIDADE + PROVA SOCIAL -->
+        <section id="avaliacoes" class="secao-branca secao-ancora" style="padding: 80px 0;">
+            <div class="container animar-fade relative-z">
+                
+                <div class="text-center" style="max-width: 800px; margin: 0 auto 50px auto;">
+                    <h2 class="titulo-secao" style="margin-bottom: 20px;">Você não precisa acreditar só no que a gente diz. Veja o que nossos alunos dizem sobre nós.</h2>
+                    <p style="font-size: 16px; color: var(--cor-texto);">A Geração Colibri construiu sua história em Guarulhos acompanhando alunos de verdade, todos os dias, em uma das decisões mais importantes da vida: conquistar a liberdade de dirigir.</p>
+                </div>
+
+                <div class="google-header-container text-center" style="margin-bottom: 40px;">
+                    <h2 class="google-titulo">EXCELENTE</h2>
+                    <div class="google-estrelas">
+                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+                    </div>
+                    
+<p class="google-base" style="color: var(--cor-texto); margin-top: 10px;">Com base em <strong style="color: var(--cor-preto);">1.177 avaliações</strong> reais de alunos que viveram a experiência Geração Colibri.</p>
+                    <a href="#" target="_blank" class="btn btn-primario" style="margin-top: 15px; background-color: #1A73E8; padding: 12px 24px; border-radius: 8px;">
+                        <i class="ph-bold ph-google-logo" style="margin-right: 8px;"></i> VER AVALIAÇÕES NO GOOGLE
+                    </a>
+                </div>
+                
+                <!-- 3 Depoimentos (Flexbox que permite scroll no mobile e fica fixo no PC) -->
+                <div class="scroll-manual" style="padding: 10px 0; display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory;">
+                        
+                    <!-- Avaliação 1: Experiência Completa -->
+                    <div class="review-card" style="flex: 1; min-width: 320px; scroll-snap-align: start;">
+                        <div class="review-header">
+                            <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Lucas+Dantas&background=0D8ABC&color=fff&rounded=true" alt="Avatar"></div>
+                            <div>
+                                <h4 style="color: var(--cor-preto);">Lucas Dantas</h4>
+                                <span class="data-review">Há 3 dias</span>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
+                        </div>
+                        <div class="stars-small"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span></div>
+                        <p>"Tive uma experiência muito boa e tranquila desde o primeiro dia do CFC até a conclusão do exame prático. Equipe e professores muito atenciosos e prontos para ajudar!"</p>
+                    </div>
+
+                    <!-- Avaliação 2: Instrutor e Aulas -->
+                    <div class="review-card" style="flex: 1; min-width: 320px; scroll-snap-align: start;">
+                        <div class="review-header">
+                            <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Aline+Lima+Bergo&background=F26522&color=fff&rounded=true" alt="Avatar"></div>
+                            <div>
+                                <h4 style="color: var(--cor-preto);">Aline Lima Bergo</h4>
+                                <span class="data-review">Há 5 dias</span>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
+                        </div>
+                        <div class="stars-small"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span></div>
+                        <p>"Nas aulas práticas, tive o instrutor Ângelo. Sua paciência e dedicação fizeram toda a diferença. O atendimento também foi muito agradável, especialmente pelas meninas da recepção."</p>
+                    </div>
+
+                    <!-- Avaliação 3: Atendimento e Aprovação -->
+                    <div class="review-card" style="flex: 1; min-width: 320px; scroll-snap-align: start;">
+                        <div class="review-header">
+                            <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Karol+Paiva&background=4285F4&color=fff&rounded=true" alt="Avatar"></div>
+                            <div>
+                                <h4 style="color: var(--cor-preto);">Karol Paiva</h4>
+                                <span class="data-review">Há 6 dias</span>
+                            </div>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
+                        </div>
+                        <div class="stars-small"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span></div>
+                        <p>"Queria agradecer a todos os funcionários da Colibri, sem dúvida foi a melhor escolha que fiz! As meninas da recepção são incríveis e super me ajudaram, e os instrutores a mesma coisa."</p>
+                    </div>
+
+                </div>
+                
+                <!-- Faixa de Autoridade -->
+                <div style="margin-top: 60px; background: var(--cor-fundo-base); border-radius: 24px; border: 1px solid var(--cor-borda); overflow: hidden; display: flex; flex-wrap: wrap; box-shadow: 0 15px 30px rgba(0,0,0,0.05);">
+                    <div style="flex: 1; min-width: 300px; padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+                        <h3 style="font-size: 24px; color: var(--cor-preto); margin-bottom: 15px;">Preço bom não precisa significar abrir mão da qualidade.</h3>
+                        <p style="font-size: 15px; color: var(--cor-texto); margin-bottom: 25px;">Na Geração Colibri, você encontra preço competitivo, estrutura, experiência e uma equipe que acompanha seu processo de verdade. É assim que construímos nossa reputação em Guarulhos há mais de duas décadas.</p>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div>
+                                <span style="display: block; font-size: 32px; font-weight: 800; color: var(--cor-destaque-planos); line-height: 1;">26</span>
+                                <span style="font-size: 13px; color: var(--cor-texto); font-weight: 600; text-transform: uppercase;">Anos de Experiência</span>
+                            </div>
+                            <div>
+                                <span style="display: block; font-size: 32px; font-weight: 800; color: var(--cor-destaque-planos); line-height: 1;">1.177+</span>
+                                <span style="font-size: 13px; color: var(--cor-texto); font-weight: 600; text-transform: uppercase;">Avaliações Reais</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nota: Para esta div, você precisa usar uma foto da equipe. Substitua 'equipe.jpg' pelo arquivo correto -->
+                    <div style="flex: 1; min-width: 300px; background: url('imagens/fachada.jpg') center/cover; min-height: 350px;">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
         <section id="como-funciona" class="secao-cinza secao-ancora">
             <div class="container relative-z">
                 <h2 class="titulo-secao text-center">Passo a Passo da Primeira Habilitação</h2>
@@ -133,7 +343,7 @@
                                 <div class="passo-marcador">3</div>
                                 <h3>Biometria + Exames</h3>
                             </div>
-                            <p>Orientação completa para: biometria, psicotécnico e exame médico.</p>
+                            <p>Orientação completa para: biometria, exame médico, psicotécnico e toxicológico.</p>
                         </div>
                     </div>
 
@@ -207,7 +417,7 @@
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Aulas práticas personalizadas</li>
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Suporte até a emissão da PPD</li>
                         </ul>
-                        <button class="btn-plano outline btn-wa" data-message="Olá, quero informações sobre a Categoria A.">Quero Categoria A <i class="ph-bold ph-arrow-right"></i></button>
+                        <a href="#" class="btn" style="display: block; text-align: center; padding: 15px; border: 2px solid #F26522; color: #F26522; border-radius: 8px; font-weight: 700; text-decoration: none; text-transform: uppercase;">Quero esta Categoria</a>
                     </div>
 
                     <div class="plano-card">
@@ -222,7 +432,7 @@
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Aulas práticas com veículos novos</li>
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Suporte até a emissão da PPD</li>
                         </ul>
-                        <button class="btn-plano outline btn-wa" data-message="Olá, quero informações sobre a Categoria B.">Quero Categoria B <i class="ph-bold ph-arrow-right"></i></button>
+                       <a href="#" class="btn" style="display: block; text-align: center; padding: 15px; border: 2px solid #F26522; color: #F26522; border-radius: 8px; font-weight: 700; text-decoration: none; text-transform: uppercase;">Quero esta Categoria</a>
                     </div>
 
                     <div class="plano-card destaque-plano">
@@ -236,35 +446,160 @@
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Uma matrícula, duas habilitações</li>
                             <li><i class="ph-bold ph-check icone-check-plano"></i> Suporte premium até a PPD</li>
                         </ul>
-                        <button class="btn-plano solid btn-wa" data-message="Olá, quero informações sobre o Pacote Categoria AB.">Quero Categoria AB <i class="ph-bold ph-arrow-right"></i></button>
+                        <a href="#" class="btn" style="display: block; text-align: center; padding: 15px; background-color: #F26522; color: #ffffff; border-radius: 8px; font-weight: 700; text-decoration: none; text-transform: uppercase;">Quero a Categoria AB</a>
                     </div>
                 </div>
                 <p class="text-center" style="margin-top: 30px; font-weight: 700; color: #7B194B;">Consulte condições especiais para pagamento parcelado.</p>
             </div>
         </section>
 
-        <section id="servicos" class="secao-cinza secao-ancora">
+        <!-- BLOCO 3: RECICLAGEM DA CNH (Estilo Dark Section Suave com Marca D'água) -->
+        <section id="reciclagem" class="secao-ancora" style="background-color: #1c1c1c; padding: 100px 0; overflow: hidden; position: relative; border-top: 1px solid var(--cor-borda);">
+            
+            <!-- Marca D'água da Logo (Maior e deslocada para a direita) -->
+            <div style="position: absolute; top: 50%; left: 75%; transform: translate(-50%, -50%); width: 1600px; height: 1600px; background-image: url('imagens/logo.png'); background-size: contain; background-position: center; background-repeat: no-repeat; opacity: 0.03; pointer-events: none; z-index: 0;"></div>
+
+            <!-- Glow amarelo sutil no fundo escuro -->
+            <div class="glow-blob" style="top: 50%; right: -150px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(254, 221, 0, 0.08) 0%, rgba(255,255,255,0) 70%); transform: translateY(-50%); pointer-events: none; z-index: 0;"></div>
+            
+            <div class="container relative-z" style="position: relative; z-index: 2;">
+                <div class="grid-2" style="align-items: center; gap: 60px;">
+                    
+                    <!-- Lado Esquerdo: Textos e Oferta -->
+                    <div class="animar-fade">
+                        <span class="badge" style="background: var(--cor-vermelho); color: #ffffff; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(254, 1, 0, 0.3); border: none;"><i class="ph-bold ph-warning" style="margin-right: 6px;"></i> CNH SUSPENSA OU COM PONTOS?</span>
+                        
+                        <h2 class="titulo-secao" style="font-size: 38px; color: #ffffff; margin-bottom: 20px; line-height: 1.15; letter-spacing: -1px;">Precisando fazer o curso de Reciclagem da CNH?</h2>
+                        <p style="font-size: 17px; color: #cccccc; margin-bottom: 35px; line-height: 1.6;">Aqui a gente resolve. Rápido, simples e sem dor de cabeça. Faça seu curso de Reciclagem 100% EAD, estude pelo celular no seu tempo e conte com o suporte da Geração Colibri durante todo o processo.</p>
+                        
+                        <!-- Card de Oferta Integrado -->
+                        <div style="background: #262626; border: 1px solid #333333; padding: 35px; border-radius: 20px; margin-bottom: 35px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                            <h3 style="color: var(--cor-amarelo); font-size: 18px; margin-bottom: 10px; letter-spacing: 1px;">CURSO DE RECICLAGEM EAD</h3>
+                            <div style="font-size: 48px; font-weight: 800; color: #ffffff; margin-bottom: 20px; letter-spacing: -2px; line-height: 1;">R$ 380</div>
+                            
+                            <ul class="lista-check" style="font-size: 15px; margin-bottom: 25px; color: #ffffff;">
+                                <li style="color: #ffffff;"><i class="ph-bold ph-check icone-check" style="color: var(--cor-whatsapp);"></i> Matrícula pelo WhatsApp</li>
+                                <li style="color: #ffffff;"><i class="ph-bold ph-check icone-check" style="color: var(--cor-whatsapp);"></i> Curso 100% EAD (Faça pelo celular)</li>
+                                <li style="color: #ffffff;"><i class="ph-bold ph-check icone-check" style="color: var(--cor-whatsapp);"></i> Suporte durante o processo</li>
+                                <li style="color: #ffffff;"><i class="ph-bold ph-check icone-check" style="color: var(--cor-whatsapp);"></i> Prova na própria Geração Colibri</li>
+                            </ul>
+                            
+                            <button class="btn btn-primario btn-wa" style="width: 100%; font-size: 16px; font-weight: 700; justify-content: center; padding: 18px; border-radius: 12px; background: var(--cor-verde); color: #ffffff; border: none;" data-track="whatsapp_reciclagem_ead" data-message="Olá! Vim pelo site e preciso fazer o curso de Reciclagem da CNH. Gostaria de saber como começar.">
+                                <i class="ph-bold ph-whatsapp-logo" style="margin-right: 8px; font-size: 22px;"></i> QUERO FAZER MINHA RECICLAGEM
+                            </button>
+                        </div>
+                        
+                        <!-- Box Lateral EAR -->
+                        <div style="border-left: 3px solid var(--cor-amarelo); padding-left: 20px; margin-bottom: 30px;">
+                            <p style="color: #ffffff; font-weight: 700; font-size: 16px; margin-bottom: 5px;">Trabalha dirigindo? Você pode ter direito à Reciclagem Preventiva.</p>
+                            <p style="color: #aaaaaa; font-size: 14px; margin-bottom: 10px;">Condutores que exercem atividade remunerada (EAR) podem solicitar o curso preventivo antes da suspensão.</p>
+                            <button class="btn-link btn-wa" style="color: var(--cor-amarelo); font-size: 15px; padding: 0; background: none; border: none;" data-track="whatsapp_reciclagem_preventiva" data-message="Olá! Gostaria de saber se tenho direito a fazer a Reciclagem Preventiva (EAR).">QUERO SABER SE POSSO FAZER <i class="ph-bold ph-arrow-right" style="margin-left: 5px;"></i></button>
+                        </div>
+                        
+                        <a href="regularizacao.html" style="color: #ffffff; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; opacity: 0.8; transition: 0.3s;" onmouseover="this.style.opacity='1'; this.style.color='var(--cor-amarelo)'" onmouseout="this.style.opacity='0.8'; this.style.color='#ffffff'">
+                            SAIBA TUDO SOBRE REGULARIZAÇÃO <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                    </div>
+                    
+                    <!-- Lado Direito: Composição de Imagens -->
+                    <div class="animar-fade" style="position: relative; padding-bottom: 40px; padding-left: 30px;">
+                        <!-- Imagem Principal -->
+                        <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px rgba(0,0,0,0.5); border: 2px solid rgba(255,255,255,0.05); position: relative; z-index: 1;">
+                            <img src="imagens/IMG_9152.jpg" alt="Pessoa estudando pelo celular para o curso de reciclagem" style="width: 100%; height: auto; display: block; min-height: 400px; object-fit: cover;">
+                        </div>
+                        
+                        <!-- Imagem Secundária (com borda igual ao fundo da seção) -->
+                        <div style="position: absolute; bottom: 0; left: 0; width: 55%; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.6); border: 6px solid #1c1c1c; z-index: 2;">
+                            <img src="imagens/sala_de_prova.jpg" alt="Sala de prova da Geração Colibri" style="width: 100%; height: auto; display: block; aspect-ratio: 4/3; object-fit: cover;">
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        
+
+        <!-- BLOCO 4: NOSSAS SOLUÇÕES (Navegação Comercial 2x2) -->
+        <section id="solucoes" class="secao-cinza secao-ancora" style="padding: 80px 0; border-bottom: 1px solid var(--cor-borda);">
             <div class="container animar-fade relative-z">
-                <h2 class="titulo-secao text-center">Outros Serviços</h2>
-                <div class="grid-servicos">
-                    <div class="card-servico">
-                        <i class="ph-duotone ph-plus-circle icone-servico"></i>
-                        <h3>Adição de Categoria</h3>
-                        <p>Adicione carro ou moto de forma rápida, sem refazer o curso teórico.</p>
-                        <button class="btn-link btn-wa" data-message="Quero saber mais sobre Adição de Categoria.">Saiba mais <i class="ph-bold ph-arrow-right" style="margin-left: 4px;"></i></button>
+                
+                <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 50px auto;">
+                    <h2 class="titulo-secao" style="margin-bottom: 15px; font-size: 36px; color: var(--cor-preto); letter-spacing: -1px;">Qual é o seu próximo passo no trânsito?</h2>
+                    <p style="font-size: 16px; color: var(--cor-texto);">Da primeira habilitação à regularização da sua CNH, a Geração Colibri acompanha você em diferentes momentos da sua jornada. Encontre o que precisa e saiba mais.</p>
+                </div>
+                
+                <!-- Grade 2x2 de Cards -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+                    
+                    <!-- Card 1: Primeira Habilitação -->
+                    <div style="background: var(--cor-branco); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda); display: flex; flex-direction: column; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="height: 220px; overflow: hidden; border-bottom: 4px solid var(--cor-amarelo);">
+                            <!-- Imagem: Aluno em aula prática -->
+                            <img src="imagens/carro-branco.jpg" alt="Primeira Habilitação na Geração Colibri" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <h3 style="font-size: 22px; color: var(--cor-preto); margin-bottom: 8px;">Primeira Habilitação</h3>
+                            <span style="color: var(--cor-destaque-planos); font-weight: 700; font-size: 14px; margin-bottom: 15px; text-transform: uppercase;">Sua liberdade começa aqui.</span>
+                            <p style="color: var(--cor-texto); font-size: 15px; margin-bottom: 25px; flex-grow: 1;">Tire sua primeira CNH de: Carro | Moto | Carro + Moto. Com orientação e suporte do início ao fim.</p>
+                            
+                            <a href="#como-funciona" style="color: var(--cor-preto); font-weight: 800; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                                CONHECER PRIMEIRA HABILITAÇÃO <i class="ph-bold ph-arrow-right" style="color: var(--cor-destaque-planos);"></i>
+                            </a>
+                        </div>
                     </div>
-                    <div class="card-servico">
-                        <i class="ph-duotone ph-arrows-left-right icone-servico"></i>
-                        <h3>Mudança de Categoria</h3>
-                        <p>Evolua sua habilitação para fins profissionais com veículos adequados.</p>
-                        <button class="btn-link btn-wa" data-message="Quero saber mais sobre Mudança de Categoria.">Saiba mais <i class="ph-bold ph-arrow-right" style="margin-left: 4px;"></i></button>
+
+                    <!-- Card 2: Adição de Categoria -->
+                    <div style="background: var(--cor-branco); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda); display: flex; flex-direction: column; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="height: 220px; overflow: hidden; border-bottom: 4px solid var(--cor-destaque-planos);">
+                            <!-- Imagem: Carro + moto juntos -->
+                            <img src="imagens/moto.PNG" alt="Adição de Categoria" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='imagens/carro-preto.JPG'">
+                        </div>
+                        <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <h3 style="font-size: 22px; color: var(--cor-preto); margin-bottom: 8px;">Adição de Categoria</h3>
+                            <span style="color: var(--cor-destaque-planos); font-weight: 700; font-size: 14px; margin-bottom: 15px; text-transform: uppercase;">Já tem CNH e quer ir além?</span>
+                            <p style="color: var(--cor-texto); font-size: 15px; margin-bottom: 25px; flex-grow: 1;">Já dirige carro? Adicione Moto. Já pilota moto? Adicione Carro.</p>
+                            
+                            <button class="btn-link btn-wa" style="color: var(--cor-preto); font-weight: 800; font-size: 15px; padding: 0; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;" data-track="whatsapp_adicao" data-message="Olá! Quero saber como funciona para adicionar uma nova categoria à minha CNH.">
+                                QUERO ADICIONAR UMA CATEGORIA <i class="ph-bold ph-arrow-right" style="color: var(--cor-destaque-planos);"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="card-servico">
-                        <i class="ph-duotone ph-desktop icone-servico"></i>
-                        <h3>Reciclagem EAD</h3>
-                        <p>Recupere seu direito de dirigir estudando online, nos seus horários livres.</p>
-                        <button class="btn-link btn-wa" data-message="Quero saber mais sobre o curso de Reciclagem EAD.">Saiba mais <i class="ph-bold ph-arrow-right" style="margin-left: 4px;"></i></button>
+
+                    <!-- Card 3: Reciclagem e Regularização -->
+                    <div style="background: var(--cor-branco); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda); display: flex; flex-direction: column; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="height: 220px; overflow: hidden; border-bottom: 4px solid var(--cor-vermelho);">
+                            <!-- Imagem: Atendimento ao aluno -->
+                            <img src="imagens/sala_de_prova.jpg" alt="Reciclagem e Regularização" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='imagens/carro-branco.jpg'">
+                        </div>
+                        <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <h3 style="font-size: 22px; color: var(--cor-preto); margin-bottom: 8px;">Reciclagem e Regularização</h3>
+                            <span style="color: var(--cor-vermelho); font-weight: 700; font-size: 14px; margin-bottom: 15px; text-transform: uppercase;">Problemas com pontuação ou suspensão?</span>
+                            <p style="color: var(--cor-texto); font-size: 15px; margin-bottom: 25px; flex-grow: 1;">Conte com a Geração Colibri para entender sua situação e encontrar o caminho para regularizar sua CNH.</p>
+                            
+                            <a href="regularizacao.html" style="color: var(--cor-preto); font-weight: 800; font-size: 15px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                                REGULARIZAR MINHA CNH <i class="ph-bold ph-arrow-right" style="color: var(--cor-vermelho);"></i>
+                            </a>
+                        </div>
                     </div>
+
+                    <!-- Card 4: Mudança de Categoria -->
+                    <div style="background: var(--cor-branco); border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda); display: flex; flex-direction: column; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div style="height: 220px; overflow: hidden; border-bottom: 4px solid var(--cor-verde);">
+                            <!-- Imagem: Veículo Profissional. Sugestão: Use uma foto de caminhão/ônibus se a autoescola oferecer -->
+                            <img src="imagens/carro-preto.JPG" alt="Mudança de Categoria" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div style="padding: 30px; display: flex; flex-direction: column; flex-grow: 1;">
+                            <h3 style="font-size: 22px; color: var(--cor-preto); margin-bottom: 8px;">Mudança de Categoria</h3>
+                            <span style="color: var(--cor-verde); font-weight: 700; font-size: 14px; margin-bottom: 15px; text-transform: uppercase;">Quer ampliar suas possibilidades?</span>
+                            <p style="color: var(--cor-texto); font-size: 15px; margin-bottom: 25px; flex-grow: 1;">Conheça as opções de mudança de categoria e fale com nossa equipe para receber orientação.</p>
+                            
+                            <button class="btn-link btn-wa" style="color: var(--cor-preto); font-weight: 800; font-size: 15px; padding: 0; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;" data-track="whatsapp_mudanca" data-message="Olá! Quero saber sobre Mudança de Categoria para fins profissionais.">
+                                QUERO SABER MAIS <i class="ph-bold ph-arrow-right" style="color: var(--cor-verde);"></i>
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -287,225 +622,279 @@
             </div>
         </section>
 
-        <section id="avaliacoes" class="secao-branca secao-ancora">
+        <!-- BLOCO 5: PERGUNTAS FREQUENTES -->
+        <section id="faq" class="secao-cinza secao-ancora" style="padding: 80px 0;">
             <div class="container animar-fade relative-z">
-                <div class="google-header-container text-center">
-                    <h2 class="google-titulo">EXCELENTE</h2>
-                    <div class="google-estrelas">
-                        <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
-                    </div>
-                    <p class="google-base">Com base em <strong>1.177 avaliações</strong></p>
-                    <h3 class="google-logo"><span style="color:#4285F4">G</span><span style="color:#EA4335">o</span><span style="color:#FBBC05">o</span><span style="color:#4285F4">g</span><span style="color:#34A853">l</span><span style="color:#EA4335">e</span></h3>
-                </div>
                 
-                <div class="carrossel-wrapper scroll-manual" id="carrossel-avaliacoes">
-                    <div class="carrossel-track">
-                        
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Lucas+Dantas&background=0D8ABC&color=fff&rounded=true" alt="Avatar"></div>
-                                <div>
-                                    <h4>Lucas Dantas</h4>
-                                    <span class="data-review">15/05/2026</span>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
-                            </div>
-                            <div class="stars-small">
-                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
-                            </div>
-                            <p>"Tive uma experiência muito boa e tranquila desde o primeiro dia do CFC até a conclusão do exame prático. Equipe e professores muito atenciosos e prontos para ajudar!"</p>
-                        </div>
-                        
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Bia+Denaro&background=A259FF&color=fff&rounded=true" alt="Avatar"></div>
-                                <div>
-                                    <h4>Bia Denaro</h4>
-                                    <span class="data-review">22/04/2026</span>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
-                            </div>
-                            <div class="stars-small">
-                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
-                            </div>
-                            <p>Tirei minha habilitação aí, nota 10 pros professores e recepção, direção! Todos estão de parabéns ❤️ atendimento excelente"</p>
-                        </div>
-
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Karol+Paiva&background=4285F4&color=fff&rounded=true" alt="Avatar"></div>
-                                <div>
-                                    <h4>Karol Paiva</h4>
-                                    <span class="data-review">15/03/2026</span>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
-                            </div>
-                            <div class="stars-small">
-                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
-                            </div>
-                            <p>"Queria agradecer a todos os funcionários da Colibri, sem dúvida foi a melhor escolha que fiz! As meninas da recepção são incríveis e super me ajudaram, e os instrutores a mesma coisa."</p>
-                        </div>
-
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Bruno+Lizoti&background=D81B60&color=fff&rounded=true" alt="Avatar"></div>
-                                <div>
-                                    <h4>Bruno Lizoti</h4>
-                                    <span class="data-review">10/03/2026</span>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
-                            </div>
-                            <div class="stars-small">
-                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
-                            </div>
-                            <p>"Aulas muito bem preparadas, instrutores excelentes e atendimento maravilhoso.
-
-Aprovado e muito grato por tudo que aprendi Colibri!"</p>
-                        </div>
-
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Aline+Lima+Bergo&background=F26522&color=fff&rounded=true" alt="Avatar"></div>
-                                <div>
-                                    <h4>Aline Lima Bergo</h4>
-                                    <span class="data-review">30/01/2026</span>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
-                            </div>
-                            <div class="stars-small">
-                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
-                            </div>
-                            <p>"Desde o início, o atendimento foi muito agradável, especialmente pelas meninas da recepção, que sempre foram rápidas no retorno e muito atenciosas. Não tive nenhum problema, tudo foi extremamente agradável. Nas aulas práticas, tive o instrutor Ângelo. Sua paciência e dedicação fizeram toda a diferença."</p>
-                        </div>
-
-                        <div class="review-card">
-                            <div class="review-header">
-                                <div class="avatar-img"><img src="https://ui-avatars.com/api/?name=Elaine+Torres&background=34A853&color=fff&rounded=true" alt="Avatar"></div>
-                                <div>
-                                    <h4>Elaine Torres</h4>
-                                    <span class="data-review">20/01/2026</span>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google" class="google-icon-clean">
-                            </div>
-                            <div class="stars-small">
-                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i> <span><i class="ph-bold ph-check"></i></span>
-                            </div>
-                            <p>"Profissionais altamente capacitados, processo rápido e sem enrolação, super recomendo a auto escola e seus profissionais, nota 1000."</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="faq" class="secao-cinza secao-ancora">
-            <div class="container animar-fade relative-z">
-                <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
-                    <span class="subtitulo-laranja">PERGUNTAS FREQUENTES</span>
-                    <h2 class="titulo-secao">Ainda com dúvidas? A gente responde.</h2>
+                <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 50px auto;">
+                    <span class="subtitulo-laranja" style="color: var(--cor-destaque-planos); font-weight: 700; font-size: 14px; letter-spacing: 2px; text-transform: uppercase;">PERGUNTAS FREQUENTES</span>
+                    <h2 class="titulo-secao" style="margin-top: 10px; margin-bottom: 20px; font-size: 36px; color: var(--cor-preto); letter-spacing: -1px;">Ficou com alguma dúvida? A gente te ajuda.</h2>
+                    <p style="font-size: 16px; color: var(--cor-texto);">Separamos as principais dúvidas de quem está começando a habilitação ou precisa regularizar a CNH.</p>
                 </div>
                 
                 <div class="faq-container">
+                    <!-- Q1 -->
                     <div class="faq-item">
-                        <button class="faq-pergunta">Vocês já aderiram ao CNH do Brasil? <i class="ph-bold ph-plus faq-icone"></i></button>
-                        <div class="faq-resposta"><p>Sim, nós da Geração Colibri já adaptamos nossos pacotes e instruções para o modelo CNH do Brasil, te dando toda ajuda e suporte, do início ao fim.</p></div>
+                        <button class="faq-pergunta">1. Nunca dirigi. O Plano Básico com 2 aulas é indicado para mim? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>O Plano Básico é ideal para começar sua jornada e para quem já possui mais facilidade na direção. Se você está começando do zero ou percebe que precisa de mais preparação, pode evoluir para um dos nossos outros planos, com mais aulas práticas e treinamento de acordo com sua necessidade. Aqui você começa pelo plano que faz sentido para você e pode evoluir sua preparação quando precisar.</p></div>
                     </div>
+                    <!-- Q2 -->
                     <div class="faq-item">
-                        <button class="faq-pergunta">Quanto tempo demora o processo completo? <i class="ph-bold ph-plus faq-icone"></i></button>
-                        <div class="faq-resposta"><p>Em média, o processo leva de 60 a 90 dias, dependendo da sua disponibilidade para as aulas e da agenda do Detran para os exames.</p></div>
+                        <button class="faq-pergunta">2. Se eu precisar de mais aulas, posso mudar para outro plano? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Sim. Temos diferentes níveis de preparação. O Plano Básico é ideal para começar sua jornada. O Plano Evolução oferece mais prática para ganhar confiança. E o Plano Aprovação é o treinamento mais completo, indicado para quem começa do zero ou busca o máximo de preparação para o exame. Nossa equipe ajuda você a entender qual opção combina melhor com o seu momento.</p></div>
                     </div>
+                    <!-- Q3 -->
                     <div class="faq-item">
-                        <button class="faq-pergunta">Preciso saber dirigir para começar? <i class="ph-bold ph-plus faq-icone"></i></button>
-                        <div class="faq-resposta"><p>Não! Nossos instrutores são treinados para ensinar do absoluto zero, com muita paciência e metodologia focada em iniciantes.</p></div>
+                        <button class="faq-pergunta">3. O que está incluso nos pacotes da Geração Colibri? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Todos os nossos pacotes incluem matrícula, material didático, suporte completo do início ao fim, agendamentos necessários durante o processo, LADV — Licença para Aprendizagem de Direção Veicular — e veículo para o exame prático. Você não precisa descobrir sozinho qual é o próximo passo. Nossa equipe acompanha e orienta você durante o processo.</p></div>
                     </div>
+                    <!-- Q4 -->
                     <div class="faq-item">
-                        <button class="faq-pergunta">Vocês cuidam de toda a burocracia? <i class="ph-bold ph-plus faq-icone"></i></button>
-                        <div class="faq-resposta"><p>Sim, nossa equipe realiza os agendamentos, emissão de guias e orientação completa em cada etapa do processo. Você foca apenas em aprender.</p></div>
+                        <button class="faq-pergunta">4. Além do pacote da autoescola, existem outras taxas e exames? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Sim. Durante o processo de habilitação existem exames e taxas oficiais que não fazem parte do valor do pacote da autoescola. Mas você não precisa se preocupar em descobrir tudo sozinho: nossa equipe orienta sobre o que precisa ser feito, quando fazer e quais são os próximos passos.</p></div>
                     </div>
+                    <!-- Q5 -->
                     <div class="faq-item">
-                        <button class="faq-pergunta">Seus veículos são equipados para as aulas? <i class="ph-bold ph-plus faq-icone"></i></button>
-                        <div class="faq-resposta"><p>Sim, nossa frota de veículos são preparados com duplo comando para o melhor aprendizado e suporte em casos de necessidade</p></div>
+                        <button class="faq-pergunta">5. Posso tirar habilitação de Carro e Moto juntas? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Sim. Você pode iniciar sua Primeira Habilitação para Carro, Moto ou Carro + Moto. Nossa equipe pode orientar sobre as opções e ajudar você a escolher o plano mais adequado.</p></div>
                     </div>
+                    <!-- Q6 -->
                     <div class="faq-item">
-                        <button class="faq-pergunta">Posso fazer a matrícula online? <i class="ph-bold ph-plus faq-icone"></i></button>
-                        <div class="faq-resposta"><p>Com certeza. Todo o processo de matrícula e pagamentos pode ser feito de forma segura através do nosso WhatsApp oficial.</p></div>
+                        <button class="faq-pergunta">6. Como funciona o curso de Reciclagem da CNH? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>O curso é 100% EAD, permitindo que você estude de onde estiver e faça o conteúdo pelo celular, com muito mais comodidade. A matrícula pode ser feita pelo WhatsApp e você conta com o suporte da Geração Colibri durante o processo.</p></div>
+                    </div>
+                    <!-- Q7 -->
+                    <div class="faq-item">
+                        <button class="faq-pergunta">7. Preciso ir até a autoescola para fazer o curso? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Não. O curso é EAD. Você pode estudar de casa e organizar seus estudos de acordo com a disponibilidade oferecida pelo curso. A prova é realizada presencialmente na unidade da Geração Colibri.</p></div>
+                    </div>
+                    <!-- Q8 -->
+                    <div class="faq-item">
+                        <button class="faq-pergunta">8. Minha CNH está com muitos pontos. Posso fazer a Reciclagem Preventiva? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Condutores que exercem atividade remunerada (EAR) podem ter direito à Reciclagem Preventiva, conforme as regras aplicáveis ao seu caso. Fale com nossa equipe para verificarmos sua situação e orientarmos você.</p></div>
                     </div>
                 </div>
+                
+                <!-- CTA de Fechamento do FAQ -->
+                <div class="text-center" style="margin-top: 50px;">
+                    <h3 style="font-size: 22px; color: var(--cor-preto); margin-bottom: 10px;">Ainda ficou alguma dúvida?</h3>
+                    <p style="font-size: 16px; color: var(--cor-texto); margin-bottom: 25px;">Fale com nossa equipe. A gente entende do assunto e ajuda você a encontrar o caminho certo.</p>
+                    <button class="btn btn-primario btn-wa" style="padding: 16px 32px; font-size: 16px; font-weight: 700; border-radius: 12px; justify-content: center; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);" data-track="whatsapp_duvidas_faq" data-message="Olá! Estava lendo o site e fiquei com uma dúvida. Podem me ajudar?">
+                        <i class="ph-bold ph-whatsapp-logo" style="margin-right: 8px; font-size: 22px;"></i> FALAR COM A GERAÇÃO COLIBRI
+                    </button>
+                </div>
+
             </div>
         </section>
 
-        <section id="localizacao" class="secao-branca secao-ancora">
+        <!-- BLOCO 6: LOCALIZAÇÃO + FECHAMENTO COMERCIAL -->
+        <section id="localizacao" class="secao-branca secao-ancora" style="padding: 80px 0; overflow: hidden; position: relative;">
             <div class="glow-blob blob-footer"></div>
-            
             <div class="container animar-fade relative-z">
-                <div class="grid-2">
-                    <div class="info-contato">
-                        <h2>Nossa Localização</h2>
-                        <p><i class="ph-fill ph-map-pin text-amarelo" style="margin-right: 6px;"></i> Rua Juazeiro do Norte, 272 – Cidade Jardim<br>Cumbica, Guarulhos/SP – 07180-230</p>
+                
+                <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 50px auto;">
+                    <h2 class="titulo-secao" style="margin-bottom: 15px; font-size: 36px; color: var(--cor-preto); letter-spacing: -1px;">Sua jornada começa na Geração Colibri.</h2>
+                    <p style="font-size: 16px; color: var(--cor-texto);">Há 26 anos formando motoristas conscientes e ajudando pessoas a conquistarem sua habilitação com segurança, orientação e confiança.<br><strong style="color: var(--cor-preto);">Venha conhecer a melhor Autoescola de Guarulhos.</strong></p>
+                </div>
+
+                <div class="grid-2" style="align-items: stretch; gap: 40px; margin-bottom: 80px;">
+                    <!-- Card de Informações e Botões -->
+                    <div style="background: var(--cor-fundo-base); border-radius: 24px; padding: 40px; border: 1px solid var(--cor-borda); box-shadow: 0 10px 30px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+                        <h3 style="font-size: 24px; color: var(--cor-preto); margin-bottom: 25px;">Informações de Atendimento</h3>
                         
-                        <h3 style="margin-top: 24px; margin-bottom: 10px;">Horário de Atendimento</h3>
-                        <p><i class="ph-fill ph-clock text-amarelo" style="margin-right: 6px;"></i> Segunda a Sexta: 08:30 – 19:00<br>Sábados: 09:00 – 14:00</p>
-                        
-                        <h3 style="margin-top: 24px; margin-bottom: 10px;">Canais de Contato</h3>
-                        <p><i class="ph-fill ph-phone-call text-amarelo" style="margin-right: 6px;"></i> WhatsApp: (11) 2479-7811<br><i class="ph-fill ph-envelope text-amarelo" style="margin-right: 6px;"></i> E-mail: geracaocolibri.sac@gmail.com</p>
+                        <div style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="ph-fill ph-map-pin" style="color: var(--cor-destaque-planos); font-size: 24px; margin-top: 2px;"></i>
+                            <div>
+                                <strong style="color: var(--cor-preto); display: block; margin-bottom: 4px;">Autoescola Geração Colibri</strong>
+                                <p style="color: var(--cor-texto); font-size: 15px; line-height: 1.4; margin: 0;">Rua Juazeiro do Norte, 272 – Cidade Jardim<br>Cumbica, Guarulhos/SP – 07180-230</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 20px; display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="ph-fill ph-clock" style="color: var(--cor-destaque-planos); font-size: 24px; margin-top: 2px;"></i>
+                            <div>
+                                <strong style="color: var(--cor-preto); display: block; margin-bottom: 4px;">Horários de Atendimento</strong>
+                                <p style="color: var(--cor-texto); font-size: 15px; line-height: 1.4; margin: 0;">Segunda a Sexta: 08:30 – 19:00<br>Sábados: 09:00 – 14:00</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 35px; display: flex; align-items: flex-start; gap: 12px;">
+                            <i class="ph-fill ph-phone-call" style="color: var(--cor-destaque-planos); font-size: 24px; margin-top: 2px;"></i>
+                            <div>
+                                <strong style="color: var(--cor-preto); display: block; margin-bottom: 4px;">Contato</strong>
+                                <p style="color: var(--cor-texto); font-size: 15px; line-height: 1.4; margin: 0;">WhatsApp / Telefone: (11) 2479-7811</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: auto;">
+                            <!-- Botão de WhatsApp com Rastreio -->
+                            <button class="btn btn-primario btn-wa" style="flex: 1; min-width: 200px; justify-content: center; font-size: 14px; padding: 16px;" data-track="whatsapp_localizacao" data-message="Olá! Peguei o contato no final do site e gostaria de mais informações.">
+                                <i class="ph-bold ph-whatsapp-logo" style="margin-right: 8px; font-size: 18px;"></i> FALAR PELO WHATSAPP
+                            </button>
+                            <!-- Botão de Rota (Google Maps) -->
+                            <a href="https://maps.google.com/?q=Rua+Juazeiro+do+Norte,+272+-+Cumbica,+Guarulhos" target="_blank" rel="noopener noreferrer" class="btn" style="flex: 1; min-width: 200px; justify-content: center; background: transparent; border: 2px solid var(--cor-borda); color: var(--cor-preto); font-size: 14px; text-decoration: none; padding: 14px; transition: 0.3s;" onmouseover="this.style.borderColor='var(--cor-destaque-planos)'; this.style.color='var(--cor-destaque-planos)';" onmouseout="this.style.borderColor='var(--cor-borda)'; this.style.color='var(--cor-preto)';">
+                                <i class="ph-bold ph-map-trifold" style="margin-right: 8px; font-size: 18px;"></i> COMO CHEGAR
+                            </a>
+                        </div>
                     </div>
-                    <div class="mapa-card">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.832729909776!2d-46.417235!3d-23.466504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63b4f53531b9%3A0xc66c1b35b0d0fa85!2sR.%20Juazeiro%20do%20Norte%2C%20272%20-%20Cidade%20Jardim%20Cumbica%2C%20Guarulhos%20-%20SP%2C%2007180-230!5e0!3m2!1spt-BR!2sbr!4v1717171717171!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy"></iframe>
+
+                    <!-- Foto da Fachada e Mapa Interativo -->
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <div style="border-radius: 24px; overflow: hidden; height: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda);">
+                            <!-- Lembrete: Inserir a foto real e limpa da fachada aqui -->
+                            <img src="imagens/fachada.jpg" alt="Fachada da Autoescola Geração Colibri" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='imagens/carro-branco.jpg'">
+                        </div>
+                        <div style="border-radius: 24px; overflow: hidden; flex-grow: 1; min-height: 260px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda);">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.832729909776!2d-46.417235!3d-23.466504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63b4f53531b9%3A0xc66c1b35b0d0fa85!2sR.%20Juazeiro%20do%20Norte%2C%20272%20-%20Cidade%20Jardim%20Cumbica%2C%20Guarulhos%20-%20SP%2C%2007180-230!5e0!3m2!1spt-BR!2sbr!4v1717171717171!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
                     </div>
                 </div>
+
+                <!-- ÚLTIMA CHAMADA (Fechamento Comercial) -->
+                <div class="animar-fade" style="background: linear-gradient(135deg, #141414, #000000); border-radius: 32px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.08);">
+                    <div class="grid-2" style="align-items: center; gap: 0;">
+                        
+                        <div style="padding: 60px 50px;">
+                            <h2 style="font-size: 34px; color: #fff; margin-bottom: 20px; line-height: 1.2; letter-spacing: -1px;">Pronto para dar o próximo passo?</h2>
+                            <p style="font-size: 16px; color: #ccc; margin-bottom: 30px; line-height: 1.6;">Seja para conquistar sua primeira CNH ou regularizar sua habilitação, conte com quem entende do assunto e acompanha você de verdade.</p>
+                            
+                            <div style="border-left: 3px solid var(--cor-amarelo); padding-left: 18px; margin-bottom: 40px;">
+                                <p style="font-size: 18px; color: #fff; font-weight: 700; margin-bottom: 6px;">Geração Colibri</p>
+                                <p style="font-size: 14px; color: #aaa; margin: 0; line-height: 1.5;">A melhor Autoescola de Guarulhos com o melhor preço da região.</p>
+                            </div>
+                            
+                            <button class="btn btn-primario btn-wa" style="font-size: 16px; font-weight: 700; padding: 18px 32px; border-radius: 12px; background: var(--cor-whatsapp); color: #fff; border: none; width: 100%; max-width: 380px; justify-content: center; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);" data-track="whatsapp_fechamento_final" data-message="Olá! Estou pronto para dar o próximo passo e queria falar com a equipe.">
+                                <i class="ph-bold ph-whatsapp-logo" style="margin-right: 10px; font-size: 24px;"></i> QUERO FALAR COM A EQUIPE
+                            </button>
+                        </div>
+                        
+                        <!-- Imagem da Equipe -->
+                        <div style="height: 100%; min-height: 450px;">
+                            <!-- Lembrete: Inserir a foto real da equipe reunida aqui -->
+                            <img src="imagens/carro-preto.JPG" alt="Equipe Geração Colibri reunida" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.src='imagens/equipe.jpg'">
+                        </div>
+                        
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
 
+   <!-- RODAPÉ CORPORATIVO -->
     <footer class="footer-corporativo">
         <div class="container relative-z">
-            <div class="footer-grid">
+            
+            <!-- Grade de 4 Colunas -->
+            <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
                 
+                <!-- Coluna 1 — Geração Colibri -->
                 <div class="footer-col">
                     <div class="logo" style="margin-bottom: 15px;">
                         <img src="imagens/logo.png" alt="Logo" class="logo-img" style="height: 40px; margin-right: 10px;">
                         <span class="logo-texto" style="font-size: 18px;">Geração Colibri</span>
                     </div>
-                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Formando motoristas conscientes e preparados para o trânsito com a melhor infraestrutura de Guarulhos.</p>
-                    <div class="links-sociais-footer">
+                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;">Há 26 anos ajudando pessoas a conquistarem sua liberdade no trânsito com orientação, segurança e confiança.</p>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 15px; font-weight: 600;">A melhor Autoescola de Guarulhos com o melhor preço da região.</p>
+                    <a href="sobre.html" style="color: var(--cor-destaque-planos); font-weight: 700; text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; transition: 0.2s;">
+                        Conheça nossa história <i class="ph-bold ph-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Coluna 2 — Acesso Rápido -->
+                <div class="footer-col">
+                    <h3 style="font-size: 18px; margin-bottom: 20px;">Acesso Rápido</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Início</a></li>
+                        <!-- ATUALIZADO: Adicionado 'index.html' antes do '#' -->
+                        <li><a href="index.html#hero">Primeira Habilitação</a></li>
+                        <li><a href="regularizacao.html">Reciclagem e Regularização</a></li>
+                        <!-- ATUALIZADO: Adicionado 'index.html' antes do '#' -->
+                        <li><a href="index.html#categorias">Adição de Categoria</a></li>
+                        <li><a href="index.html#categorias">Mudança de Categoria</a></li>
+                        <li><a href="sobre.html">Sobre Nós</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3 — Fale Conosco -->
+                <div class="footer-col">
+                    <h3 style="font-size: 18px; margin-bottom: 20px;">Fale Conosco</h3>
+                    <ul class="footer-infos" style="list-style: none; color: #666; font-size: 14px; margin-bottom: 20px;">
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="ph-fill ph-map-pin" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
+                            <span>Rua Juazeiro do Norte, 272 – Cumbica, Guarulhos/SP</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">
+                            <i class="ph-fill ph-phone-call" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
+                            <span>(11) 2479-7811</span>
+                        </li>
+                        <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;">
+                            <i class="ph-fill ph-clock" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
+                            <span>Seg a Sex: 08:30 – 19:00<br>Sábados: 09:00 – 14:00</span>
+                        </li>
+                    </ul>
+                    <button class="btn btn-primario btn-wa" style="width: 100%; font-size: 14px; padding: 14px; justify-content: center; border-radius: 8px;" data-track="whatsapp_footer" data-message="Olá! Peguei o contato no rodapé do site e gostaria de mais informações.">
+                        <i class="ph-bold ph-whatsapp-logo" style="margin-right: 8px; font-size: 18px;"></i> FALAR PELO WHATSAPP
+                    </button>
+                </div>
+
+                <!-- Coluna 4 — Acompanhe a Geração Colibri -->
+                <div class="footer-col">
+                    <h3 style="font-size: 18px; margin-bottom: 20px;">Acompanhe a Colibri</h3>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Dicas, informações e conteúdos para ajudar você a dirigir melhor e entender tudo sobre sua habilitação.</p>
+                    <div class="links-sociais-footer" style="display: flex; gap: 15px;">
                         <a href="https://www.instagram.com/geracaocolibriautoescola/" target="_blank" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
                         <a href="https://www.facebook.com/geracaocolibri?locale=pt_BR" target="_blank" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
                         <a href="https://www.tiktok.com/@geracaocolibriautoescola?_t=8q3JCMjhUcX&_r=1" target="_blank" aria-label="TikTok"><i class="ph-fill ph-tiktok-logo"></i></a>
                         <a href="https://youtube.com/@geracaocolibriautoescola272?si=tWgFRy-alcleRliJ" target="_blank" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
                     </div>
                 </div>
-
-                <div class="footer-col">
-                    <h3>Acesso Rápido</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Primeira Habilitação</a></li>
-                        <li><a href="regularizacao.html">Regularização de CNH</a></li>
-                        <li><a href="cursos.html">Cursos Especializados</a></li>
-                        <li><a href="produtos.html">Produtos</a></li>
-                        <li><a href="sobre.html">Sobre a Autoescola</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Informações Legais</h3>
-                    <ul class="footer-infos" style="list-style: none; color: #666; font-size: 14px;">
-                        <li style="margin-bottom: 10px;"><strong>CNPJ:</strong> 03.594.977/0001-72</li>
-                        <li style="margin-bottom: 10px;"><strong>Credencial Detran-SP:</strong> CENTRO DE FORMAÇÃO DE CONDUTORES -A/B Nº 204</li>
-                        <li style="margin-bottom: 10px;">Rua Juazeiro do Norte, 272 – Cumbica, Guarulhos/SP</li>
-                    </ul>
-                </div>
                 
             </div>
+            
+            <!-- Faixa Institucional Inferior -->
+            <div style="border-top: 1px solid var(--cor-borda); padding: 25px 0 15px 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
+                <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+                    <span class="badge" style="background: var(--cor-fundo-base); color: var(--cor-texto); border: 1px solid var(--cor-borda); margin: 0; font-size: 12px; box-shadow: none;"><i class="ph-fill ph-shield-check" style="color: var(--cor-verde); margin-right: 6px; font-size: 16px;"></i> Autoescola credenciada pelo DETRAN-SP</span>
+                    <span style="font-size: 13px; color: #888;"><strong>CNPJ:</strong> 03.594.977/0001-72</span>
+                    <span style="font-size: 13px; color: #888;"><strong>Credenciamento:</strong> CFC - A/B Nº 204</span>
+                </div>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="politica-privacidade.html" style="font-size: 13px; color: #888; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='var(--cor-destaque-planos)'" onmouseout="this.style.color='#888'">Política de Privacidade</a>
+                    <a href="termos-uso.html" style="font-size: 13px; color: #888; text-decoration: none; transition: 0.2s;" onmouseover="this.style.color='var(--cor-destaque-planos)'" onmouseout="this.style.color='#888'">Termos de Uso</a>
+                </div>
+            </div>
+
         </div>
 
+        <!-- Links Legais e Copyright -->
         <div class="footer-bottom">
             <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
-                <p>&copy; 2026 Autoescola Geração Colibri. Todos os direitos reservados.</p>
+                <p>&copy; <span id="ano-copyright"></span> Autoescola Geração Colibri. Todos os direitos reservados.</p>
                 <p>Desenvolvido por <a href="https://linktr.ee/guih.barbz" target="_blank" style="color: var(--cor-destaque-planos); text-decoration: none; font-weight: 600;">Guilherme Barbosa</a></p>
             </div>
-            <p class="disclaimer-bottom">Os valores das taxas estaduais (Detran/Exames) não compõem os pacotes da autoescola e devem ser pagos separadamente.</p>
+            <p class="disclaimer-bottom" style="margin-top: 15px;">Os valores das taxas estaduais (Detran/Exames) não compõem os pacotes da autoescola e devem ser pagos separadamente.</p>
         </div>
+        
+        <!-- Script rápido para atualizar o ano automaticamente -->
+        <script>
+            document.getElementById('ano-copyright').textContent = new Date().getFullYear();
+        </script>
     </footer>
 
     <script src="index.js"></script>
+
+    <!-- BANNER DE COOKIES -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <i class="ph-fill ph-cookie" style="font-size: 24px; color: var(--cor-amarelo);"></i>
+                <p>Nós usamos cookies para melhorar sua experiência, personalizar anúncios e analisar nosso tráfego. Ao continuar navegando, você concorda com a nossa <a href="politica-privacidade.html">Política de Privacidade</a>.</p>
+            </div>
+            <div class="cookie-botoes">
+                <button id="btn-aceitar-cookies" class="btn btn-primario" style="padding: 10px 20px; font-size: 14px; border-radius: 8px;">Entendi e Aceito</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

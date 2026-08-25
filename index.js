@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // ==========================================
-    // 1. SISTEMA DINÂMICO DE WHATSAPP
+    // 1. SISTEMA DINÂMICO DE WHATSAPP + RASTREAMENTO
     // ==========================================
     const NUMERO_WHATSAPP = "551124797811";
     const botoesWhatsapp = document.querySelectorAll('.btn-wa');
@@ -53,13 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const mensagemCodificada = encodeURIComponent(mensagemBruta);
             const linkWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensagemCodificada}`;
             
+            // Disparo para o dataLayer (Personalizado)
             if (this.getAttribute('data-track') && window.dataLayer) {
                 window.dataLayer.push({
                     'event': this.getAttribute('data-track'),
                     'button_location': 'Website Geração Colibri'
                 });
             }
+
+            // Disparo de Conversão Oficial do Google Ads
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-620881332/W8NKCPyQouccELTLh6gC'
+                });
+            }
             
+            // Abre o WhatsApp em nova guia
             window.open(linkWhatsApp, '_blank');
         });
     });
@@ -115,50 +124,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ==========================================
-    // 4. CARROSSEL DE AVALIAÇÕES (Drag Livre + Loop Infinito)
+    // 4. CARROSSEL SUAVE E CONTÍNUO (INFINITE MARQUEE)
     // ==========================================
-    const slider = document.getElementById('carrossel-avaliacoes');
-    const trackReview = slider ? slider.querySelector('.carrossel-track') : null;
+    function iniciarCarrosselInfinito() {
+        const trilho = document.getElementById('trilho-depoimentos');
+        if (!trilho) return; 
 
-    if (slider && trackReview) {
-        
-        const cardsHTML = trackReview.innerHTML;
-        trackReview.innerHTML = cardsHTML + cardsHTML + cardsHTML;
+        const cards = Array.from(trilho.children);
 
-        setTimeout(() => {
-            slider.scrollLeft = slider.scrollWidth / 3;
-        }, 100);
-
-        slider.addEventListener('scroll', () => {
-            const umTerco = slider.scrollWidth / 3;
-            if (slider.scrollLeft === 0) {
-                slider.scrollLeft = umTerco;
-            } else if (slider.scrollLeft >= umTerco * 2) {
-                slider.scrollLeft = umTerco + (slider.scrollLeft - umTerco * 2); 
-            }
-        });
-
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true;
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-
-        slider.addEventListener('mouseleave', () => { isDown = false; });
-        slider.addEventListener('mouseup', () => { isDown = false; });
-
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 1.5; 
-            slider.scrollLeft = scrollLeft - walk;
+        cards.forEach(card => {
+            const clone = card.cloneNode(true);
+            trilho.appendChild(clone);
         });
     }
+    
+    iniciarCarrosselInfinito();
 
     // ==========================================
     // 5. ANIMAÇÕES NO SCROLL (INTERSECTION OBSERVER)
@@ -192,10 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const iconeMenu = btnMobile.querySelector('i');
 
         btnMobile.addEventListener('click', () => {
-            // Abre ou fecha o menu
             menuPrincipal.classList.toggle('ativo');
             
-            // Troca o ícone (Barrinhas <-> X)
             if (menuPrincipal.classList.contains('ativo')) {
                 iconeMenu.classList.remove('ph-list');
                 iconeMenu.classList.add('ph-x');
@@ -205,7 +183,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         
-        // Fecha o menu automaticamente quando o usuário clica em qualquer link
         const linksMenu = menuPrincipal.querySelectorAll('a:not(.link-dropdown)');
         linksMenu.forEach(link => {
             link.addEventListener('click', () => {
@@ -218,3 +195,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// ==========================================
+    // 7. CONTROLE DO BANNER DE COOKIES
+    // ==========================================
+    document.addEventListener("DOMContentLoaded", function() {
+        const cookieBanner = document.getElementById('cookie-banner');
+        const btnAceitarCookies = document.getElementById('btn-aceitar-cookies');
+
+        // DICA DE TESTE: Descomente a linha abaixo (tire as //) se quiser forçar o banner a aparecer SEMPRE enquanto você programa.
+        // localStorage.removeItem('cookiesAceitos');
+
+        if (cookieBanner && !localStorage.getItem('cookiesAceitos')) {
+            setTimeout(() => {
+                cookieBanner.classList.add('mostrar');
+            }, 1000);
+        }
+
+        if (btnAceitarCookies) {
+            btnAceitarCookies.addEventListener('click', () => {
+                localStorage.setItem('cookiesAceitos', 'true');
+                cookieBanner.classList.remove('mostrar');
+            });
+        }
+    });
