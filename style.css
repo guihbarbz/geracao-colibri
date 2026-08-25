@@ -509,3 +509,113 @@ body.dark-mode .cookie-banner {
     background-color: #1a1a1a;
     box-shadow: 0 -10px 30px rgba(0,0,0,0.5);
 }
+
+/* ==========================================
+   AJUSTES DE RESPONSIVIDADE (MOBILE)
+   ========================================== */
+
+@media (max-width: 768px) {
+    /* 1. Corrige o espaçamento geral para não colar nas bordas e evita rolagem horizontal */
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* 2. Força todas as grades (grids) a ficarem em uma coluna só no celular */
+    .grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    /* 3. Ajustes do Card de Oferta na Primeira Dobra e Reciclagem */
+    /* Sobrescreve os paddings inline altos que colocamos para o PC */
+    .hero-content > div,
+    #reciclagem .grid-2 > div > div:nth-child(3) {
+        padding: 25px 20px !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Ajuste do cartão interno de preço */
+    .hero-content > div > div {
+        padding: 15px !important;
+    }
+
+    /* 4. Redução de Fontes para Mobile */
+    .titulo-secao {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+    }
+
+    /* Reduz o tamanho do preço gigante */
+    .hero-content span[style*="font-size: 48px"],
+    #reciclagem div[style*="font-size: 48px"] {
+        font-size: 36px !important;
+    }
+
+    /* 5. Ajustes de Botões e Badges */
+    .badge {
+        left: 20px !important;
+        font-size: 11px !important;
+        padding: 6px 12px !important;
+    }
+
+    .btn {
+        font-size: 14px !important;
+        padding: 15px !important;
+        text-align: center;
+    }
+    
+    /* 6. Corrige as imagens lado a lado */
+    .hero-content {
+        order: 1; /* Garante que o texto vem antes da imagem */
+    }
+    
+    /* Evita que o botão flutuante do WhatsApp cubra o botão do card */
+    section {
+        padding-bottom: 60px !important;
+    }
+
+    /* 7. Centralizar o bloco de preço no card do Plano Básico */
+    .hero-content div[style*="font-size: 48px"], 
+    .hero-content div[style*="font-size: 36px"] {
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+    
+    /* Centraliza o texto secundário (à vista / parcelado) */
+    .hero-content div[style*="border-left"],
+    .hero-content div[style*="background: rgba(255, 255, 255, 0.04)"] {
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    /* 8. Ocultar a foto da fachada no mobile (mantendo apenas o Mapa) */
+    #localizacao .grid-2 > div:nth-child(2) > div:first-child {
+        display: none !important;
+    }
+
+    /* Força a centralização de caixas flexíveis no mobile */
+    .flex-center-mobile {
+        justify-content: center !important;
+    }
+}
+
+/* Ajuste extra para telas muito pequenas (menores que 400px) */
+@media (max-width: 400px) {
+    .titulo-secao {
+        font-size: 28px !important;
+    }
+    .hero-content > div {
+        padding: 20px 15px !important;
+    }
+}
