@@ -219,3 +219,65 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+
+    document.addEventListener('DOMContentLoaded', async () => {
+                const containerFeed = document.getElementById('meu-feed-instagram');
+                // ID atualizado fornecido pelo usuário
+                const urlBehold = 'https://feeds.behold.so/UFos3tzBcaYIXUHYTJpl';
+
+                try {
+                    const resposta = await fetch(urlBehold);
+                    const dados = await resposta.json();
+                    const posts = dados.posts || [];
+                    const ultimosPosts = posts.slice(0, 6);
+
+                    ultimosPosts.forEach(post => {
+                        const card = document.createElement('a');
+                        card.href = post.permalink;
+                        card.target = '_blank';
+                        card.className = 'insta-card';
+                        card.setAttribute('aria-label', 'Ver post no Instagram');
+
+                        const isVideo = post.mediaType === 'VIDEO' && post.mediaUrl;
+
+                        if (isVideo) {
+                            const video = document.createElement('video');
+                            video.src = post.mediaUrl;
+                            video.poster = post.thumbnailUrl || (post.sizes && post.sizes.medium ? post.sizes.medium.mediaUrl : '');
+                            video.muted = true;
+                            video.loop = true;
+                            video.playsInline = true;
+                            video.style.width = '100%';
+                            video.style.height = '100%';
+                            video.style.objectFit = 'cover';
+
+                            card.addEventListener('mouseenter', () => {
+                                video.play().catch(e => console.log("Reprodução impedida pelo navegador", e));
+                            });
+
+                            card.addEventListener('mouseleave', () => {
+                                video.pause();
+                                video.currentTime = 0;
+                            });
+
+                            card.appendChild(video);
+                        } else {
+                            const imagem = document.createElement('img');
+                            if (post.sizes && post.sizes.medium && post.sizes.medium.mediaUrl) {
+                                imagem.src = post.sizes.medium.mediaUrl;
+                            } else {
+                                imagem.src = post.thumbnailUrl ? post.thumbnailUrl : post.mediaUrl;
+                            }
+                            imagem.alt = post.prunedCaption ? post.prunedCaption.substring(0, 50) + '...' : 'Post do Instagram da Geração Colibri';
+                            imagem.loading = 'lazy';
+
+                            card.appendChild(imagem);
+                        }
+
+                        containerFeed.appendChild(card);
+                    });
+                } catch (erro) {
+                    console.error('Erro ao carregar o feed do Instagram:', erro);
+                    containerFeed.innerHTML = '<p style="text-align: center; grid-column: 1/-1; color: var(--cor-texto);">Não foi possível carregar as fotos no momento. Visite nosso perfil no Instagram!</p>';
+                }
+            });

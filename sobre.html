@@ -239,6 +239,36 @@
             </div>
         </section>
 
+        <section id="instagram-feed" class="secao-branca" style="padding: 80px 0; border-top: 1px solid var(--cor-borda);">
+            <div class="container animar-fade relative-z">
+                
+                <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
+                    <span class="subtitulo-laranja" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
+                        <i class="ph-fill ph-instagram-logo" style="font-size: 24px;"></i> NOSSO INSTAGRAM
+                    </span>
+                    <h2 class="titulo-secao" style="margin-bottom: 15px; font-size: 36px; color: var(--cor-preto); letter-spacing: -1px;">
+                        Acompanhe nosso dia a dia
+                    </h2>
+                    <p style="font-size: 16px; color: var(--cor-texto);">
+                        Fique por dentro das novidades, dicas de trânsito e veja mais alunos conquistando a sonhada CNH.
+                    </p>
+                </div>
+
+                <!-- Container onde o JavaScript injetará as fotos -->
+                <div id="meu-feed-instagram" class="insta-grid-custom">
+                    <!-- As fotos carregarão automaticamente aqui via JS -->
+                </div>
+
+                <!-- Botão de CTA para o Perfil -->
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="https://www.instagram.com/geracaocolibriautoescola/" target="_blank" rel="noopener noreferrer" class="btn btn-primario" style="background-color: transparent; border: 2px solid var(--cor-destaque-planos); color: var(--cor-destaque-planos); font-size: 15px; padding: 14px 28px; transition: 0.3s;" onmouseover="this.style.backgroundColor='var(--cor-destaque-planos)'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--cor-destaque-planos)';">
+                        SEGUIR @GERACAOCOLIBRI
+                    </a>
+                </div>
+                
+            </div>
+        </section>
+
     </main>
 
     <!-- RODAPÉ CORPORATIVO -->
@@ -290,7 +320,7 @@
                         </li>
                         <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;">
                             <i class="ph-fill ph-clock" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
-                            <span>Seg a Sex: 08:30 – 19:00<br>Sábados: 09:00 – 14:00</span>
+                            <span>Seg a Sex: 08:30 – 18:30<br>Sábados: 09:00 – 14:00</span>
                         </li>
                     </ul>
                     <button class="btn btn-primario btn-wa" style="width: 100%; font-size: 14px; padding: 14px; justify-content: center; border-radius: 8px;" data-track="whatsapp_footer" data-message="Olá! Peguei o contato no rodapé do site e gostaria de mais informações.">
@@ -343,5 +373,18 @@
     </footer>
 
     <script src="index.js"></script>
+
+    <!-- BANNER DE COOKIES -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <i class="ph-fill ph-cookie" style="font-size: 24px; color: var(--cor-amarelo);"></i>
+                <p>Nós usamos cookies para melhorar sua experiência, personalizar anúncios e analisar nosso tráfego. Ao continuar navegando, você concorda com a nossa <a href="politica-privacidade.html">Política de Privacidade</a>.</p>
+            </div>
+            <div class="cookie-botoes">
+                <button id="btn-aceitar-cookies" class="btn btn-primario" style="padding: 10px 20px; font-size: 14px; border-radius: 8px;">Entendi e Aceito</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

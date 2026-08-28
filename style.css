@@ -713,3 +713,48 @@ body.dark-mode .cookie-banner {
                     left: auto !important; 
                 }
             }
+
+.insta-grid-custom {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            .insta-card {
+                aspect-ratio: 4/5; /* Formato vertical (Retrato) para preencher melhor o espaço */
+                border-radius: 16px;
+                overflow: hidden;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                background-color: var(--cor-borda);
+                display: block;
+            }
+            .insta-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            }
+            .insta-card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+            .insta-card:hover img {
+                transform: scale(1.05);
+            }
+            
+            /* REGRAS EXCLUSIVAS PARA O CELULAR */
+            @media (max-width: 768px) {
+                .insta-grid-custom {
+                    gap: 10px; /* Espaçamento menor para otimizar o espaço mobile */
+                    padding: 0 10px;
+                }
+                .insta-card {
+                    border-radius: 10px;
+                }
+                /* Exibe apenas os 3 primeiros posts no celular */
+                .insta-card:nth-child(n+4) {
+                    display: none;
+                }
+            }
