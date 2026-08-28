@@ -619,7 +619,6 @@ body.dark-mode .cookie-banner {
         padding: 20px 15px !important;
     }
 }
-
 .texto-gradiente {
                 background: linear-gradient(90deg, var(--cor-amarelo), #FFA000);
                 -webkit-background-clip: text;
@@ -655,13 +654,62 @@ body.dark-mode .cookie-banner {
             }
             .card-vidro-flutuante.c1 { top: 5%; left: -30px; animation-delay: 0s; }
             .card-vidro-flutuante.c2 { bottom: 10%; right: -20px; animation-delay: 3s; }
+            
             @keyframes flutuar {
                 0% { transform: translateY(0px); }
                 50% { transform: translateY(-15px); }
                 100% { transform: translateY(0px); }
             }
+            
+            /* ==========================================
+               CORREÇÃO MOBILE DEFINITIVA (RECICLAGEM FLUTUANTE)
+               ========================================== */
             @media (max-width: 768px) {
-                .composicao-elaborada { min-height: auto !important; margin-top: 40px; padding: 20px 0; }
-                .card-vidro-flutuante { position: relative; inset: auto !important; margin: 15px auto; width: 100%; animation: none; transform: none; }
-                .recorte-imagem-premium { width: 100% !important; border-width: 4px !important; }
+                #reciclagem { 
+                    padding-bottom: 90px !important; 
+                }
+                #reciclagem .titulo-secao { 
+                    font-size: 32px !important; 
+                    line-height: 1.2 !important; 
+                }
+                #reciclagem .animar-fade > div[style*="linear-gradient"] { 
+                    padding: 25px 20px !important; 
+                    box-sizing: border-box !important;
+                    width: 100% !important;
+                }
+                
+                .composicao-elaborada { 
+                    display: block !important;
+                    min-height: auto !important; 
+                    margin-top: 40px !important; 
+                    position: relative;
+                }
+                
+                .recorte-imagem-premium { 
+                    width: 100% !important; 
+                    border-width: 4px !important; 
+                    margin: 0 auto !important;
+                }
+                
+                /* DEVOLVE A FLUTUAÇÃO NO MOBILE */
+                .card-vidro-flutuante { 
+                    position: absolute !important; 
+                    animation: flutuar 6s ease-in-out infinite !important; 
+                    width: 90% !important; 
+                    min-width: auto !important; 
+                    padding: 12px 15px !important; 
+                }
+                
+                /* Posiciona o Card 1 no topo por cima da foto */
+                .card-vidro-flutuante.c1 { 
+                    top: -15px !important; 
+                    left: 5% !important; 
+                }
+                
+                /* Posiciona o Card 2 na base por cima da foto */
+                .card-vidro-flutuante.c2 { 
+                    bottom: -15px !important; 
+                    right: 5% !important; 
+                    left: auto !important; 
+                }
             }
