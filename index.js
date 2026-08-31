@@ -281,3 +281,18 @@ document.addEventListener('DOMContentLoaded', () => {
                     containerFeed.innerHTML = '<p style="text-align: center; grid-column: 1/-1; color: var(--cor-texto);">Não foi possível carregar as fotos no momento. Visite nosso perfil no Instagram!</p>';
                 }
             });
+
+            document.addEventListener("DOMContentLoaded", function() {
+                let mapaIframe = document.querySelector('.mapa-autoescola');
+                let observer = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let iframe = entry.target;
+                            iframe.src = iframe.getAttribute('data-src');
+                            observer.unobserve(iframe);
+                        }
+                    });
+                }, { rootMargin: "0px 0px 50px 0px" }); // Carrega 50px antes de aparecer na tela
+    
+                observer.observe(mapaIframe);
+            });
