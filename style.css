@@ -374,7 +374,7 @@ body.dark-mode .banner-dica {
     .secao-hero { padding: 100px 0 60px 0; }
     .hero-content { margin: 0 auto; text-align: center; }
     .hero-overlay-gradiente { background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 60%, rgba(0,0,0,0.4) 100%); }
-    .lista-check li { justify-content: center; }
+    .lista-check li { justify-content: left; }
     .botoes-grupo { justify-content: center; }
     .menu-principal { display: none; } 
     .secao-hero h1 { font-size: 36px; }
@@ -758,3 +758,187 @@ body.dark-mode .cookie-banner {
                     display: none;
                 }
             }
+
+/* ==========================================
+   SEÇÃO DE PACOTES (COM FOTO E DUAS COLUNAS)
+   ========================================== */
+.secao-pacotes-premium { 
+    padding: 80px 0; 
+    /* Utilizando a variável global de fundo */
+    background-color: var(--cor-fundo-base); 
+}
+
+.pacote-container-duplo {
+    max-width: 1100px; 
+    margin: 0 auto; 
+    padding: 0 20px;
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px; 
+    align-items: center;
+}
+
+.pacote-imagem-wrapper {
+    position: relative; 
+    width: 100%; 
+    height: 100%; 
+    min-height: 550px;
+    border-radius: 20px; 
+    overflow: hidden; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.pacote-imagem-wrapper img {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+
+.card-pacote-unico {
+    border: 2px solid var(--cor-amarelo, #f37021); 
+    border-radius: 16px; 
+    padding: 40px; 
+    text-align: left;
+    /* Variável de fundo de card que inverte no dark mode */
+    background: var(--cor-branco); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08); 
+    position: relative;
+}
+
+.faixa-destaque-unico {
+    position: absolute; 
+    top: -16px; 
+    left: 50%; 
+    transform: translateX(-50%);
+    background: var(--cor-amarelo, #f37021); 
+    color: #fff; 
+    font-size: 12px; 
+    font-weight: 800;
+    padding: 8px 24px; 
+    border-radius: 30px; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px; 
+    white-space: nowrap; 
+    box-shadow: 0 5px 15px rgba(243, 112, 33, 0.3);
+}
+
+.pacote-cabecalho { 
+    text-align: center; 
+    margin-bottom: 30px; 
+    padding-bottom: 25px; 
+    /* Variável de borda */
+    border-bottom: 1px solid var(--cor-borda); 
+}
+
+.pacote-icone { 
+    font-size: 48px; 
+    color: var(--cor-amarelo, #f37021); 
+    margin-bottom: 15px; 
+}
+
+.pacote-titulo { 
+    font-size: 28px; 
+    /* Variável de cor de título que vira branco no dark mode */
+    color: var(--cor-preto); 
+    margin-bottom: 5px; 
+    font-weight: 800; 
+}
+
+.pacote-sub { 
+    font-size: 15px; 
+    color: var(--cor-texto); 
+}
+
+.pacote-lista { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0 0 35px 0; 
+}
+
+.pacote-lista li { 
+    font-size: 16px; 
+    /* Variável global de texto */
+    color: var(--cor-texto); 
+    margin-bottom: 16px; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    font-weight: 500; 
+}
+
+.pacote-lista li i { 
+    color: var(--cor-amarelo, #f37021); 
+    font-size: 22px; 
+}
+
+.btn-pacote-principal {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px;
+    width: 100%; 
+    padding: 18px; 
+    font-weight: bold; 
+    border-radius: 12px;
+    text-decoration: none; 
+    background: var(--cor-amarelo, #f37021); 
+    color: #fff; 
+    font-size: 16px; 
+    transition: 0.3s;
+}
+
+.btn-pacote-principal:hover { 
+    filter: brightness(0.9); 
+    transform: translateY(-3px); 
+    color: #fff; 
+}
+
+.outros-pacotes { 
+    margin-top: 30px; 
+    padding: 25px; 
+    /* Variável de fundo neutro */
+    background: var(--cor-fundo-base); 
+    border: 1px dashed var(--cor-borda); 
+    border-radius: 12px; 
+    text-align: left; 
+}
+
+.outros-pacotes p { 
+    font-size: 15px; 
+    color: var(--cor-texto); 
+    margin-bottom: 15px; 
+}
+
+.btn-outros-pacotes {
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 8px;
+    padding: 12px 24px; 
+    /* Botão com cores dinâmicas invertidas */
+    color: var(--cor-preto); 
+    border: 2px solid var(--cor-preto); 
+    border-radius: 8px;
+    text-decoration: none; 
+    font-weight: bold; 
+    font-size: 14px; 
+    transition: 0.3s;
+}
+
+.btn-outros-pacotes:hover { 
+    background: var(--cor-preto); 
+    color: var(--cor-branco); 
+}
+
+@media (max-width: 992px) {
+    .pacote-container-duplo { 
+        grid-template-columns: 1fr; 
+        gap: 40px; 
+    }
+    .pacote-imagem-wrapper { 
+        min-height: 350px; 
+    }
+}
