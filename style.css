@@ -942,3 +942,85 @@ body.dark-mode .cookie-banner {
         min-height: 350px; 
     }
 }
+
+/* =========================================
+   PLANOS - HABILITAÇÃO
+   ========================================= */
+.planos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: stretch;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.plano-card-novo {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plano-card-novo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+}
+
+.plano-basico {
+    border: 2px solid #FFD700;
+}
+
+.plano-evolucao {
+    border: 2px solid #F26522;
+}
+
+.plano-aprovacao {
+    border: 2px solid #10ac84;
+}
+
+.lista-plano {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0 30px 0;
+    flex-grow: 1;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lista-plano li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.4;
+}
+
+.lista-plano li.destaque-item {
+    font-weight: 700;
+    color: #111;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #ddd;
+}
+
+.icone-check {
+    font-size: 18px;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 992px) {
+    .planos-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
