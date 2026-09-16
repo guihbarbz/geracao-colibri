@@ -40,35 +40,55 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // ==========================================
-    // 1. SISTEMA DINÂMICO DE WHATSAPP + RASTREAMENTO
+    // 1. SISTEMA DINÂMICO DE WHATSAPP + RASTREAMENTO (BLINDADO)
     // ==========================================
     const NUMERO_WHATSAPP = "551124797811";
     const botoesWhatsapp = document.querySelectorAll('.btn-wa');
     
     botoesWhatsapp.forEach(botao => {
+        // TRAVA 1: Impede a duplicidade de listeners caso o script seja carregado duas vezes
+        if (botao.dataset.listenerAnexado === 'true') return;
+        botao.dataset.listenerAnexado = 'true';
+
         botao.addEventListener('click', function(e) {
             e.preventDefault();
+            e.stopPropagation(); // TRAVA 2: Bloqueia a propagação do clique para outros elementos
+            
+            // TRAVA 3: Debounce contra duplo clique rápido (ansiedade do usuário)
+            if (this.getAttribute('data-processando') === 'true') return;
+            this.setAttribute('data-processando', 'true');
+            setTimeout(() => { this.removeAttribute('data-processando'); }, 2000);
             
             const mensagemBruta = this.getAttribute('data-message') || "Olá! Gostaria de mais informações sobre a Autoescola.";
-            const mensagemCodificada = encodeURIComponent(mensagemBruta);
-            const linkWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${mensagemCodificada}`;
+            const linkWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensagemBruta)}`;
+            const nomeDoBotao = this.getAttribute('data-track') || 'whatsapp_generico';
             
-            // Disparo para o dataLayer (Personalizado)
-            if (this.getAttribute('data-track') && window.dataLayer) {
-                window.dataLayer.push({
-                    'event': this.getAttribute('data-track'),
+            // DISPARO ÚNICO E ATÔMICO PARA O GOOGLE ADS
+            // Removemos o dataLayer.push customizado solto e unificamos tudo aqui para evitar 2 hits
+            if (typeof gtag === 'function') {
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-620881332/W8NKCPyQouccELTLh6gC',
+                    'botao_clicado': nomeDoBotao, // O 'click_whatsapp_top' agora viaja dentro da conversão oficial
                     'button_location': 'Website Geração Colibri'
+                });
+            } else if (window.dataLayer) {
+                // Fallback de segurança 
+                window.dataLayer.push({
+                    'event': 'conversion',
+                    'send_to': 'AW-620881332/W8NKCPyQouccELTLh6gC',
+                    'botao_clicado': nomeDoBotao
                 });
             }
 
-            // Disparo de Conversão Oficial do Google Ads
-            if (typeof gtag === 'function') {
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-620881332/W8NKCPyQouccELTLh6gC'
+            // DISPARO PARA O META PIXEL (rastreia o mesmo clique no lado do Facebook/Instagram Ads)
+            if (typeof fbq === 'function') {
+                fbq('track', 'Contact', {
+                    'content_name': nomeDoBotao,
+                    'content_category': 'WhatsApp'
                 });
             }
-            
-            // Abre o WhatsApp em nova guia
+
+            // Abre o WhatsApp
             window.open(linkWhatsApp, '_blank');
         });
     });
