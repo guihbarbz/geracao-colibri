@@ -65,25 +65,96 @@
 
         function atualizarTimeline() {
             if (!timeline || !linhaProgresso || prefereMenosMovimento) return;
-            var rect = timeline.getBoundingClientRect();
-            var alturaJanela = window.innerHeight;
+            var containerRect = timeline.getBoundingClientRect();
+            var alturaContainer = containerRect.height || 1;
+            var linhaAtivacao = window.innerHeight * 0.6;
 
-            var inicio = alturaJanela * 0.8;
-            var fim = alturaJanela * 0.3;
-            var percorrido = inicio - rect.top;
-            var distanciaTotal = (rect.height + (inicio - fim)) || 1;
-            var progresso = Math.max(0, Math.min(1, percorrido / distanciaTotal));
+            // Progresso contínuo: onde a linha de ativação está, em relação
+            // ao topo do container, como fração de 0 a 1. Isso acompanha o
+            // scroll suavemente, quadro a quadro — não só quando um card ativa.
+            var fracaoPreenchimento = (linhaAtivacao - containerRect.top) / alturaContainer;
+            fracaoPreenchimento = Math.max(0, Math.min(1, fracaoPreenchimento));
 
-            linhaProgresso.style.height = (progresso * 100) + '%';
+            passos.forEach(function (passo) {
+                // O ponto conector (::before) fica exatamente no centro vertical
+                // de cada .passo-jornada — mesma referência (linhaAtivacao) usada
+                // acima, então o card acende exatamente quando a linha o alcança.
+                var rectPasso = passo.getBoundingClientRect();
+                var centroConector = rectPasso.top + rectPasso.height / 2;
+                passo.classList.toggle('fx-ativo', centroConector <= linhaAtivacao);
+            });
 
-            passos.forEach(function (passo, i) {
-                var pontoAtivacao = (i + 0.5) / passos.length;
-                if (progresso >= pontoAtivacao) {
-                    passo.classList.add('fx-ativo');
+            linhaProgresso.style.height = (Math.max(0, Math.min(1, fracaoPreenchimento)) * 100) + '%';
+        }
+
+        // ==========================================
+        // 3B. ETAPAS DO PASSO A PASSO — ABREM SOZINHAS NO SCROLL
+        // Conforme o usuário desce, a etapa ativa expande e a
+        // anterior retrai. O clique manual continua funcionando e
+        // pausa o automático por alguns segundos.
+        // ==========================================
+        var etapas = Array.prototype.slice.call(document.querySelectorAll('.etapa-expansivel'));
+        var pausaAutomatico = 0;
+
+        function abrirEtapa(alvo) {
+            etapas.forEach(function (outra) {
+                var ehAlvo = (outra === alvo);
+                outra.classList.toggle('aberta', ehAlvo);
+                var c = outra.querySelector('.passo-cabecalho');
+                if (c) c.setAttribute('aria-expanded', ehAlvo ? 'true' : 'false');
+            });
+        }
+
+        etapas.forEach(function (etapa) {
+            var cabecalho = etapa.querySelector('.passo-cabecalho');
+            if (!cabecalho) return;
+
+            cabecalho.setAttribute('role', 'button');
+            cabecalho.setAttribute('tabindex', '0');
+            cabecalho.setAttribute('aria-expanded', 'false');
+
+            function alternarManual() {
+                pausaAutomatico = Date.now() + 4000;
+                if (etapa.classList.contains('aberta')) {
+                    etapa.classList.remove('aberta');
+                    cabecalho.setAttribute('aria-expanded', 'false');
                 } else {
-                    passo.classList.remove('fx-ativo');
+                    abrirEtapa(etapa);
+                }
+            }
+
+            cabecalho.addEventListener('click', alternarManual);
+            cabecalho.addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    alternarManual();
                 }
             });
+        });
+
+        // Escolhe, a cada scroll, a etapa mais próxima da linha de leitura
+        function atualizarEtapaAtiva() {
+            if (!etapas.length || prefereMenosMovimento) return;
+            if (Date.now() < pausaAutomatico) return;
+
+            var linhaLeitura = window.innerHeight * 0.45;
+            var melhor = null;
+            var menorDistancia = Infinity;
+
+            etapas.forEach(function (etapa) {
+                var rect = etapa.getBoundingClientRect();
+                if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+                var centro = rect.top + rect.height / 2;
+                var distancia = Math.abs(centro - linhaLeitura);
+                if (distancia < menorDistancia) {
+                    menorDistancia = distancia;
+                    melhor = etapa;
+                }
+            });
+
+            if (melhor && !melhor.classList.contains('aberta')) {
+                abrirEtapa(melhor);
+            }
         }
 
         // ==========================================
@@ -92,10 +163,13 @@
         // precisa existir no HTML de antemão.
         // ==========================================
         var gruposParaCascata = [
-            '#atalhos-habilitacao .container > div > a',
+            '#categorias .grid-3',
             '.grid-servicos',
-            '#adicao-mudanca .grid-2',
-            '.planos-grid',
+            '#adicao .grid-2',
+            '#mudanca .grid-3',
+            '.bento-grid',
+            '.grid-taxas',
+            '.grid-links-uteis',
             '.faq-container'
         ];
 
@@ -200,6 +274,7 @@
                 atualizarBarraProgresso();
                 atualizarParallaxHero();
                 atualizarTimeline();
+                atualizarEtapaAtiva();
                 tarefaPendente = false;
             });
         }

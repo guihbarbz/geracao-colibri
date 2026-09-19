@@ -1120,3 +1120,170 @@ body.fx-habilitacao .btn-flutuante-wa { animation: fxPulsoWa 2.8s ease-in-out in
 @media (max-width: 768px) {
     body.fx-habilitacao #atalhos-habilitacao { background-attachment: scroll !important; }
 }
+
+/* ==========================================
+   PÁGINA HABILITAÇÃO — REESTRUTURAÇÃO (pedido do cliente)
+   Cards de categoria, adição, taxas, links úteis, redes e
+   etapas expansíveis do passo a passo.
+   ========================================== */
+
+/* --- Cards de Categoria A / B / AB --- */
+.card-categoria { background: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 20px; padding: 40px 30px; text-align: center; display: flex; flex-direction: column; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-categoria:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+.card-categoria--destaque { border: 2px solid var(--cor-amarelo); box-shadow: 0 20px 40px rgba(254,221,0,0.15); }
+.card-categoria-tag { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: var(--cor-amarelo); color: #111; font-size: 11px; font-weight: 800; padding: 6px 18px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+.card-categoria-icone { width: 84px; height: 84px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 42px; margin: 0 auto 20px auto; }
+.card-categoria-letra { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cor-texto); display: block; margin-bottom: 6px; }
+.card-categoria h3 { font-size: 26px; color: var(--cor-preto); margin-bottom: 12px; letter-spacing: -0.5px; }
+.card-categoria p { font-size: 14.5px; color: var(--cor-texto); line-height: 1.55; margin-bottom: 28px; flex-grow: 1; }
+.card-categoria-btn { width: 100%; justify-content: center; background: transparent; border: 2px solid var(--cor-destaque-planos); color: var(--cor-destaque-planos); font-weight: 800; padding: 14px; border-radius: 10px; text-transform: uppercase; font-size: 13px; cursor: pointer; transition: 0.3s; font-family: var(--fonte-texto); }
+.card-categoria-btn:hover { background: var(--cor-destaque-planos); color: #fff; }
+.card-categoria-btn--amarelo { border-color: var(--cor-amarelo); color: #856600; }
+.card-categoria-btn--amarelo:hover { background: var(--cor-amarelo); color: #111; }
+.card-categoria-btn--verde { border-color: var(--cor-verde); color: #0b7d5e; }
+.card-categoria-btn--verde:hover { background: var(--cor-verde); color: #fff; }
+
+/* --- Cards "Já tem moto / já tem carro" (Adição) --- */
+.card-adicao { background: var(--cor-fundo-base); border: 1px solid var(--cor-borda); border-radius: 20px; padding: 35px 30px; text-align: center; }
+.card-adicao-icones { display: flex; align-items: center; justify-content: center; gap: 16px; margin-bottom: 20px; }
+.card-adicao-tem, .card-adicao-quer { width: 62px; height: 62px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; }
+.card-adicao-tem { background: rgba(0,0,0,0.05); color: var(--cor-texto); }
+.card-adicao-quer { background: rgba(242, 101, 34, 0.12); color: var(--cor-destaque-planos); }
+.card-adicao-seta { font-size: 22px; color: var(--cor-destaque-planos); }
+.card-adicao h3 { font-size: 20px; color: var(--cor-preto); margin-bottom: 8px; }
+.card-adicao p { font-size: 15px; color: var(--cor-texto); margin: 0; }
+.card-adicao p strong { color: var(--cor-preto); }
+
+.grid-etapas-adicao { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.etapa-adicao { display: flex; align-items: flex-start; gap: 12px; }
+.etapa-adicao span { width: 28px; height: 28px; border-radius: 50%; background: var(--cor-destaque-planos); color: #fff; font-size: 13px; font-weight: 800; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.etapa-adicao p { font-size: 14px; color: var(--cor-texto); margin: 0; line-height: 1.4; }
+
+/* --- Blocos visuais de taxa --- */
+.grid-taxas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.taxa-bloco { background: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 16px; padding: 28px 24px; text-align: center; transition: transform 0.3s ease, border-color 0.3s ease; }
+.taxa-bloco:hover { transform: translateY(-4px); border-color: var(--cor-amarelo); }
+.taxa-bloco i { font-size: 34px; color: var(--cor-destaque-planos); margin-bottom: 14px; display: block; }
+.taxa-nome { font-size: 14px; color: var(--cor-texto); line-height: 1.4; margin-bottom: 10px; min-height: 38px; }
+.taxa-valor { font-size: 26px; font-weight: 800; color: var(--cor-preto); margin: 0; letter-spacing: -0.5px; }
+.taxa-valor--variavel { font-size: 16px; font-weight: 700; color: var(--cor-texto); }
+
+/* --- Links úteis --- */
+.grid-links-uteis { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.card-link-util { background: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 16px; padding: 26px; display: flex; align-items: center; gap: 18px; text-decoration: none; transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; }
+.card-link-util:hover { transform: translateY(-4px); border-color: var(--cor-destaque-planos); box-shadow: 0 15px 30px rgba(0,0,0,0.07); }
+.card-link-util > i:first-child { font-size: 32px; color: var(--cor-destaque-planos); flex-shrink: 0; }
+.card-link-util h3 { font-size: 16px; color: var(--cor-preto); margin: 0 0 4px 0; }
+.card-link-util p { font-size: 13.5px; color: var(--cor-texto); margin: 0; line-height: 1.45; }
+.card-link-seta { font-size: 18px; color: var(--cor-texto); margin-left: auto; flex-shrink: 0; transition: transform 0.3s ease; }
+.card-link-util:hover .card-link-seta { transform: translate(3px, -3px); color: var(--cor-destaque-planos); }
+
+/* --- Bloco de redes sociais --- */
+.bloco-redes { background: var(--cor-fundo-base); border: 1px solid var(--cor-borda); border-radius: 20px; padding: 40px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: center; }
+.bloco-redes-links { display: flex; flex-direction: column; gap: 12px; }
+.bloco-redes-links a { display: flex; align-items: center; gap: 12px; background: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 12px; padding: 14px 20px; text-decoration: none; color: var(--cor-preto); font-weight: 700; font-size: 15px; transition: 0.3s; }
+.bloco-redes-links a i { font-size: 22px; color: var(--cor-destaque-planos); }
+.bloco-redes-links a:hover { border-color: var(--cor-destaque-planos); transform: translateX(4px); }
+
+/* --- Etapas expansíveis do passo a passo --- */
+.etapa-expansivel .passo-cabecalho { cursor: pointer; display: flex; align-items: center; gap: 12px; }
+.etapa-expansivel .passo-cabecalho h3 { flex-grow: 1; }
+.etapa-seta { font-size: 16px; color: var(--cor-texto); transition: transform 0.3s ease; flex-shrink: 0; }
+.etapa-expansivel.aberta .etapa-seta { transform: rotate(180deg); }
+.etapa-detalhe { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, margin-top 0.35s ease; }
+.etapa-expansivel.aberta .etapa-detalhe { max-height: 260px; margin-top: 10px; }
+.etapa-detalhe p { margin: 0; }
+
+@media (max-width: 992px) {
+    .grid-taxas { grid-template-columns: repeat(2, 1fr); }
+    .grid-etapas-adicao { grid-template-columns: repeat(2, 1fr); }
+    .bloco-redes { grid-template-columns: 1fr; gap: 30px; }
+}
+
+@media (max-width: 768px) {
+    .grid-links-uteis { grid-template-columns: 1fr; }
+    .grid-taxas { grid-template-columns: 1fr; }
+    .grid-etapas-adicao { grid-template-columns: 1fr; }
+    .taxa-nome { min-height: 0; }
+    .bloco-redes { padding: 30px 24px; }
+}
+
+/* ==========================================
+   HABILITAÇÃO — 2ª RODADA DE AJUSTES DO CLIENTE
+   Atalhos do topo, cards de Mudança de Categoria,
+   bento grid do "Por que a Geração Colibri" e lojas de app.
+   ========================================== */
+
+/* --- Atalhos de navegação no topo --- */
+.grid-atalhos-hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; max-width: 900px; margin: 0 auto 45px auto; }
+.atalho-hero { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); padding: 22px 20px; border-radius: 14px; text-decoration: none; display: flex; align-items: center; gap: 14px; transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease; color: #fff; text-align: left; }
+.atalho-hero i { font-size: 26px; flex-shrink: 0; transition: color 0.3s ease; }
+.atalho-hero span { font-size: 15px; font-weight: 700; line-height: 1.25; }
+.atalho-hero:hover { background: var(--cor-amarelo); border-color: var(--cor-amarelo); color: #111; transform: translateY(-3px); }
+.atalho-hero:hover i { color: #111; }
+
+@media (max-width: 900px) { .grid-atalhos-hero { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .grid-atalhos-hero { grid-template-columns: 1fr; } .atalho-hero { padding: 18px; } }
+
+/* --- Cards de Mudança de Categoria (C / D / E) --- */
+.card-mudanca { background: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 20px; padding: 35px 28px; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+.card-mudanca:hover { transform: translateY(-6px); border-color: var(--cor-verde); box-shadow: 0 20px 40px rgba(16,185,129,0.12); }
+.card-mudanca-icones { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 20px; }
+.card-mudanca-tem, .card-mudanca-quer { width: 58px; height: 58px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; }
+.card-mudanca-tem { background: rgba(0,0,0,0.05); color: var(--cor-texto); }
+.card-mudanca-quer { background: rgba(16, 185, 129, 0.12); color: #0b7d5e; }
+.card-mudanca-seta { font-size: 20px; color: var(--cor-verde); }
+.card-mudanca-letra { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: var(--cor-texto); display: block; margin-bottom: 6px; }
+.card-mudanca h3 { font-size: 21px; color: var(--cor-preto); margin-bottom: 10px; }
+.card-mudanca p { font-size: 14.5px; color: var(--cor-texto); line-height: 1.5; margin: 0; }
+
+.etapa-adicao--verde span { background: var(--cor-verde); }
+
+/* --- BENTO GRID: "Por que a Geração Colibri" (mesma cara clara do site, só o layout é bento) --- */
+.bento-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(150px, auto); gap: 24px; }
+.bento-card { background: var(--cor-branco); padding: 32px; border-radius: 24px; border: 1px solid var(--cor-borda); box-shadow: 0 4px 12px rgba(0,0,0,0.03); transition: transform 0.2s, box-shadow 0.2s; display: flex; flex-direction: column; justify-content: flex-start; text-decoration: none; }
+.bento-card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+.bento-card h3 { font-size: 20px; color: var(--cor-preto); margin: 0 0 12px 0; }
+.bento-card p { font-size: 14.5px; color: var(--cor-texto); line-height: 1.55; margin: 0; }
+.bento-card .icone-servico { margin-bottom: 16px; }
+
+/* Card grande em destaque (o diferencial, ocupa 2x2) */
+.bento-card--destaque { grid-column: span 2; grid-row: span 2; justify-content: center; }
+.bento-card--destaque .icone-servico { font-size: 56px; margin-bottom: 20px; }
+.bento-card--destaque h3 { font-size: 28px; letter-spacing: -0.5px; line-height: 1.2; }
+.bento-card--destaque p { font-size: 15.5px; }
+.bento-tag { display: inline-block; align-self: flex-start; background: rgba(242, 101, 34, 0.1); color: var(--cor-destaque-planos); font-size: 12px; font-weight: 800; letter-spacing: 0.5px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; margin-bottom: 18px; }
+
+/* Card largo na base */
+.bento-card--largo { grid-column: span 3; flex-direction: row; align-items: center; gap: 24px; }
+.bento-card--largo .icone-servico { margin-bottom: 0; flex-shrink: 0; }
+
+/* Card de chamada, na cor de destaque da marca (mesmo amarelo usado no resto do site) */
+.bento-card--cta { background: var(--cor-amarelo); border-color: var(--cor-amarelo); justify-content: space-between; box-shadow: 0 8px 20px rgba(254, 221, 0, 0.25); }
+.bento-card--cta:hover { background: #f0d200; border-color: #f0d200; }
+.bento-card--cta h3 { color: #111; margin: 0; }
+.bento-card--cta i { font-size: 24px; color: #111; margin-top: auto; }
+
+@media (max-width: 992px) {
+    .bento-grid { grid-template-columns: repeat(2, 1fr); }
+    .bento-card--destaque { grid-column: span 2; grid-row: span 1; }
+    .bento-card--largo { grid-column: span 2; }
+}
+
+@media (max-width: 600px) {
+    .bento-grid { grid-template-columns: 1fr; gap: 20px; }
+    .bento-card--destaque, .bento-card--largo { grid-column: span 1; }
+    .bento-card--largo { flex-direction: column; align-items: flex-start; gap: 0; }
+    .bento-card--largo .icone-servico { margin-bottom: 16px; }
+}
+
+/* --- Card de link útil com dois botões de loja --- */
+.card-link-util--duplo { cursor: default; }
+.card-link-util--duplo:hover { transform: none; border-color: var(--cor-borda); box-shadow: none; }
+.card-link-lojas { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+.card-link-lojas a { display: inline-flex; align-items: center; gap: 7px; background: var(--cor-fundo-base); border: 1px solid var(--cor-borda); border-radius: 10px; padding: 9px 16px; font-size: 13px; font-weight: 700; color: var(--cor-preto); text-decoration: none; transition: 0.25s; }
+.card-link-lojas a i { font-size: 17px; color: var(--cor-destaque-planos); }
+.card-link-lojas a:hover { border-color: var(--cor-destaque-planos); color: var(--cor-destaque-planos); transform: translateY(-2px); }
+
+/* --- Etapa aberta automaticamente pelo scroll --- */
+.etapa-expansivel.aberta .passo-cabecalho h3 { color: var(--cor-preto); }
