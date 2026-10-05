@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CNH suspensa ou com excesso de pontos? Faça o curso de reciclagem online e regularize sua CNH com a Geração Colibri.">
-    <title>Regularizar CNH Suspensa | Curso de Reciclagem</title>
+    <meta name="description" content="CNH suspensa, cassada ou com excesso de pontos? Curso de Reciclagem, Reciclagem Preventiva e Reabilitação de CNH Cassada com a Geração Colibri em Guarulhos.">
+    <title>Regularização de CNH: Reciclagem, Preventiva e Reabilitação | Geração Colibri</title>
     <!-- ======================================================= -->
     <!-- PACOTE COMPLETO DE FAVICONS E APP ICONS -->
     <link rel="icon" type="image/x-icon" href="imagens/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
-    <!-- Se o seu arquivo JSON tiver outro nome (ex: site.webmanifest), ajuste abaixo -->
     <link rel="manifest" href="imagens/site.webmanifest">
     <meta name="theme-color" content="#ffffff">
     <!-- ======================================================= -->
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
     <link rel="stylesheet" href="style.css">
 
     <!-- ================================================== -->
-    <!-- META PIXEL CODE (COLE AQUI!) -->
+    <!-- META PIXEL CODE -->
     <!-- ================================================== -->
     <script>
     !function(f,b,e,v,n,t,s)
@@ -42,20 +41,42 @@
     /></noscript>
 
     <!-- ================================================== -->
-<!-- GOOGLE TAG (Google Ads) -->
-<!-- ================================================== -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-620881332"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-620881332');
-</script>
+    <!-- GOOGLE TAG (Google Ads) -->
+    <!-- ================================================== -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-620881332"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-620881332');
+    </script>
+
+    <!-- ESTILO ESPECÍFICO DA PÁGINA DE REGULARIZAÇÃO -->
+    <style>
+        .grid-situacao { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        @media (max-width: 900px) { .grid-situacao { grid-template-columns: 1fr; } }
+
+        .painel-generico { border-radius: 24px; padding: 50px 35px; text-align: center; position: relative; overflow: hidden; min-height: 320px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .painel-generico i { font-size: 76px; margin-bottom: 20px; position: relative; z-index: 1; }
+        .painel-generico p { font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; position: relative; z-index: 1; margin: 0; }
+        .painel-generico::before { content: ''; position: absolute; inset: 0; opacity: 0.08; background-image: radial-gradient(circle, currentColor 2px, transparent 2px); background-size: 22px 22px; }
+
+        .fluxo-processo { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; margin: 0 auto; }
+        .fluxo-no { background: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 14px; padding: 16px 22px; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--cor-preto); text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .fluxo-seta { font-size: 20px; color: var(--cor-destaque-planos); flex-shrink: 0; }
+        @media (max-width: 600px) { .fluxo-processo { flex-direction: column; } .fluxo-seta { transform: rotate(90deg); } }
+
+        .pill-beneficio { display: inline-flex; align-items: center; gap: 8px; background: var(--cor-fundo-base); border: 1px solid var(--cor-borda); border-radius: 30px; padding: 10px 18px; font-size: 13px; font-weight: 700; color: var(--cor-preto); }
+        .pill-beneficio i { color: var(--cor-verde); font-size: 16px; }
+
+        .box-preco { background: var(--cor-branco); border-radius: 24px; padding: 40px; border: 1px solid var(--cor-borda); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .box-preco-valor { font-size: 40px; font-weight: 800; color: var(--cor-preto); letter-spacing: -1px; line-height: 1; }
+        .box-preco-parcelas { font-size: 14px; color: var(--cor-texto); margin-top: 8px; }
+    </style>
 </head>
 <body>
 
    <header class="header-fixo">
-        <!-- A logo agora aponta para o topo da Home -->
         <a href="index.html#hero" class="logo">
             <img src="imagens/logo.png" alt="Ícone Autoescola Geração Colibri" class="logo-img">
             <span class="logo-texto">Geração Colibri</span>
@@ -67,11 +88,9 @@
 
         <nav class="menu-principal">
             <ul>
-                
                 <li class="dropdown">
                     <a href="#" class="link-dropdown">Início <i class="ph-bold ph-caret-down icone-seta"></i></a>
                     <ul class="submenu">
-                        <!-- Primeira Habilitação virou subcategoria e o "Como funciona" foi removido -->
                         <li><a href="index.html#hero">Primeira Habilitação</a></li>
                         <li><a href="index.html#pacotes">Nossos Pacotes</a></li>
                         <li><a href="index.html#solucoes">Mais Serviços</a></li>
@@ -79,365 +98,498 @@
                         <li><a href="index.html#faq">Dúvidas Frequentes</a></li>
                     </ul>
                 </li>
-                
+
                 <li><a href="habilitacao.html">Habilitação</a></li>
-                <li><a href="regularizacao.html">Regularização CNH</a></li>
+                <li><a href="regularizacao.html" aria-current="page">Regularização CNH</a></li>
                 <li><a href="cursos.html">Cursos</a></li>
                 <li><a href="produtos.html">Produtos</a></li>
-                
+
                 <li><a href="sobre.html">Sobre Nós</a></li>
             </ul>
         </nav>
         <div class="header-actions">
             <button id="btn-dark" class="btn-icone" title="Alternar Tema"><i class="ph-fill ph-moon"></i></button>
-            <button class="btn btn-primario btn-sm btn-wa" data-track="click_whatsapp_top" data-message="Olá! Vim do site e quero informações gerais."><i class="ph-bold ph-whatsapp-logo" style="margin-right: 6px;"></i> WhatsApp</button>
+            <button class="btn btn-primario btn-sm btn-wa" data-track="click_whatsapp_top_regularizacao" data-message="Olá! Vim da página de Regularização e quero informações gerais."><i class="ph-bold ph-whatsapp-logo" style="margin-right: 6px;"></i> WhatsApp</button>
         </div>
     </header>
 
-    <button class="btn-flutuante-wa btn-wa" data-track="whatsapp_flutuante_reciclagem">
+    <button class="btn-flutuante-wa btn-wa" data-track="whatsapp_flutuante_regularizacao" data-message="Olá! Estava na página de Regularização e preciso de ajuda.">
         <i class="ph-fill ph-whatsapp-logo"></i>
     </button>
 
     <main style="margin-top: var(--altura-header);">
-        
-        <!-- HERO SECTION (Conversão Imediata com Foto) -->
-        <section class="secao-cinza" style="padding: 70px 0 50px 0; border-bottom: 1px solid var(--cor-borda);">
 
-            
-
+        <!-- ================================================= -->
+        <!-- 1. HERO -->
+        <!-- ================================================= -->
+        <section class="secao-cinza secao-ancora" style="padding: 90px 0;">
             <div class="container animar-fade relative-z">
-                <div class="grid-2" style="align-items: center;">
-                    
-                    <!-- Coluna de Texto -->
+                <div class="grid-2" style="align-items: center; gap: 50px;">
+
                     <div>
-                        <div style="display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap;">
-                            <span class="badge" style="background: var(--cor-vermelho); color: #fff;"><i class="ph-bold ph-warning"></i> PONTOS NA CNH?</span>
-                            <span class="badge" style="background: var(--cor-amarelo); color: #000;"><i class="ph-bold ph-prohibit"></i> CNH SUSPENSA?</span>
-                        </div>
-                        
-                        <h1 class="titulo-secao" style="font-size: 42px; margin-bottom: 20px; text-align: left;">Regularize sua habilitação 100% online sem perder tempo.</h1>
-                        
-                        <ul style="list-style: none; padding: 0; margin-bottom: 30px; font-size: 16px; color: var(--cor-texto);">
-                            <li style="margin-bottom: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); margin-right: 8px;"></i> Faça tudo pelo celular</li>
-                            <li style="margin-bottom: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); margin-right: 8px;"></i> Curso online autorizado</li>
-                            <li style="margin-bottom: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); margin-right: 8px;"></i> Prova na nossa unidade</li>
-                            <li style="margin-bottom: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); margin-right: 8px;"></i> Atendimento rápido e suporte completo</li>
+                        <span class="badge" style="background: var(--cor-vermelho); color: #fff; margin-bottom: 18px;"><i class="ph-bold ph-warning"></i> SUSPENSA, CASSADA OU COM EXCESSO DE PONTOS?</span>
+
+                        <h1 class="titulo-secao" style="font-size: 40px; text-align: left; margin-bottom: 18px; letter-spacing: -1px;">CNH suspensa, cassada ou com excesso de pontos?</h1>
+
+                        <p style="font-size: 16.5px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 28px;">Entenda sua situação e conte com a Geração Colibri para orientar você no caminho da regularização da sua CNH.</p>
+
+                        <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Curso de Reciclagem</li>
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Reciclagem Preventiva</li>
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Reabilitação de CNH Cassada</li>
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Suporte durante todo o processo</li>
                         </ul>
 
-                        <button class="btn btn-primario btn-wa" data-track="whatsapp_reciclagem_hero" style="font-size: 18px; padding: 15px 30px;" data-message="Olá! Quero regularizar minha CNH agora.">
-                            <i class="ph-bold ph-whatsapp-logo"></i> Fale agora com nossa equipe
+                        <button class="btn btn-primario btn-wa" style="font-size: 16px; padding: 18px 34px; text-transform: uppercase; font-weight: 800;" data-track="whatsapp_regularizacao_hero" data-message="Olá! Quero regularizar minha CNH.">
+                            <i class="ph-bold ph-whatsapp-logo"></i> QUERO REGULARIZAR MINHA CNH
                         </button>
-                        <p style="margin-top: 15px; font-size: 14px; color: var(--cor-texto);">Você resolve tudo em um só lugar. Atendimento rápido e suporte completo.</p>
                     </div>
 
-                    <!-- Coluna da Imagem -->
-                    <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
-                        <img src="imagens/antes_depois.png" alt="Aluna feliz com a CNH regularizada" style="width: 100%; height: auto; display: block;">
+                    <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 45px rgba(0,0,0,0.12);">
+                        <img src="imagens/hero_regularizacao.jpg" alt="Mulher dentro do carro segurando a CNH e consultando no celular a situação de sua habilitação" loading="eager" width="1100" height="619" style="width: 100%; height: 100%; object-fit: cover; display: block;">
                     </div>
-                    
+
                 </div>
             </div>
         </section>
 
-        <!-- BLOCO DE PREÇO (CTA Principal) Movido para o Topo -->
-        <section class="secao-branca" style="padding: 60px 0 20px 0;">
+        <!-- ================================================= -->
+        <!-- 2. ATALHO PARA CADA SITUAÇÃO -->
+        <!-- ================================================= -->
+        <section class="secao-branca secao-ancora" style="padding: 90px 0;">
             <div class="container animar-fade relative-z">
-                <div style="background: linear-gradient(135deg, #111, #222); border-radius: 24px; padding: 50px; text-align: center; color: #fff; box-shadow: 0 20px 40px rgba(0,0,0,0.2); max-width: 800px; margin: 0 auto;">
-                    <h2 style="font-size: 32px; color: #fff; margin-bottom: 10px;">CURSO DE RECICLAGEM ONLINE</h2>
-                    <div style="font-size: 48px; font-weight: 800; color: var(--cor-amarelo); margin: 20px 0;">A partir de R$ 380,00</div>
-                    
-                    <ul style="list-style: none; padding: 0; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; font-size: 16px;">
-                        <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Processo simples</li>
-                        <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Atendimento rápido</li>
-                        <li><i class="ph-bold ph-check" style="color: var(--cor-verde);"></i> Faça tudo online</li>
-                    </ul>
-                    
-                    <button class="btn btn-primario btn-wa" data-track="whatsapp_reciclagem_ead" style="font-size: 20px; padding: 20px 50px; background: var(--cor-verde); width: 100%; max-width: 400px; justify-content: center;" data-message="Olá! Quero me matricular no curso de reciclagem.">
-                        <i class="ph-bold ph-whatsapp-logo"></i> Quero resolver agora
-                    </button>
-                    
-                    <div style="margin-top: 25px; display: flex; justify-content: center; gap: 10px; color: #aaa; font-size: 14px;">
-                        <span><i class="ph-fill ph-star" style="color: var(--cor-amarelo);"></i> Nota máxima no Google</span>
-                        <span>•</span>
-                        <span>Credenciada Detran-SP</span>
-                    </div>
+                <div class="text-center" style="max-width: 800px; margin: 0 auto 50px auto;">
+                    <h2 class="titulo-secao" style="letter-spacing: -1px;">Qual é a situação da sua CNH?</h2>
+                    <p style="color: var(--cor-texto); font-size: 16px;">Escolha abaixo o que você precisa e vá direto para a informação.</p>
                 </div>
-            </div>
-        </section>
-        
-        <!-- SUBHEADLINE DE IMPACTO COM FOTO DRAMÁTICA -->
-        <section class="secao-branca" style="padding: 60px 0;">
-            <div class="container text-center animar-fade">
-                <h2 style="font-size: 28px; color: var(--cor-preto); font-weight: 800;">Muita gente acha que pode ter 40 pontos...</h2>
-                <h3 style="font-size: 24px; color: var(--cor-vermelho); font-weight: 600; margin-top: 10px; margin-bottom: 40px;">Até descobrir que a CNH pode ser suspensa antes disso.</h3>
-                
-                <div style="max-width: 900px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.2);">
-                    <img src="imagens/preocupada.jpg" alt="A dor de ter a CNH bloqueada e a solução rápida" style="width: 100%; height: auto; display: block;">
-                </div>
-            </div>
-        </section>
 
-        <section class="secao-cinza" style="padding: 60px 0;">
-            <div class="container">
-                <div class="bloco-titulo text-center">
-                    <h2 class="titulo-secao">Como funciona a pontuação da CNH?</h2>
-                </div>
-                
-                <div class="grid-servicos" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-                    <div class="card-servico" style="border-top: 5px solid var(--cor-verde);">
-                        <h3 style="font-size: 32px; color: var(--cor-verde); margin-bottom: 10px;">40 Pontos</h3>
-                        <p style="color: var(--cor-texto);">Limite máximo apenas quando <strong>NÃO existe</strong> nenhuma infração gravíssima.</p>
+                <div class="grid-situacao">
+                    <div class="card-categoria">
+                        <div class="card-categoria-icone" style="background: rgba(254, 1, 0, 0.1); color: var(--cor-vermelho);">
+                            <i class="ph-fill ph-prohibit"></i>
+                        </div>
+                        <span class="card-categoria-letra">CNH Suspensa</span>
+                        <h3>Sua CNH foi suspensa?</h3>
+                        <p>Faça o curso de reciclagem e cumpra as etapas necessárias para regularizar sua habilitação.</p>
+                        <a href="#reciclagem" class="card-categoria-btn" style="text-decoration: none;">VER CURSO DE RECICLAGEM</a>
                     </div>
-                    <div class="card-servico" style="border-top: 5px solid var(--cor-amarelo);">
-                        <h3 style="font-size: 32px; color: var(--cor-amarelo); margin-bottom: 10px;">30 Pontos</h3>
-                        <p style="color: var(--cor-texto);">O limite cai quando existe <strong>1 infração gravíssima</strong> registrada no seu prontuário.</p>
+
+                    <div class="card-categoria">
+                        <div class="card-categoria-icone" style="background: rgba(254, 221, 0, 0.2); color: #856600;">
+                            <i class="ph-fill ph-shield-warning"></i>
+                        </div>
+                        <span class="card-categoria-letra">Reciclagem Preventiva</span>
+                        <h3>Tem EAR e atingiu 30 pontos?</h3>
+                        <p>Se você exerce atividade remunerada ao veículo (EAR) e atingiu 30 pontos em 12 meses, verifique se atende aos requisitos para a Reciclagem Preventiva.</p>
+                        <a href="#preventiva" class="card-categoria-btn card-categoria-btn--amarelo" style="text-decoration: none;">VER RECICLAGEM PREVENTIVA</a>
                     </div>
-                    <div class="card-servico" style="border-top: 5px solid var(--cor-vermelho);">
-                        <h3 style="font-size: 32px; color: var(--cor-vermelho); margin-bottom: 10px;">20 Pontos</h3>
-                        <p style="color: var(--cor-texto);">Risco crítico. Limite quando existem <strong>2 ou mais</strong> infrações gravíssimas.</p>
+
+                    <div class="card-categoria">
+                        <div class="card-categoria-icone" style="background: rgba(66, 66, 65, 0.1); color: var(--cor-preto);">
+                            <i class="ph-fill ph-x-circle"></i>
+                        </div>
+                        <span class="card-categoria-letra">CNH Cassada</span>
+                        <h3>Cumpriu o período de cassação?</h3>
+                        <p>Inicie seu processo de reabilitação e conte com nosso suporte e preparação para os exames.</p>
+                        <a href="#reabilitacao" class="card-categoria-btn card-categoria-btn--verde" style="text-decoration: none;">VER REABILITAÇÃO</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="secao-branca" style="padding: 60px 0;">
-            <div class="container">
-                <div class="grid-2">
-                    <!-- Coluna 1: Autossuspensivas -->
-                    <div style="background: rgba(254, 1, 0, 0.05); border: 1px solid rgba(254, 1, 0, 0.2); padding: 40px; border-radius: 20px;">
-                        <span class="badge" style="background: var(--cor-vermelho); color: #fff; margin-bottom: 20px;">CUIDADO REDOBRADO</span>
-                        <h3 style="font-size: 24px; color: var(--cor-preto); margin-bottom: 15px;">Infrações Autossuspensivas</h3>
-                        <p style="color: var(--cor-texto); margin-bottom: 20px;">Algumas infrações podem suspender sua CNH na hora, mesmo sem atingir o limite de pontos. Exemplos:</p>
-                        
-                        <!-- Lista corrigida: padding e margin zerados, com flexbox para alinhar o ícone -->
-                        <ul style="list-style: none; padding: 0; margin: 0; color: var(--cor-texto);">
-                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
-                                <i class="ph-bold ph-x" style="color: var(--cor-vermelho); font-size: 20px; flex-shrink: 0; margin-top: 2px;"></i>
-                                <span>Lei Seca ou recusar bafômetro</span>
-                            </li>
-                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
-                                <i class="ph-bold ph-x" style="color: var(--cor-vermelho); font-size: 20px; flex-shrink: 0; margin-top: 2px;"></i>
-                                <span>Excesso de velocidade acima de 50%</span>
-                            </li>
-                            <li style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 12px;">
-                                <i class="ph-bold ph-x" style="color: var(--cor-vermelho); font-size: 20px; flex-shrink: 0; margin-top: 2px;"></i>
-                                <span>Disputar corrida ou manobra perigosa</span>
-                            </li>
+        <!-- ================================================= -->
+        <!-- 3. CURSO DE RECICLAGEM PARA CNH SUSPENSA (1ª OFERTA) -->
+        <!-- ================================================= -->
+        <section id="reciclagem" class="secao-cinza secao-ancora" style="padding: 100px 0;">
+            <div class="container animar-fade relative-z">
+                <div class="grid-2" style="gap: 50px; align-items: center;">
+
+                    <div style="order: 2; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
+                        <img src="imagens/curso_ead.jpg" alt="Curso de Reciclagem 100% online, estudado pelo celular" loading="lazy" width="1100" height="618" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
+                    <div style="order: 1;">
+                        <span class="subtitulo-laranja">CNH SUSPENSA</span>
+                        <h2 class="titulo-secao" style="font-size: 32px; letter-spacing: -1px; margin-bottom: 15px;">Curso de Reciclagem para CNH Suspensa</h2>
+                        <p style="font-size: 16px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 25px;">Faça seu curso de reciclagem online com praticidade e conte com o suporte da nossa equipe durante o processo.</p>
+
+                        <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Curso EAD</li>
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> 30 horas-aula</li>
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Acesso pelo celular ou computador</li>
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Biometria facial</li>
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Suporte durante o processo</li>
+                            <li style="margin-bottom: 12px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Prova presencial</li>
                         </ul>
-                        
-                        <p style="margin-top: 20px; font-weight: 700; color: var(--cor-vermelho);">⚠️ Não espere a CNH ser bloqueada para regularizar.</p>
+
+                        <div class="box-preco" style="margin-bottom: 25px;">
+                            <span class="box-preco-valor">R$ 380</span>
+                            <span style="font-size: 16px; color: var(--cor-texto); font-weight: 600;"> à vista</span>
+                            <p class="box-preco-parcelas">ou 2x de R$ 205 no boleto · 6x de R$ 72 no cartão</p>
+                        </div>
+
+                        <button class="btn btn-primario btn-wa" style="width: 100%; justify-content: center; font-size: 16px; padding: 18px; text-transform: uppercase; font-weight: 800;" data-track="wa_reciclagem_matricula" data-message="Olá! Quero fazer minha matrícula no Curso de Reciclagem.">
+                            <i class="ph-bold ph-whatsapp-logo"></i> QUERO FAZER MINHA MATRÍCULA
+                        </button>
                     </div>
 
-                    <div style="background: rgba(254, 221, 0, 0.1); border: 1px solid rgba(254, 221, 0, 0.3); padding: 40px; border-radius: 20px;">
-                        <span class="badge" style="background: var(--cor-amarelo); color: #000; margin-bottom: 20px;">TRABALHA DIRIGINDO?</span>
-                        <h3 style="font-size: 24px; color: var(--cor-preto); margin-bottom: 15px;">Reciclagem Preventiva (EAR)</h3>
-                        <p style="color: var(--cor-texto); margin-bottom: 20px;">Motoristas de aplicativo, taxistas e profissionais com EAR podem fazer o curso preventivo ao atingir <strong>30 pontos</strong>, zerando a pontuação e evitando o bloqueio.</p>
-                        <button class="btn-link btn-wa" data-track="whatsapp_reciclagem_preventiva" style="color: var(--cor-preto); font-weight: 700;" data-message="Olá, sou motorista EAR e quero informações sobre a reciclagem preventiva.">Consultar minha CNH agora <i class="ph-bold ph-arrow-right"></i></button>
-                    </div>
                 </div>
             </div>
         </section>
 
-       <!-- APLICATIVO CNH DIGITAL (Consulta de Pontos) -->
-        <!-- APLICATIVO CNH DIGITAL (Consulta de Pontos) -->
-        <section class="secao-cinza" style="padding: 60px 0;">
+        <!-- ================================================= -->
+        <!-- 4. COMO FUNCIONA A RECICLAGEM -->
+        <!-- ================================================= -->
+        <section class="secao-branca secao-ancora" style="padding: 100px 0;">
             <div class="container animar-fade relative-z">
-                <!-- CORREÇÃO 1: background: var(--cor-fundo-base) no lugar de #fff -->
-                <div class="grid-2" style="align-items: center; background: var(--cor-fundo-base); border-radius: 24px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda);">
-                    
-                    <!-- Coluna 1: Apenas os Textos -->
-                    <div>
-                        <!-- CORREÇÃO 2: color: #000 para forçar o texto preto no fundo amarelo sempre -->
-                        <span class="badge" style="background: var(--cor-amarelo); color: #000; margin-bottom: 20px;"><i class="ph-bold ph-magnifying-glass"></i> CONSULTE SUA CNH</span>
-                        
-                        <h2 style="font-size: 32px; color: var(--cor-preto); margin-bottom: 20px;">Como saber se minha CNH está suspensa?</h2>
-                        
-                        <p style="color: var(--cor-texto); margin-bottom: 20px; font-size: 16px;">
-                            A forma mais rápida e segura de verificar a situação da sua habilitação e a sua pontuação atual é através do aplicativo oficial do governo, a <strong>Carteira Digital de Trânsito (CDT)</strong>.
-                        </p>
-                        <p style="color: var(--cor-texto); margin-bottom: 0; font-size: 16px;">
-                            Baixe o app gratuitamente, faça login com sua conta Gov.br e acesse a aba "Infrações" para ver todos os detalhes do seu prontuário.
-                        </p>
-                    </div>
-                    
-                    <!-- Coluna 2: Imagem do App e Botões agrupados -->
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 30px;">
-                        
-                        <!-- Imagem da Logo -->
-                        <img src="imagens/CNH_do_Brasil.png" alt="Aplicativo Carteira Digital de Trânsito" style="max-width: 250px; height: auto; object-fit: contain;">
-                        
-                        <!-- Botões -->
-                        <div style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; width: 100%;">
-                            <!-- Botão Google Play (Adicionada borda sutil para dark mode) -->
-                            <a href="https://play.google.com/store/apps/details?id=br.gov.serpro.cnhe" target="_blank" rel="noopener noreferrer" class="btn" style="background: #111; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 8px; flex: 1; min-width: 160px; justify-content: center; border: 1px solid #333;">
-                                <i class="ph-fill ph-google-play-logo" style="font-size: 24px;"></i>
-                                <div style="text-align: left; line-height: 1.2;">
-                                    <span style="font-size: 10px; display: block; opacity: 0.8;">DISPONÍVEL NO</span>
-                                    <strong style="font-size: 14px;">Google Play</strong>
-                                </div>
-                            </a>
-                            
-                            <!-- Botão App Store (Adicionada borda sutil para dark mode) -->
-                            <a href="https://apps.apple.com/br/app/carteira-digital-de-tr%C3%A2nsito/id1275057217" target="_blank" rel="noopener noreferrer" class="btn" style="background: #111; color: #fff; text-decoration: none; display: flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 8px; flex: 1; min-width: 160px; justify-content: center; border: 1px solid #333;">
-                                <i class="ph-fill ph-apple-logo" style="font-size: 24px;"></i>
-                                <div style="text-align: left; line-height: 1.2;">
-                                    <span style="font-size: 10px; display: block; opacity: 0.8;">BAIXAR NA</span>
-                                    <strong style="font-size: 14px;">App Store</strong>
-                                </div>
-                            </a>
-                        </div>
-
-                    </div>
-
+                <div class="text-center" style="max-width: 800px; margin: 0 auto 35px auto;">
+                    <h2 class="titulo-secao" style="letter-spacing: -1px;">Como funciona a Reciclagem?</h2>
                 </div>
-            </div>
-        </section>
 
-        <!-- DIFERENÇA SUSPENSÃO X CASSAÇÃO COM IMAGEM DIDÁTICA -->
-        <section class="secao-cinza" style="padding: 60px 0;">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 40px;">
-                    <h2 class="titulo-secao">Suspensão não é a mesma coisa que Cassação</h2>
+                <div class="fluxo-processo" style="margin-bottom: 50px;">
+                    <span class="fluxo-no">Matrícula</span>
+                    <i class="ph-bold ph-arrow-right fluxo-seta"></i>
+                    <span class="fluxo-no">Curso online</span>
+                    <i class="ph-bold ph-arrow-right fluxo-seta"></i>
+                    <span class="fluxo-no">Prova</span>
+                    <i class="ph-bold ph-arrow-right fluxo-seta"></i>
+                    <span class="fluxo-no">Regularização</span>
                 </div>
-                
-                <div class="grid-2" style="align-items: center;">
-                    <!-- Coluna de Textos -->
-                    <div style="display: flex; flex-direction: column; gap: 20px;">
-                        <div class="card-servico" style="margin: 0;">
-                            <h3 style="font-size: 22px; color: var(--cor-amarelo); margin-bottom: 10px;"><i class="ph-fill ph-pause-circle"></i> Suspensão</h3>
-                            <p style="color: var(--cor-texto); margin: 0;">Você fica um período sem dirigir e precisa realizar o curso de reciclagem para ter o documento de volta.</p>
-                        </div>
-                        <div class="card-servico" style="margin: 0;">
-                            <h3 style="font-size: 22px; color: var(--cor-vermelho); margin-bottom: 10px;"><i class="ph-fill ph-prohibit"></i> Cassação</h3>
-                            <p style="color: var(--cor-texto); margin: 0;">Você perde o direito de dirigir. Terá que refazer todo o processo de habilitação.</p>
-                            <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid var(--cor-borda);">
-                                <strong style="color: var(--cor-vermelho);">🚫 O maior motivo de cassação é ser pego dirigindo com a CNH suspensa.</strong>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Coluna da Imagem -->
-                    <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                        <img src="imagens/nayara_bloqueio.png" alt="Entenda os status da sua CNH" style="width: 100%; height: auto; display: block;">
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- SEÇÃO INDIVIDUAL: PASSO A PASSO SUSPENSÃO -->
-         <!-- SEÇÃO INDIVIDUAL: PASSO A PASSO SUSPENSÃO -->
-        <section class="secao-branca" style="padding: 60px 0;">
-            <div class="container">
-                <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
-                    <span class="badge" style="background: var(--cor-amarelo); color: var(--cor-preto); margin-bottom: 15px;"><i class="ph-bold ph-pause-circle"></i> CNH SUSPENSA</span>
-                    <h2 class="titulo-secao">Como regularizar a CNH Suspensa?</h2>
-                    <p style="color: var(--cor-texto); font-size: 16px; margin-top: 15px;">Na suspensão, você precisa cumprir o prazo de penalidade e realizar o Curso de Reciclagem. Todo o processo de estudo é online e prático.</p>
-                </div>
-                
-                <div class="grid-servicos" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                    <!-- Passo 1 -->
+                <div class="grid-servicos" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
                     <div class="card-servico" style="position: relative; padding-top: 40px;">
-                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-amarelo); color: var(--cor-preto); width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid #fff;">1</div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Matrícula Rápida</h3>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Fale com nossa equipe pelo WhatsApp, envie seus documentos e inicie seu processo imediatamente.</p>
+                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-amarelo); color: #111; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid var(--cor-fundo-base);">1</div>
+                        <h3 style="font-size: 19px; margin-bottom: 10px;">Matrícula</h3>
+                        <p style="font-size: 14px; color: var(--cor-texto); margin: 0;">Entre em contato com nossa equipe e receba as orientações para iniciar seu curso.</p>
                     </div>
-                    <!-- Passo 2 -->
                     <div class="card-servico" style="position: relative; padding-top: 40px;">
-                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-amarelo); color: var(--cor-preto); width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid #fff;">2</div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Curso 100% Online</h3>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Assista às 30 horas de aulas teóricas diretamente do seu celular ou computador, no seu próprio ritmo.</p>
+                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-amarelo); color: #111; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid var(--cor-fundo-base);">2</div>
+                        <h3 style="font-size: 19px; margin-bottom: 10px;">Curso online</h3>
+                        <p style="font-size: 14px; color: var(--cor-texto); margin: 0;">Realize as 30 horas-aula pelo celular ou computador.</p>
                     </div>
-                    <!-- Passo 3 -->
                     <div class="card-servico" style="position: relative; padding-top: 40px;">
-                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-amarelo); color: var(--cor-preto); width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid #fff;">3</div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Prova na Unidade</h3>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Após concluir as aulas online, agendamos sua prova teórica presencial em nossa autoescola.</p>
+                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-amarelo); color: #111; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid var(--cor-fundo-base);">3</div>
+                        <h3 style="font-size: 19px; margin-bottom: 10px;">Prova</h3>
+                        <p style="font-size: 14px; color: var(--cor-texto); margin: 0;">Após concluir o curso, realize a prova presencial.</p>
                     </div>
-                    <!-- Passo 4 -->
                     <div class="card-servico" style="position: relative; padding-top: 40px; border-bottom: 4px solid var(--cor-verde);">
-                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-verde); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid #fff;"><i class="ph-bold ph-check"></i></div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">CNH Liberada</h3>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Aprovado na prova e cumprido o prazo de suspensão estipulado pelo Detran, seu direito de dirigir é restaurado.</p>
+                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-verde); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid var(--cor-fundo-base);"><i class="ph-bold ph-check"></i></div>
+                        <h3 style="font-size: 19px; margin-bottom: 10px;">Regularização</h3>
+                        <p style="font-size: 14px; color: var(--cor-texto); margin: 0;">Após a aprovação e o cumprimento das exigências, acompanhe a regularização da sua CNH.</p>
                     </div>
                 </div>
-            </div>
-        </section>
 
-       <!-- SEÇÃO INDIVIDUAL: PASSO A PASSO CASSAÇÃO -->
-        <section class="secao-cinza" style="padding: 60px 0;">
-            <div class="container">
-                <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
-                    <span class="badge" style="background: var(--cor-vermelho); color: #fff; margin-bottom: 15px;"><i class="ph-bold ph-prohibit"></i> CNH CASSADA</span>
-                    <h2 class="titulo-secao">O que fazer em caso de Cassação?</h2>
-                    <p style="color: var(--cor-texto); font-size: 16px; margin-top: 15px;">A cassação é a penalidade máxima. Você perde o direito de dirigir e precisará passar pelo processo de reabilitação (reiniciar o processo de habilitação).</p>
-                </div>
-                
-                <div class="grid-servicos" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
-                    <!-- Passo 1 -->
-                    <div class="card-servico" style="position: relative; padding-top: 40px;">
-                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-vermelho); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid var(--cor-fundo-base);">1</div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Prazo de 2 anos</h3>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Diferente da suspensão, na cassação é obrigatório aguardar o prazo de 2 anos sem dirigir antes de iniciar a reabilitação.</p>
-                    </div>
-                    <!-- Passo 2 -->
-                    <div class="card-servico" style="position: relative; padding-top: 40px;">
-                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-vermelho); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid var(--cor-fundo-base);">2</div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Exames Iniciais</h3>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Após o prazo, você precisará realizar novamente os exames Médico e Psicotécnico em uma clínica credenciada.</p>
-                    </div>
-                    <!-- Passo 3 -->
-                    <div class="card-servico" style="position: relative; padding-top: 40px;">
-                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-vermelho); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid var(--cor-fundo-base);">3</div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Provas (Sem Aulas)</h3>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Uma grande vantagem: <strong>não é obrigatório refazer as aulas</strong> teóricas ou práticas. Você passa direto para a prova teórica e, depois, para o exame prático de direção.</p>
-                    </div>
-                    <!-- Passo 4 -->
-                    <div class="card-servico" style="position: relative; padding-top: 40px; border-bottom: 4px solid var(--cor-verde);">
-                        <div style="position: absolute; top: -20px; left: 30px; background: var(--cor-verde); color: #fff; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 20px; border: 4px solid var(--cor-fundo-base)"><i class="ph-bold ph-check"></i></div>
-                        <h3 style="font-size: 20px; margin-bottom: 10px;">Nova CNH</h3>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Com aprovação em todas as etapas de reabilitação, uma nova via da sua habilitação será emitida.</p>
-                    </div>
-                </div>
-                
-                <!-- CTA para Cassação -->
-                <div class="text-center" style="margin-top: 40px;">
-                    <button class="btn btn-primario btn-wa" data-track="whatsapp_cassacao" style="font-size: 16px;" data-message="Olá! Minha CNH foi cassada e preciso de ajuda para iniciar a reabilitação.">
-                        <i class="ph-bold ph-whatsapp-logo"></i> Precisa de ajuda com CNH Cassada? Fale conosco
+                <div class="text-center" style="margin-top: 45px;">
+                    <button class="btn btn-primario btn-wa" style="font-size: 16px; padding: 16px 32px;" data-track="wa_reciclagem_como_funciona" data-message="Olá! Quero começar minha reciclagem.">
+                        <i class="ph-bold ph-whatsapp-logo"></i> QUERO COMEÇAR MINHA RECICLAGEM
                     </button>
                 </div>
             </div>
         </section>
 
-        <section class="secao-branca" style="padding: 60px 0;">
-            <div class="container">
-                <div class="text-center" style="margin-bottom: 40px;">
-                    <h2 class="titulo-secao">Dúvidas Frequentes</h2>
+        <!-- ================================================= -->
+        <!-- 5. RECICLAGEM PREVENTIVA -->
+        <!-- ================================================= -->
+        <section id="preventiva" class="secao-cinza secao-ancora" style="padding: 100px 0;">
+            <div class="container animar-fade relative-z">
+                <div class="grid-2" style="gap: 50px; align-items: center;">
+
+                    <div>
+                        <span class="badge" style="background: var(--cor-amarelo); color: #000; margin-bottom: 18px;"><i class="ph-bold ph-shield-warning"></i> RECICLAGEM PREVENTIVA</span>
+                        <h2 class="titulo-secao" style="font-size: 32px; text-align: left; letter-spacing: -1px; margin-bottom: 8px;">Tem EAR? Você pode evitar a suspensão por pontos</h2>
+                        <p style="font-size: 15px; color: var(--cor-destaque-planos); font-weight: 700; margin-bottom: 20px;">Conheça a Reciclagem Preventiva</p>
+
+                        <p style="font-size: 15.5px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 18px;">O condutor que exerce atividade remunerada ao veículo (EAR) pode solicitar autorização para realizar a Reciclagem Preventiva ao atingir 30 pontos na CNH em 12 meses, desde que atenda aos requisitos estabelecidos pelo Detran-SP.</p>
+                        <p style="font-size: 15.5px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 25px;">Após a autorização, o condutor realiza o curso de reciclagem e as etapas necessárias.</p>
+
+                        <div class="banner-dica" style="margin-bottom: 28px;">
+                            <i class="ph-fill ph-info" style="font-size: 30px; color: #856600; flex-shrink: 0;"></i>
+                            <p style="font-size: 14.5px; color: var(--cor-texto); line-height: 1.6; margin: 0; font-weight: 600;">Não espere sua CNH ser suspensa. Verifique se você pode fazer a Reciclagem Preventiva.</p>
+                        </div>
+
+                        <button class="btn btn-primario btn-wa" style="font-size: 15px; padding: 16px 30px; text-transform: uppercase; font-weight: 800;" data-track="wa_preventiva" data-message="Olá! Tenho EAR e atingi 30 pontos. Quero verificar minha situação para a Reciclagem Preventiva.">
+                            <i class="ph-bold ph-whatsapp-logo"></i> QUERO VERIFICAR MINHA SITUAÇÃO
+                        </button>
+                    </div>
+
+                    <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.08);">
+                        <img src="imagens/reciclagem.jpg" alt="Pessoa acompanhando pelo celular, em casa, o andamento do curso de reciclagem" loading="lazy" width="900" height="1350" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+
                 </div>
-                
-                <div class="grid-2">
-                    <div class="card-servico">
-                        <h4 style="font-size: 18px; margin-bottom: 10px;">O curso é online?</h4>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Sim! O curso teórico é 100% online. Você estuda de onde quiser, pelo celular ou computador.</p>
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!-- 6. SUSPENSÃO POR PONTUAÇÃO -->
+        <!-- ================================================= -->
+        <section class="secao-branca secao-ancora" style="padding: 100px 0;">
+            <div class="container animar-fade relative-z">
+                <div class="text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
+                    <h2 class="titulo-secao" style="letter-spacing: -1px;">Por que minha CNH pode ser suspensa?</h2>
+                    <p style="color: var(--cor-texto); font-size: 16px;">A suspensão pode ocorrer pelo acúmulo de pontos dentro do período de 12 meses ou por infrações que preveem diretamente a suspensão do direito de dirigir.</p>
+                </div>
+
+                <div class="grid-servicos" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 35px;">
+                    <div class="card-servico" style="border-top: 5px solid var(--cor-verde); text-align: center;">
+                        <h3 style="font-size: 34px; color: var(--cor-verde); margin-bottom: 10px;">40 Pontos</h3>
+                        <p style="color: var(--cor-texto); margin: 0;">Sem infração gravíssima.</p>
                     </div>
-                    <div class="card-servico">
-                        <h4 style="font-size: 18px; margin-bottom: 10px;">A prova é presencial?</h4>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Sim, após finalizar as aulas online, a prova teórica final é realizada presencialmente em nossa unidade credenciada.</p>
+                    <div class="card-servico" style="border-top: 5px solid var(--cor-amarelo); text-align: center;">
+                        <h3 style="font-size: 34px; color: #856600; margin-bottom: 10px;">30 Pontos</h3>
+                        <p style="color: var(--cor-texto); margin: 0;">Com 1 infração gravíssima.</p>
                     </div>
-                    <div class="card-servico">
-                        <h4 style="font-size: 18px; margin-bottom: 10px;">Quem precisa fazer reciclagem?</h4>
-                        <p style="font-size: 14px; color: var(--cor-texto);">Condutores que atingiram o limite de pontos ou cometeram infrações autossuspensivas (ex: Lei Seca).</p>
+                    <div class="card-servico" style="border-top: 5px solid var(--cor-vermelho); text-align: center;">
+                        <h3 style="font-size: 34px; color: var(--cor-vermelho); margin-bottom: 10px;">20 Pontos</h3>
+                        <p style="color: var(--cor-texto); margin: 0;">Com 2 ou mais infrações gravíssimas.</p>
                     </div>
-                    <div class="card-servico">
-                        <h4 style="font-size: 18px; margin-bottom: 10px;">Como funciona a biometria?</h4>
-                        <p style="font-size: 14px; color: var(--cor-texto);">O sistema exige validação facial para garantir que é você mesmo assistindo às aulas, trazendo segurança para o processo.</p>
+                </div>
+
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 35px auto; color: var(--cor-texto); font-size: 15px;">Para quem exerce atividade remunerada ao veículo (EAR), existem regras específicas, inclusive a possibilidade da Reciclagem Preventiva.</p>
+
+                <div class="text-center">
+                    <button class="btn btn-wa" style="background: transparent; border: 2px solid var(--cor-preto); color: var(--cor-preto); font-weight: 800; padding: 16px 30px; border-radius: 12px; text-transform: uppercase; font-size: 14px;" data-track="wa_suspensao_duvidas" data-message="Olá! Tenho dúvidas sobre a pontuação da minha CNH.">
+                        <i class="ph-bold ph-whatsapp-logo"></i> TENHO DÚVIDAS SOBRE MINHA CNH
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!-- 7. CNH CASSADA -->
+        <!-- ================================================= -->
+        <section style="padding: 90px 0; background: #17181b;">
+            <div class="container animar-fade relative-z text-center">
+                <span class="badge" style="background: var(--cor-vermelho); color: #fff; margin-bottom: 20px;"><i class="ph-bold ph-x-circle"></i> CNH CASSADA</span>
+                <h2 class="titulo-secao" style="color: #fff; letter-spacing: -1px; margin-bottom: 18px;">CNH cassada: entenda o que acontece</h2>
+
+                <p style="color: rgba(255,255,255,0.75); font-size: 15.5px; line-height: 1.6; max-width: 720px; margin: 0 auto 15px auto;">Dirigir durante o período de suspensão pode gerar um processo de cassação da CNH.</p>
+                <p style="color: rgba(255,255,255,0.75); font-size: 15.5px; line-height: 1.6; max-width: 720px; margin: 0 auto 45px auto;">A cassação também pode ocorrer em outras situações previstas na legislação de trânsito e é aplicada por meio de processo administrativo.</p>
+
+                <div class="fluxo-processo" style="margin-bottom: 20px;">
+                    <span class="fluxo-no" style="background: var(--cor-vermelho); color: #fff; border-color: var(--cor-vermelho);">Cassação</span>
+                    <i class="ph-bold ph-arrow-right fluxo-seta" style="color: #fff;"></i>
+                    <span class="fluxo-no" style="background: #2a2a2a; color: #fff; border-color: #3a3a3a;">2 Anos</span>
+                    <i class="ph-bold ph-arrow-right fluxo-seta" style="color: #fff;"></i>
+                    <span class="fluxo-no" style="background: var(--cor-verde); color: #fff; border-color: var(--cor-verde);">Reabilitação</span>
+                </div>
+
+                <p style="color: rgba(255,255,255,0.75); font-size: 15.5px; line-height: 1.6; max-width: 720px; margin: 0 auto 40px auto;">Após cumprir o período de 2 anos da penalidade de cassação, o condutor poderá iniciar o processo de reabilitação para voltar a dirigir.</p>
+
+                <a href="#reabilitacao" class="btn btn-primario" style="font-size: 15px; padding: 16px 30px; text-transform: uppercase; font-weight: 800; text-decoration: none;">
+                    <i class="ph-bold ph-arrow-down"></i> QUERO INICIAR MINHA REABILITAÇÃO
+                </a>
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!-- 8 + 9. REABILITAÇÃO DA CNH CASSADA + PREPARAÇÃO PARA O EXAME -->
+        <!-- ================================================= -->
+        <section id="reabilitacao" class="secao-branca secao-ancora" style="padding: 100px 0;">
+            <div class="container animar-fade relative-z">
+                <div class="grid-2" style="gap: 50px; align-items: center; margin-bottom: 50px;">
+
+                    <div>
+                        <span class="subtitulo-laranja">REABILITAÇÃO</span>
+                        <h2 class="titulo-secao" style="font-size: 32px; text-align: left; letter-spacing: -1px; margin-bottom: 15px;">Cumpriu o período de cassação? Comece sua Reabilitação</h2>
+                        <p style="font-size: 16px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 25px;">Conte com a Geração Colibri para acompanhar seu processo de reabilitação, com suporte nas etapas necessárias e preparação para os exames.</p>
+
+                        <div class="box-preco" style="margin-bottom: 25px;">
+                            <span style="display: block; font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--cor-texto); margin-bottom: 10px;">Pacote Reabilitação — Categoria B</span>
+                            <span class="box-preco-valor">R$ 499</span>
+                            <span style="font-size: 16px; color: var(--cor-texto); font-weight: 600;"> à vista</span>
+                            <p class="box-preco-parcelas" style="margin-bottom: 24px;">ou 6x de R$ 89</p>
+
+                            <p style="font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--cor-texto); margin-bottom: 14px;">Incluso no pacote</p>
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 11px; font-size: 14.5px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 19px; flex-shrink: 0;"></i> Matrícula</li>
+                                <li style="margin-bottom: 11px; font-size: 14.5px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 19px; flex-shrink: 0;"></i> Material de apoio para a prova teórica</li>
+                                <li style="margin-bottom: 11px; font-size: 14.5px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 19px; flex-shrink: 0;"></i> Suporte completo durante o processo</li>
+                                <li style="margin-bottom: 11px; font-size: 14.5px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 19px; flex-shrink: 0;"></i> Orientação e agendamento das etapas realizadas pela autoescola</li>
+                                <li style="margin-bottom: 11px; font-size: 14.5px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 19px; flex-shrink: 0;"></i> 2 aulas práticas preparatórias para o exame</li>
+                                <li style="margin-bottom: 11px; font-size: 14.5px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 19px; flex-shrink: 0;"></i> Veículo para realização do exame prático</li>
+                                <li style="font-size: 14.5px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 19px; flex-shrink: 0;"></i> Acompanhamento até a conclusão do processo</li>
+                            </ul>
+
+                            <p style="font-size: 12.5px; color: var(--cor-texto); margin-top: 18px; margin-bottom: 0;">Exames e taxas oficiais são pagos à parte.</p>
+                        </div>
+
+                        <button class="btn btn-primario btn-wa" style="width: 100%; justify-content: center; font-size: 16px; padding: 18px; text-transform: uppercase; font-weight: 800;" data-track="wa_reabilitacao" data-message="Olá! Cumpri o período de cassação e quero começar minha reabilitação.">
+                            <i class="ph-bold ph-whatsapp-logo"></i> QUERO COMEÇAR MINHA REABILITAÇÃO
+                        </button>
+                    </div>
+
+                    <div>
+                        <img src="imagens/aula.JPG" alt="Aluno da Geração Colibri ao volante durante aula prática, acompanhado pelo instrutor" loading="lazy" width="1000" height="750" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); object-fit: cover; aspect-ratio: 4/3;">
+                    </div>
+
+                </div>
+
+                <!-- Faixa de destaque: 3 principais benefícios -->
+                <div class="text-center" style="display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 50px;">
+                    <span class="pill-beneficio"><i class="ph-fill ph-check-circle"></i> SUPORTE COMPLETO</span>
+                    <span class="pill-beneficio"><i class="ph-fill ph-check-circle"></i> 2 AULAS PREPARATÓRIAS</span>
+                    <span class="pill-beneficio"><i class="ph-fill ph-check-circle"></i> VEÍCULO PARA O EXAME</span>
+                </div>
+
+                <!-- 9. PREPARAÇÃO PARA O EXAME (faixa dentro da mesma seção) -->
+                <div class="banner-dica" style="max-width: 900px; margin: 0 auto;">
+                    <i class="ph-fill ph-target" style="font-size: 34px; color: var(--cor-destaque-planos); flex-shrink: 0;"></i>
+                    <div>
+                        <h3 style="font-size: 17px; color: var(--cor-preto); margin-bottom: 6px;">Você já sabe dirigir. Nós preparamos você para o exame.</h3>
+                        <p style="font-size: 14.5px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 8px;">As aulas preparatórias têm como foco atualizar o motorista sobre as regras e procedimentos do exame atual, identificar hábitos de condução que podem prejudicar seu desempenho e prepará-lo para realizar a prova com mais segurança.</p>
+                        <p style="font-size: 14.5px; color: var(--cor-preto); font-weight: 700; margin: 0;">Preparação direcionada para aumentar suas chances de aprovação.</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ================================================= -->
+        <!-- 10. POR QUE ESCOLHER A GERAÇÃO COLIBRI? -->
+        <!-- ================================================= -->
+        <section class="secao-cinza secao-ancora" style="padding: 100px 0;">
+            <div class="container animar-fade relative-z">
+                <div class="grid-2" style="gap: 50px; align-items: center;">
+
+                    <div>
+                        <h2 class="titulo-secao" style="text-align: left; letter-spacing: -1px; margin-bottom: 25px;">Conte com quem entende do processo</h2>
+
+                        <ul style="list-style: none; padding: 0; margin-bottom: 30px;">
+                            <li style="margin-bottom: 14px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Autoescola credenciada pelo Detran-SP</li>
+                            <li style="margin-bottom: 14px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Mais de 13 anos de experiência</li>
+                            <li style="margin-bottom: 14px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Atendimento humanizado</li>
+                            <li style="margin-bottom: 14px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Suporte durante todo o processo</li>
+                            <li style="margin-bottom: 14px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Curso de reciclagem online</li>
+                            <li style="margin-bottom: 14px; font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Orientação para suspensão, reciclagem preventiva e reabilitação</li>
+                            <li style="font-size: 15px; color: var(--cor-preto); display: flex; align-items: center; gap: 10px;"><i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Unidade em Guarulhos</li>
+                        </ul>
+
+                        <button class="btn btn-primario btn-wa" style="font-size: 15px; padding: 16px 30px; text-transform: uppercase; font-weight: 800;" data-track="wa_porque_colibri_regularizacao" data-message="Olá! Quero falar com a equipe da Geração Colibri sobre regularização de CNH.">
+                            <i class="ph-bold ph-whatsapp-logo"></i> FALAR COM NOSSA EQUIPE
+                        </button>
+                    </div>
+
+                    <div>
+                        <img src="imagens/fachada.jpeg" alt="Equipe da Autoescola Geração Colibri na fachada da unidade em Cumbica, Guarulhos" loading="lazy" width="900" height="675" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); object-fit: cover;">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!-- 11. AVALIAÇÕES DO GOOGLE -->
+        <!-- ================================================= -->
+        <section class="secao-branca secao-ancora" style="padding: 100px 0;">
+            <div class="container animar-fade relative-z">
+                <div class="text-center" style="max-width: 800px; margin: 0 auto 50px auto;">
+                    <h2 class="titulo-secao" style="letter-spacing: -1px;">Quem conhece nosso trabalho, recomenda</h2>
+                </div>
+
+                <div class="grid-servicos">
+                    <div class="card-depoimento" style="width: auto;">
+                        <div class="estrelas"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="texto-depoimento">"Tive uma experiência muito boa e tranquila desde o primeiro dia até a conclusão. Equipe e professores muito atenciosos e prontos para ajudar!"</p>
+                        <p style="font-weight: 700; color: var(--cor-preto); font-size: 14px; margin: 0;">Lucas</p>
+                    </div>
+                    <div class="card-depoimento" style="width: auto;">
+                        <div class="estrelas"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="texto-depoimento">"Nas aulas práticas, a paciência e dedicação do instrutor fizeram toda a diferença. O atendimento também foi muito agradável, especialmente pela recepção."</p>
+                        <p style="font-weight: 700; color: var(--cor-preto); font-size: 14px; margin: 0;">Aline</p>
+                    </div>
+                    <div class="card-depoimento" style="width: auto;">
+                        <div class="estrelas"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+                        <p class="texto-depoimento">"Queria agradecer a todos os funcionários da Colibri, sem dúvida foi a melhor escolha que fiz! A recepção é incrível e super me ajudou, e os instrutores a mesma coisa."</p>
+                        <p style="font-weight: 700; color: var(--cor-preto); font-size: 14px; margin: 0;">Karol</p>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 40px;">
+                    <a href="https://www.google.com/maps/place/Autoescola+Gera%C3%A7%C3%A3o+Colibri/@-23.4507718,-46.4772812,17z/data=!4m8!3m7!1s0x94ce8a7e90295555:0x6feac675c80f00b9!8m2!3d-23.4507718!4d-46.4747063!9m1!1b1!16s%2Fg%2F1v2yz_l7" target="_blank" rel="noopener noreferrer" class="btn btn-primario" style="background-color: transparent; border: 2px solid var(--cor-destaque-planos); color: var(--cor-destaque-planos); font-size: 15px; padding: 14px 28px; text-decoration: none; transition: 0.3s;" onmouseover="this.style.backgroundColor='var(--cor-destaque-planos)'; this.style.color='#fff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='var(--cor-destaque-planos)';">
+                        VER AVALIAÇÕES NO GOOGLE
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!-- 12. DÚVIDAS FREQUENTES -->
+        <!-- ================================================= -->
+        <section id="faq" class="secao-cinza secao-ancora" style="padding: 100px 0;">
+            <div class="container animar-fade relative-z">
+                <div class="text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
+                    <h2 class="titulo-secao" style="letter-spacing: -1px;">Dúvidas frequentes</h2>
+                </div>
+
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-pergunta">O curso de reciclagem é online? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Sim. O curso é realizado na modalidade EAD, permitindo que você estude pelo celular ou computador.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">Quantas horas tem o curso de reciclagem? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>O curso possui 30 horas-aula.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">Quanto custa o curso de reciclagem? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>O curso custa R$ 380 à vista, 2x de R$ 205 no boleto ou 6x de R$ 72 no cartão.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">Quem pode fazer a Reciclagem Preventiva? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Condutores que exercem atividade remunerada ao veículo (EAR) e atendam aos requisitos estabelecidos pelo Detran-SP, incluindo a condição de pontuação necessária para solicitar a autorização.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">Dirigir durante a suspensão pode levar à cassação? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Sim. Dirigir enquanto o direito de dirigir está suspenso é uma das situações que podem gerar processo de cassação da CNH.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">Quanto tempo dura a penalidade de cassação? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>O período de cassação é de 2 anos. Após o cumprimento da penalidade, o condutor poderá iniciar o processo de reabilitação.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">Como funciona a preparação para o exame prático na Reabilitação? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>O Pacote de Reabilitação da Geração Colibri inclui 2 aulas práticas preparatórias, direcionadas para atualizar o motorista sobre as regras e procedimentos do exame atual e prepará-lo para realizar a prova com mais segurança.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-pergunta">A Geração Colibri acompanha meu processo? <i class="ph-bold ph-plus faq-icone"></i></button>
+                        <div class="faq-resposta"><p>Sim. Nossa equipe oferece suporte e orientação durante o processo e auxilia nas etapas realizadas por meio da autoescola.</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!-- 13. CTA FINAL -->
+        <!-- ================================================= -->
+        <section class="secao-branca" style="padding: 90px 0; border-top: 1px solid var(--cor-borda);">
+            <div class="container animar-fade relative-z">
+                <div class="grid-2" style="gap: 40px; align-items: center; background: var(--cor-fundo-base); border-radius: 24px; padding: 50px; border: 1px solid var(--cor-borda);">
+
+                    <div>
+                        <h2 class="titulo-secao" style="text-align: left; font-size: 30px; letter-spacing: -1px; margin-bottom: 15px;">Sua CNH tem solução. Vamos ajudar você no próximo passo.</h2>
+                        <p style="font-size: 16px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 30px;">Seja para reciclagem, prevenção ou reabilitação, conte com a Geração Colibri para orientar você durante o processo.</p>
+
+                        <button class="btn btn-primario btn-wa" style="font-size: 16px; padding: 18px 34px; text-transform: uppercase; font-weight: 800; margin-bottom: 20px;" data-track="whatsapp_cta_final_regularizacao" data-message="Olá! Vi a página de Regularização e quero dar o próximo passo.">
+                            <i class="ph-bold ph-whatsapp-logo"></i> QUERO REGULARIZAR MINHA CNH
+                        </button>
+
+                        <p style="font-size: 13px; color: var(--cor-texto); margin: 0;"><strong style="color: var(--cor-preto);">Autoescola Geração Colibri</strong><br>Credenciada pelo Detran-SP • Guarulhos/SP</p>
+                    </div>
+
+                    <div style="border-radius: 20px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                        <img src="imagens/antes_depois.png" alt="Aluna feliz com a CNH regularizada" loading="lazy" style="width: 100%; height: auto; display: block;">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================= -->
+        <!-- REDES SOCIAIS (reaproveitada exatamente como já existe no site) -->
+        <!-- ================================================= -->
         <section id="instagram-feed" class="secao-branca" style="padding: 80px 0; border-top: 1px solid var(--cor-borda);">
             <div class="container animar-fade relative-z">
-                
+
                 <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
                     <span class="subtitulo-laranja" style="display: flex; align-items: center; justify-content: center; gap: 8px;">
                         <i class="ph-fill ph-instagram-logo" style="font-size: 24px;"></i> NOSSO INSTAGRAM
@@ -461,7 +613,7 @@
                         SEGUIR @GERACAOCOLIBRI
                     </a>
                 </div>
-                
+
             </div>
         </section>
 
@@ -470,24 +622,21 @@
     <!-- RODAPÉ CORPORATIVO -->
     <footer class="footer-corporativo">
         <div class="container relative-z">
-            
-            <!-- Grade de 4 Colunas -->
+
             <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px;">
-                
-                <!-- Coluna 1 — Geração Colibri -->
+
                 <div class="footer-col">
                     <div class="logo" style="margin-bottom: 15px;">
                         <img src="imagens/logo.png" alt="Logo" class="logo-img" style="height: 40px; margin-right: 10px;">
                         <span class="logo-texto" style="font-size: 18px;">Geração Colibri</span>
                     </div>
-                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;">Há 26 anos ajudando pessoas a conquistarem sua liberdade no trânsito com orientação, segurança e confiança.</p>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;">Desde 2000 ajudando pessoas a conquistarem sua habilitação.</p>
                     <p style="color: #666; font-size: 14px; margin-bottom: 15px; font-weight: 600;">A melhor Autoescola de Guarulhos com o melhor preço da região.</p>
                     <a href="sobre.html" style="color: var(--cor-destaque-planos); font-weight: 700; text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; transition: 0.2s;">
                         Conheça nossa história <i class="ph-bold ph-arrow-right"></i>
                     </a>
                 </div>
 
-                <!-- Coluna 2 — Acesso Rápido -->
                 <div class="footer-col">
                     <h3 style="font-size: 18px; margin-bottom: 20px;">Acesso Rápido</h3>
                     <ul class="footer-links">
@@ -500,20 +649,19 @@
                     </ul>
                 </div>
 
-                <!-- Coluna 3 — Fale Conosco -->
                 <div class="footer-col">
                     <h3 style="font-size: 18px; margin-bottom: 20px;">Fale Conosco</h3>
                     <ul class="footer-infos" style="list-style: none; color: #666; font-size: 14px; margin-bottom: 20px;">
                         <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;">
-                            <i class="ph-fill ph-map-pin" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
+                            <i class="ph-fill ph-map-pin" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i>
                             <span>Rua Juazeiro do Norte, 272 – Cumbica, Guarulhos/SP</span>
                         </li>
                         <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: center;">
-                            <i class="ph-fill ph-phone-call" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
+                            <i class="ph-fill ph-phone-call" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i>
                             <span>(11) 2479-7811</span>
                         </li>
                         <li style="margin-bottom: 12px; display: flex; gap: 10px; align-items: flex-start;">
-                            <i class="ph-fill ph-clock" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i> 
+                            <i class="ph-fill ph-clock" style="color: var(--cor-amarelo); font-size: 20px; flex-shrink: 0;"></i>
                             <span>Seg a Sex: 08:30 – 18:30<br>Sábados: 09:00 – 14:00</span>
                         </li>
                     </ul>
@@ -522,7 +670,6 @@
                     </button>
                 </div>
 
-                <!-- Coluna 4 — Acompanhe a Geração Colibri -->
                 <div class="footer-col">
                     <h3 style="font-size: 18px; margin-bottom: 20px;">Acompanhe a Colibri</h3>
                     <p style="color: #666; font-size: 14px; margin-bottom: 20px;">Dicas, informações e conteúdos para ajudar você a dirigir melhor e entender tudo sobre sua habilitação.</p>
@@ -533,10 +680,9 @@
                         <a href="https://youtube.com/@geracaocolibriautoescola272?si=tWgFRy-alcleRliJ" target="_blank" aria-label="YouTube"><i class="ph-fill ph-youtube-logo"></i></a>
                     </div>
                 </div>
-                
+
             </div>
-            
-            <!-- Faixa Institucional Inferior -->
+
             <div style="border-top: 1px solid var(--cor-borda); padding: 25px 0 15px 0; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px;">
                 <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
                     <span class="badge" style="background: var(--cor-fundo-base); color: var(--cor-texto); border: 1px solid var(--cor-borda); margin: 0; font-size: 12px; box-shadow: none;"><i class="ph-fill ph-shield-check" style="color: var(--cor-verde); margin-right: 6px; font-size: 16px;"></i> Autoescola credenciada pelo DETRAN-SP</span>
@@ -551,7 +697,6 @@
 
         </div>
 
-        <!-- Links Legais e Copyright -->
         <div class="footer-bottom">
             <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
                 <p>&copy; <span id="ano-copyright"></span> Autoescola Geração Colibri. Todos os direitos reservados.</p>
@@ -559,8 +704,7 @@
             </div>
             <p class="disclaimer-bottom" style="margin-top: 15px;">Os valores das taxas estaduais (Detran/Exames) não compõem os pacotes da autoescola e devem ser pagos separadamente.</p>
         </div>
-        
-        <!-- Script rápido para atualizar o ano automaticamente -->
+
         <script>
             document.getElementById('ano-copyright').textContent = new Date().getFullYear();
         </script>

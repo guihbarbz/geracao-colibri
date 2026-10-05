@@ -18,6 +18,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="preload" as="image" href="imagens/cnh_nayara.jpeg">
     <link rel="stylesheet" href="style.css">
 
     <!-- ================================================== -->
@@ -148,7 +149,7 @@
                 <div class="text-center" style="max-width: 800px; margin: 0 auto 50px auto;">
                     <span class="subtitulo-laranja">CATEGORIAS</span>
                     <h2 class="titulo-secao" style="letter-spacing: -1px;">Qual categoria é a sua?</h2>
-                    <p style="color: var(--cor-texto); font-size: 16px;">Você pode se habilitar para moto, carro ou os dois de uma vez.</p>
+                    <p style="color: var(--cor-texto); font-size: 16px;">Escolha sua habilitação: moto, carro ou as duas categorias juntas.</p>
                 </div>
 
                 <div class="grid-3">
@@ -189,7 +190,129 @@
             </div>
         </section>
 
-        <!-- 3. PASSO A PASSO DA PRIMEIRA HABILITAÇÃO -->
+        <!-- 3. PLANO BÁSICO — R$ 499 -->
+        <section id="planos" class="secao-cinza secao-ancora" style="padding: 100px 0;">
+            <div class="container animar-fade relative-z">
+                <div class="text-center" style="margin-bottom: 55px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <span style="display: inline-block; background: rgba(254, 221, 0, 0.2); color: #856600; padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 15px;">Investimento</span>
+                    <h2 class="titulo-secao" style="font-size: 36px; margin-bottom: 15px; letter-spacing: -1px;">Comece sua habilitação a partir de R$ 499</h2>
+                    <p style="color: var(--cor-texto); font-size: 16px;">Mais do que aulas práticas, você conta com uma equipe acompanhando sua jornada até a habilitação.</p>
+                </div>
+
+                <div class="grid-2" style="gap: 40px; align-items: stretch; max-width: 1000px; margin: 0 auto;">
+
+                    <!-- CARD DO PLANO BÁSICO -->
+                    <div style="background: var(--cor-branco); border-radius: 24px; padding: 45px 35px 35px 35px; border: 1px solid var(--cor-borda); display: flex; flex-direction: column; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.06); margin-top: 15px;">
+
+                        <div style="position: absolute; top: -18px; left: 35px; background: var(--cor-amarelo); color: #111; font-size: 12px; font-weight: 800; padding: 8px 22px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 8px 20px rgba(254, 221, 0, 0.3);">
+                            Plano Básico
+                        </div>
+
+                        <h3 style="font-size: 26px; font-weight: 800; color: var(--cor-preto); margin-bottom: 25px; line-height: 1.2; letter-spacing: -0.5px;">
+                            O plano ideal para começar sua jornada
+                        </h3>
+
+                        <div style="background: var(--cor-fundo-base); padding: 24px; border-radius: 16px; margin-bottom: 30px; border: 1px solid var(--cor-borda); position: relative; overflow: hidden;">
+                            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--cor-verde);"></div>
+
+                            <span style="display: block; font-size: 11px; font-weight: 800; color: var(--cor-texto); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Categoria B (Carro)</span>
+                            <div style="display: flex; align-items: baseline; gap: 8px;">
+                                <span class="contador-preco" data-valor="499" style="font-size: 38px; font-weight: 800; color: var(--cor-verde); line-height: 1; letter-spacing: -1px;">R$ 499</span>
+                                <span style="font-size: 14px; color: var(--cor-texto); font-weight: 600;">à vista</span>
+                            </div>
+                            <p style="font-size: 13px; color: var(--cor-texto); margin-top: 6px; margin-bottom: 0; font-weight: 500;">ou 6x de R$ 89 sem juros</p>
+                        </div>
+
+                        <p style="font-size: 14px; font-weight: 700; color: var(--cor-preto); margin-bottom: 15px;">O que está incluso no pacote:</p>
+                        <ul style="list-style: none; padding: 0; margin-bottom: 35px; flex-grow: 1;">
+                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--cor-texto);">
+                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Matrícula + material didático
+                            </li>
+                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--cor-texto);">
+                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Suporte completo + agendamentos
+                            </li>
+                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--cor-texto);">
+                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Plano de aula personalizado
+                            </li>
+                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--cor-texto);">
+                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> 2 Aulas práticas + LADV
+                            </li>
+                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--cor-texto);">
+                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Veículo para o exame prático
+                            </li>
+                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: var(--cor-texto);">
+                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Suporte até a emissão da PPD
+                            </li>
+                        </ul>
+
+                        <button class="btn btn-wa" style="width: 100%; justify-content: center; background: var(--cor-amarelo); color: #111; font-weight: 800; border: none; padding: 18px; border-radius: 12px; text-transform: uppercase; font-size: 14px; box-shadow: 0 8px 20px rgba(254, 221, 0, 0.25);" data-track="wa_plano_basico" data-message="Olá! Quero conhecer o Plano Básico de Habilitação.">QUERO O PLANO BÁSICO</button>
+                    </div>
+
+                    <!-- PRECISA DE MAIS AULAS? -->
+                    <div style="background: var(--cor-branco); border-radius: 24px; padding: 45px 35px; border: 1px solid var(--cor-borda); display: flex; flex-direction: column; justify-content: center; margin-top: 15px;">
+                        <i class="ph-bold ph-steering-wheel" style="font-size: 48px; color: var(--cor-destaque-planos); margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 26px; font-weight: 800; color: var(--cor-preto); margin-bottom: 18px; line-height: 1.2; letter-spacing: -0.5px;">Precisa de mais aulas?</h3>
+                        <p style="font-size: 16px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 30px;">Temos planos com diferentes quantidades de aulas práticas para atender ao seu nível de experiência e preparação.</p>
+
+                        <ul style="list-style: none; padding: 0; margin-bottom: 35px;">
+                            <li style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--cor-texto); margin-bottom: 14px;">
+                                <i class="ph-fill ph-plus-circle" style="color: var(--cor-destaque-planos); font-size: 20px; flex-shrink: 0;"></i> Mais horas ao volante
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--cor-texto); margin-bottom: 14px;">
+                                <i class="ph-fill ph-plus-circle" style="color: var(--cor-destaque-planos); font-size: 20px; flex-shrink: 0;"></i> Preparação mais completa para o exame
+                            </li>
+                            <li style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--cor-texto);">
+                                <i class="ph-fill ph-plus-circle" style="color: var(--cor-destaque-planos); font-size: 20px; flex-shrink: 0;"></i> Mesmo suporte do início ao fim
+                            </li>
+                        </ul>
+
+                        <!-- ATENÇÃO: confirmar o destino quando a página Pacotes existir (ex.: pacotes.html) -->
+                        <a href="index.html#pacotes" class="btn" style="width: 100%; justify-content: center; background: transparent; border: 2px solid var(--cor-preto); color: var(--cor-preto); font-weight: 800; padding: 16px; border-radius: 12px; text-transform: uppercase; font-size: 14px; text-decoration: none; transition: 0.3s;" onmouseover="this.style.background='var(--cor-preto)'; this.style.color='var(--cor-branco)';" onmouseout="this.style.background='transparent'; this.style.color='var(--cor-preto)';">
+                            CONHECER TODOS OS PACOTES
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. PLANO DE AULA PERSONALIZADO / 2 AULAS MÍNIMAS -->
+        <section id="quantas-aulas" class="secao-branca secao-ancora" style="padding: 100px 0;">
+            <div class="container animar-fade">
+                <div class="grid-2" style="align-items: center; gap: 60px;">
+
+                    <div style="position: relative;">
+                        <img src="imagens/aula.JPG" alt="Instrutor da Geração Colibri preenchendo o plano de aula durante uma aula prática" loading="lazy" width="1000" height="750" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); object-fit: cover; aspect-ratio: 4/3;">
+
+                        <div style="position: absolute; bottom: 30px; right: -20px; background: var(--cor-branco); padding: 20px; border-radius: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.12); display: flex; align-items: center; gap: 15px; border: 1px solid var(--cor-borda);">
+                            <div style="width: 45px; height: 45px; background: rgba(254, 221, 0, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="ph-bold ph-chart-line-up" style="font-size: 24px; color: #856600;"></i>
+                            </div>
+                            <div>
+                                <p style="margin: 0; font-weight: 800; font-size: 15px; color: var(--cor-preto);">Foco na evolução</p>
+                                <p style="margin: 0; font-size: 13px; color: var(--cor-texto);">Acompanhamento real.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <span class="subtitulo-laranja">SEU RITMO É O QUE IMPORTA</span>
+                        <h2 class="titulo-secao" style="font-size: 34px; margin-bottom: 25px; letter-spacing: -1px;">2 aulas são o mínimo. Sua preparação é individual.</h2>
+
+                        <p style="font-size: 16px; color: var(--cor-texto); margin-bottom: 20px; line-height: 1.6;">As 2 aulas práticas atendem à carga mínima obrigatória, mas cada aluno possui um nível diferente de experiência, segurança e habilidade.</p>
+
+                        <p style="font-size: 16px; color: var(--cor-texto); margin-bottom: 20px; line-height: 1.6;">Por isso, utilizamos essas aulas também para avaliar sua preparação. O instrutor identifica os pontos que precisam ser desenvolvidos e, quando necessário, orienta um plano de treinamento personalizado.</p>
+
+                        <div style="background: var(--cor-fundo-base); padding: 25px; border-radius: 16px; border-left: 4px solid var(--cor-amarelo);">
+                            <p style="font-size: 17px; color: var(--cor-preto); font-weight: 700; margin: 0; line-height: 1.5;">Você decide como deseja continuar. Nossa função é orientar.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PASSO A PASSO DA PRIMEIRA HABILITAÇÃO -->
         <section id="processo" class="secao-cinza secao-ancora" style="padding: 100px 0;">
             <div class="container animar-fade relative-z">
                 <div class="text-center" style="max-width: 800px; margin: 0 auto 20px auto;">
@@ -240,7 +363,7 @@
                     <div class="passo-jornada">
                         <div class="passo-conteudo etapa-expansivel">
                             <div class="passo-cabecalho"><div class="passo-marcador">7</div><h3>Preparação</h3><i class="ph-bold ph-caret-down etapa-seta"></i></div>
-                            <div class="etapa-detalhe"><p>O instrutor avalia sua evolução e orienta se mais treinamento fará diferença antes da prova.</p></div>
+                            <div class="etapa-detalhe"><p>O instrutor avalia sua evolução com base no plano de ensino e orienta se você precisa de mais preparo para o exame.</p></div>
                         </div>
                     </div>
                     <div class="passo-jornada esquerda">
@@ -251,132 +374,16 @@
                     </div>
                     <div class="passo-jornada">
                         <div class="passo-conteudo etapa-expansivel">
-                            <div class="passo-cabecalho"><div class="passo-marcador">9</div><h3>CNH / PPD</h3><i class="ph-bold ph-caret-down etapa-seta"></i></div>
-                            <div class="etapa-detalhe"><p>Aprovado, sua Permissão para Dirigir sai direto no app, em versão digital.</p></div>
+                            <div class="passo-cabecalho"><div class="passo-marcador">9</div><h3>Exame toxicológico</h3><i class="ph-bold ph-caret-down etapa-seta"></i></div>
+                            <div class="etapa-detalhe"><p>Na Primeira Habilitação, o resultado negativo do exame toxicológico é obrigatório para emissão da PPD/CNH.</p></div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 4. PLANO BÁSICO — R$ 499 -->
-        <section id="planos" class="secao-cinza secao-ancora" style="padding: 100px 0;">
-            <div class="container animar-fade relative-z">
-                <div class="text-center" style="margin-bottom: 55px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                    <span style="display: inline-block; background: rgba(254, 221, 0, 0.2); color: #856600; padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 15px;">Investimento</span>
-                    <h2 class="titulo-secao" style="font-size: 36px; margin-bottom: 15px; letter-spacing: -1px;">Comece sua habilitação a partir de R$ 499</h2>
-                    <p style="color: var(--cor-texto); font-size: 16px;">Mais do que aulas práticas, você conta com uma equipe acompanhando sua jornada até a habilitação.</p>
-                </div>
-
-                <div class="grid-2" style="gap: 40px; align-items: stretch; max-width: 1000px; margin: 0 auto;">
-
-                    <!-- CARD DO PLANO BÁSICO -->
-                    <div style="background: #ffffff; border-radius: 24px; padding: 45px 35px 35px 35px; border: 1px solid var(--cor-borda); display: flex; flex-direction: column; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.06); margin-top: 15px;">
-
-                        <div style="position: absolute; top: -18px; left: 35px; background: var(--cor-amarelo); color: #111; font-size: 12px; font-weight: 800; padding: 8px 22px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; box-shadow: 0 8px 20px rgba(254, 221, 0, 0.3);">
-                            Plano Básico
-                        </div>
-
-                        <h3 style="font-size: 26px; font-weight: 800; color: #111; margin-bottom: 25px; line-height: 1.2; letter-spacing: -0.5px;">
-                            O plano ideal para começar sua jornada
-                        </h3>
-
-                        <div style="background: #F8F9FA; padding: 24px; border-radius: 16px; margin-bottom: 30px; border: 1px solid #EAEAEA; position: relative; overflow: hidden;">
-                            <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--cor-verde);"></div>
-
-                            <span style="display: block; font-size: 11px; font-weight: 800; color: #555; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Categoria B (Carro)</span>
-                            <div style="display: flex; align-items: baseline; gap: 8px;">
-                                <span class="contador-preco" data-valor="499" style="font-size: 38px; font-weight: 800; color: var(--cor-verde); line-height: 1; letter-spacing: -1px;">R$ 499</span>
-                                <span style="font-size: 14px; color: #555; font-weight: 600;">à vista</span>
-                            </div>
-                            <p style="font-size: 13px; color: #666; margin-top: 6px; margin-bottom: 0; font-weight: 500;">ou 6x de R$ 89 sem juros</p>
-                        </div>
-
-                        <p style="font-size: 14px; font-weight: 700; color: #111; margin-bottom: 15px;">O que está incluso no pacote:</p>
-                        <ul style="list-style: none; padding: 0; margin-bottom: 35px; flex-grow: 1;">
-                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #333;">
-                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Matrícula + material didático
-                            </li>
-                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #333;">
-                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Suporte completo + agendamentos
-                            </li>
-                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #333;">
-                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Plano de aula personalizado
-                            </li>
-                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #333;">
-                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> 2 Aulas práticas + LADV
-                            </li>
-                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #333;">
-                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Veículo para o exame prático
-                            </li>
-                            <li style="margin-bottom: 14px; display: flex; align-items: center; gap: 12px; font-size: 14px; color: #333;">
-                                <i class="ph-fill ph-check-circle" style="color: var(--cor-verde); font-size: 20px; flex-shrink: 0;"></i> Suporte até a emissão da PPD
-                            </li>
-                        </ul>
-
-                        <button class="btn btn-wa" style="width: 100%; justify-content: center; background: var(--cor-amarelo); color: #111; font-weight: 800; border: none; padding: 18px; border-radius: 12px; text-transform: uppercase; font-size: 14px; box-shadow: 0 8px 20px rgba(254, 221, 0, 0.25);" data-track="wa_plano_basico" data-message="Olá! Quero conhecer o Plano Básico de Habilitação.">QUERO O PLANO BÁSICO</button>
-                    </div>
-
-                    <!-- PRECISA DE MAIS AULAS? -->
-                    <div style="background: #ffffff; border-radius: 24px; padding: 45px 35px; border: 1px solid var(--cor-borda); display: flex; flex-direction: column; justify-content: center; margin-top: 15px;">
-                        <i class="ph-bold ph-steering-wheel" style="font-size: 48px; color: var(--cor-destaque-planos); margin-bottom: 20px;"></i>
-                        <h3 style="font-size: 26px; font-weight: 800; color: #111; margin-bottom: 18px; line-height: 1.2; letter-spacing: -0.5px;">Precisa de mais aulas?</h3>
-                        <p style="font-size: 16px; color: var(--cor-texto); line-height: 1.6; margin-bottom: 30px;">Temos planos com diferentes quantidades de aulas práticas para atender ao seu nível de experiência e preparação.</p>
-
-                        <ul style="list-style: none; padding: 0; margin-bottom: 35px;">
-                            <li style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #333; margin-bottom: 14px;">
-                                <i class="ph-fill ph-plus-circle" style="color: var(--cor-destaque-planos); font-size: 20px; flex-shrink: 0;"></i> Mais horas ao volante
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #333; margin-bottom: 14px;">
-                                <i class="ph-fill ph-plus-circle" style="color: var(--cor-destaque-planos); font-size: 20px; flex-shrink: 0;"></i> Preparação mais completa para o exame
-                            </li>
-                            <li style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: #333;">
-                                <i class="ph-fill ph-plus-circle" style="color: var(--cor-destaque-planos); font-size: 20px; flex-shrink: 0;"></i> Mesmo suporte do início ao fim
-                            </li>
-                        </ul>
-
-                        <!-- ATENÇÃO: confirmar o destino quando a página Pacotes existir (ex.: pacotes.html) -->
-                        <a href="index.html#pacotes" class="btn" style="width: 100%; justify-content: center; background: transparent; border: 2px solid var(--cor-preto); color: var(--cor-preto); font-weight: 800; padding: 16px; border-radius: 12px; text-transform: uppercase; font-size: 14px; text-decoration: none; transition: 0.3s;" onmouseover="this.style.background='var(--cor-preto)'; this.style.color='#fff';" onmouseout="this.style.background='transparent'; this.style.color='var(--cor-preto)';">
-                            CONHECER TODOS OS PACOTES
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. PLANO DE AULA PERSONALIZADO / 2 AULAS MÍNIMAS -->
-        <section id="quantas-aulas" class="secao-branca secao-ancora" style="padding: 100px 0;">
-            <div class="container animar-fade">
-                <div class="grid-2" style="align-items: center; gap: 60px;">
-
-                    <div style="position: relative;">
-                        <img src="imagens/aula.JPG" alt="Instrutor da Geração Colibri preenchendo o plano de aula durante uma aula prática" loading="lazy" style="width: 100%; border-radius: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); object-fit: cover; aspect-ratio: 4/3;">
-
-                        <div style="position: absolute; bottom: 30px; right: -20px; background: #fff; padding: 20px; border-radius: 16px; box-shadow: 0 15px 30px rgba(0,0,0,0.12); display: flex; align-items: center; gap: 15px; border: 1px solid var(--cor-borda);">
-                            <div style="width: 45px; height: 45px; background: rgba(254, 221, 0, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                                <i class="ph-bold ph-chart-line-up" style="font-size: 24px; color: #856600;"></i>
-                            </div>
-                            <div>
-                                <p style="margin: 0; font-weight: 800; font-size: 15px; color: var(--cor-preto);">Foco na evolução</p>
-                                <p style="margin: 0; font-size: 13px; color: var(--cor-texto);">Acompanhamento real.</p>
-                            </div>
+                    <div class="passo-jornada esquerda">
+                        <div class="passo-conteudo etapa-expansivel">
+                            <div class="passo-cabecalho"><div class="passo-marcador">10</div><h3>PPD/CNH</h3><i class="ph-bold ph-caret-down etapa-seta"></i></div>
+                            <div class="etapa-detalhe"><p>Após a conclusão do processo, aguarde sua PPD/CNH digital ou recolha a taxa de emissão para receber o documento físico.</p></div>
                         </div>
                     </div>
-
-                    <div>
-                        <span class="subtitulo-laranja">SEU RITMO É O QUE IMPORTA</span>
-                        <h2 class="titulo-secao" style="font-size: 34px; margin-bottom: 25px; letter-spacing: -1px;">2 aulas são o mínimo. Sua preparação é individual.</h2>
-
-                        <p style="font-size: 16px; color: var(--cor-texto); margin-bottom: 20px; line-height: 1.6;">As 2 aulas práticas atendem à carga mínima obrigatória, mas cada aluno possui um nível diferente de experiência, segurança e habilidade.</p>
-
-                        <p style="font-size: 16px; color: var(--cor-texto); margin-bottom: 20px; line-height: 1.6;">Por isso, utilizamos essas aulas também para avaliar sua preparação. O instrutor identifica os pontos que precisam ser desenvolvidos e, quando necessário, orienta um plano de treinamento personalizado.</p>
-
-                        <div style="background: var(--cor-fundo-base); padding: 25px; border-radius: 16px; border-left: 4px solid var(--cor-amarelo);">
-                            <p style="font-size: 17px; color: var(--cor-preto); font-weight: 700; margin: 0; line-height: 1.5;">Você decide como deseja continuar. Nossa função é orientar.</p>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -435,21 +442,10 @@
                 <div class="text-center" style="max-width: 800px; margin: 0 auto 50px auto;">
                     <span class="subtitulo-laranja">CATEGORIAS PROFISSIONAIS</span>
                     <h2 class="titulo-secao" style="letter-spacing: -1px;">Quer dirigir para trabalhar? Mude de categoria.</h2>
-                    <p style="color: var(--cor-texto); font-size: 16px;">Para quem já tem CNH B e quer avançar para caminhão, ônibus ou veículos com reboque.</p>
+                    <p style="color: var(--cor-texto); font-size: 16px;">Para quem já tem CNH B e quer avançar para ônibus ou veículos com reboque.</p>
                 </div>
 
-                <div class="grid-3" style="margin-bottom: 45px;">
-                    <div class="card-mudanca">
-                        <div class="card-mudanca-icones">
-                            <span class="card-mudanca-tem"><i class="ph-fill ph-car"></i></span>
-                            <i class="ph-bold ph-arrow-right card-mudanca-seta"></i>
-                            <span class="card-mudanca-quer"><i class="ph-fill ph-truck"></i></span>
-                        </div>
-                        <span class="card-mudanca-letra">Categoria C</span>
-                        <h3>Caminhão</h3>
-                        <p>Veículos de carga com mais de 3.500 kg de peso bruto total.</p>
-                    </div>
-
+                <div class="grid-2" style="gap: 30px; margin-bottom: 45px; max-width: 760px; margin-left: auto; margin-right: auto;">
                     <div class="card-mudanca">
                         <div class="card-mudanca-icones">
                             <span class="card-mudanca-tem"><i class="ph-fill ph-car"></i></span>
@@ -476,19 +472,20 @@
                 <div style="background: var(--cor-branco); border: 1px solid var(--cor-borda); border-radius: 20px; padding: 40px;">
                     <p style="font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: var(--cor-texto); margin-bottom: 25px;">Como funciona a mudança de categoria:</p>
 
-                    <div class="grid-etapas-adicao">
-                        <div class="etapa-adicao etapa-adicao--verde"><span>1</span><p>Abertura do requerimento de mudança</p></div>
-                        <div class="etapa-adicao etapa-adicao--verde"><span>2</span><p>Exame médico e avaliação psicológica</p></div>
-                        <div class="etapa-adicao etapa-adicao--verde"><span>3</span><p>Exame toxicológico obrigatório</p></div>
-                        <div class="etapa-adicao etapa-adicao--verde"><span>4</span><p>Aulas práticas e exame prático</p></div>
+                    <div class="grid-etapas-adicao grid-etapas-adicao--5">
+                        <div class="etapa-adicao etapa-adicao--verde"><span>1</span><p><strong>Exame toxicológico.</strong> Realização em laboratório credenciado.</p></div>
+                        <div class="etapa-adicao etapa-adicao--verde"><span>2</span><p><strong>Abertura do requerimento.</strong> Abertura do processo de mudança de categoria.</p></div>
+                        <div class="etapa-adicao etapa-adicao--verde"><span>3</span><p><strong>Exame médico e psicológico.</strong> Realização dos exames necessários.</p></div>
+                        <div class="etapa-adicao etapa-adicao--verde"><span>4</span><p><strong>Aulas práticas.</strong> Mínimo de 10 horas de aulas práticas.</p></div>
+                        <div class="etapa-adicao etapa-adicao--verde"><span>5</span><p><strong>Exame prático.</strong> Realização do exame da nova categoria.</p></div>
                     </div>
 
                     <div class="banner-dica" style="margin: 30px 0; border-left-color: var(--cor-verde);">
                         <i class="ph-fill ph-info" style="font-size: 30px; color: #0b7d5e; flex-shrink: 0;"></i>
-                        <p style="font-size: 14.5px; color: var(--cor-texto); line-height: 1.6; margin: 0;">A mudança exige mais horas de aula prática do que a adição, por envolver veículos maiores. O exame toxicológico é obrigatório e tem validade de 90 dias — orientamos o melhor momento para realizá-lo.</p>
+                        <p style="font-size: 14.5px; color: var(--cor-texto); line-height: 1.6; margin: 0;">A mudança de categoria exige mais horas de preparação por envolver veículos maiores, e o exame toxicológico é obrigatório logo no início do processo.</p>
                     </div>
 
-                    <button class="btn btn-wa" style="width: 100%; justify-content: center; background: var(--cor-verde); color: #fff; font-weight: 800; border: none; padding: 18px; border-radius: 12px; text-transform: uppercase; font-size: 14px;" data-track="wa_mudanca_categoria" data-message="Olá! Já tenho CNH B e quero saber sobre Mudança de Categoria (C, D ou E).">QUERO MUDAR DE CATEGORIA</button>
+                    <button class="btn btn-wa" style="width: 100%; justify-content: center; background: var(--cor-verde); color: #fff; font-weight: 800; border: none; padding: 18px; border-radius: 12px; text-transform: uppercase; font-size: 14px;" data-track="wa_mudanca_categoria" data-message="Olá! Já tenho CNH B e quero saber sobre Mudança de Categoria (D ou E).">QUERO MUDAR DE CATEGORIA</button>
                 </div>
             </div>
         </section>
@@ -499,7 +496,7 @@
                 <div class="text-center" style="max-width: 800px; margin: 0 auto 50px auto;">
                     <span class="subtitulo-laranja">TRANSPARÊNCIA</span>
                     <h2 class="titulo-secao" style="letter-spacing: -1px;">Taxas do processo</h2>
-                    <p style="color: var(--cor-texto); font-size: 16px;">Estes valores são cobrados pelo Detran-SP e pelos prestadores credenciados, separadamente do pacote da autoescola.</p>
+                    <p style="color: var(--cor-texto); font-size: 16px;">Estes valores são pagos separadamente aos órgãos ou prestadores responsáveis e não fazem parte do pacote da autoescola.</p>
                 </div>
 
                 <div class="grid-taxas">
@@ -537,7 +534,7 @@
 
                 <div class="banner-dica" style="margin-top: 40px; border-left-color: var(--cor-amarelo);">
                     <i class="ph-fill ph-info" style="font-size: 32px; color: #856600; flex-shrink: 0;"></i>
-                    <p style="font-size: 14.5px; color: var(--cor-texto); line-height: 1.6; margin: 0;">Esses valores não fazem parte do pacote da autoescola e são pagos diretamente aos respectivos órgãos ou prestadores responsáveis. Podem sofrer alterações — consulte os valores vigentes no momento da realização do processo.</p>
+                    <p style="font-size: 14.5px; color: var(--cor-texto); line-height: 1.6; margin: 0;">Estes valores são pagos separadamente aos órgãos ou prestadores responsáveis e não fazem parte do pacote da autoescola. Podem sofrer alterações — consulte os valores vigentes no momento da realização do processo.</p>
                 </div>
             </div>
         </section>
@@ -625,7 +622,7 @@
                 </div>
 
                 <div class="text-center" style="margin-top: 40px;">
-                    <a href="index.html#avaliacoes" style="color: var(--cor-destaque-planos); font-weight: 700; text-decoration: none; font-size: 14px;">VER MAIS AVALIAÇÕES <i class="ph-bold ph-arrow-right"></i></a>
+                    <a href="https://www.google.com/maps/place/Autoescola+Gera%C3%A7%C3%A3o+Colibri/@-23.4507718,-46.4772812,17z/data=!4m8!3m7!1s0x94ce8a7e90295555:0x6feac675c80f00b9!8m2!3d-23.4507718!4d-46.4747063!9m1!1b1!16s%2Fg%2F1v2yz_l7" target="_blank" rel="noopener noreferrer" style="color: var(--cor-destaque-planos); font-weight: 700; text-decoration: none; font-size: 14px;">VER MAIS AVALIAÇÕES <i class="ph-bold ph-arrow-right"></i></a>
                 </div>
             </div>
         </section>
@@ -757,7 +754,7 @@
 
                 <div class="grid-2" style="gap: 40px; align-items: stretch;">
 
-                    <div style="background: #fff; border-radius: 24px; padding: 40px; border: 1px solid var(--cor-borda); display: flex; flex-direction: column;">
+                    <div style="background: var(--cor-branco); border-radius: 24px; padding: 40px; border: 1px solid var(--cor-borda); display: flex; flex-direction: column;">
                         <div style="margin-bottom: 28px; display: flex; align-items: flex-start; gap: 14px;">
                             <i class="ph-fill ph-map-pin" style="color: var(--cor-destaque-planos); font-size: 26px; margin-top: 2px; flex-shrink: 0;"></i>
                             <div>
@@ -794,7 +791,7 @@
 
                     <div style="display: flex; flex-direction: column; gap: 20px;">
                         <div style="border-radius: 24px; overflow: hidden; height: 240px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda);">
-                            <img src="imagens/fachada.jpeg" alt="Equipe da Autoescola Geração Colibri na fachada da unidade em Cumbica, Guarulhos" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="imagens/fachada.jpeg" alt="Equipe da Autoescola Geração Colibri na fachada da unidade em Cumbica, Guarulhos" loading="lazy" width="900" height="675" style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                         <div style="border-radius: 24px; overflow: hidden; flex-grow: 1; min-height: 240px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border: 1px solid var(--cor-borda);">
                             <iframe class="mapa-autoescola" title="Mapa da Autoescola Geração Colibri em Guarulhos" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.832729909776!2d-46.417235!3d-23.466504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce63b4f53531b9%3A0xc66c1b35b0d0fa85!2sR.%20Juazeiro%20do%20Norte%2C%20272%20-%20Cidade%20Jardim%20Cumbica%2C%20Guarulhos%20-%20SP%2C%2007180-230!5e0!3m2!1spt-BR!2sbr!4v1717171717171!5m2!1spt-BR!2sbr" src="" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -820,7 +817,7 @@
             </div>
         </section>
 
-        <section id="instagram-feed" class="secao-branca" style="padding: 80px 0; border-top: 1px solid var(--cor-borda);">
+         <section id="instagram-feed" class="secao-branca" style="padding: 80px 0; border-top: 1px solid var(--cor-borda);">
             <div class="container animar-fade relative-z">
                 
                 <div class="bloco-titulo text-center" style="max-width: 800px; margin: 0 auto 40px auto;">
@@ -848,7 +845,6 @@
                 </div>
                 
             </div>
-        </section>
 
     </main>
 
@@ -866,7 +862,7 @@
                         <img src="imagens/logo.png" alt="Logo" class="logo-img" style="height: 40px; margin-right: 10px;">
                         <span class="logo-texto" style="font-size: 18px;">Geração Colibri</span>
                     </div>
-                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;">Há 26 anos ajudando pessoas a conquistarem sua liberdade no trânsito com orientação, segurança e confiança.</p>
+                    <p style="color: #666; font-size: 14px; margin-bottom: 10px;">Desde 2000 ajudando pessoas a conquistarem sua habilitação.</p>
                     <p style="color: #666; font-size: 14px; margin-bottom: 15px; font-weight: 600;">A melhor Autoescola de Guarulhos com o melhor preço da região.</p>
                     <a href="sobre.html" style="color: var(--cor-destaque-planos); font-weight: 700; text-decoration: none; font-size: 14px; display: inline-flex; align-items: center; gap: 5px; transition: 0.2s;">
                         Conheça nossa história <i class="ph-bold ph-arrow-right"></i>
